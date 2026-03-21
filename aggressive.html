@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aggressive Bot — Clawbot Trading System</title>
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --bg2: #111118;
+    --bg3: #1a1a24;
+    --border: #2a2a3a;
+    --text: #e8e8f0;
+    --muted: #6b6b80;
+    --bot: #f59e0b;
+    --green: #22c55e;
+    --red: #ef4444;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+  /* NAV */
+  nav { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 0 32px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
+  .nav-brand { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 700; color: var(--bot); letter-spacing: 0.5px; text-decoration: none; }
+  .nav-links { display: flex; gap: 6px; list-style: none; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 13px; padding: 6px 14px; border-radius: 20px; transition: all 0.2s; }
+  .nav-links a:hover { color: var(--text); background: var(--bg3); }
+  .nav-links a.active { color: var(--bot); background: rgba(245,158,11,0.12); }
+  .live-badge { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--green); background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); padding: 4px 10px; border-radius: 20px; }
+  .live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: pulse 1.5s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+  /* HERO */
+  .hero { padding: 56px 32px 48px; max-width: 900px; margin: 0 auto; }
+  .bot-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(245,158,11,0.12); border: 1px solid rgba(245,158,11,0.3); color: var(--bot); padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+  .hero h1 { font-size: clamp(36px, 5vw, 60px); font-weight: 800; line-height: 1.1; margin-bottom: 12px; }
+  .hero h1 span { color: var(--bot); }
+  .hero .tagline { font-size: 18px; color: var(--muted); line-height: 1.6; max-width: 600px; margin-bottom: 40px; }
+
+  /* LIVE BALANCE */
+  .balance-card { background: var(--bg2); border: 2px solid var(--bot); border-radius: 16px; padding: 32px; max-width: 900px; margin: 0 auto 40px; position: relative; overflow: hidden; }
+  .balance-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--bot), #ef4444); }
+  .balance-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin-bottom: 8px; }
+  .balance-amount { font-size: clamp(40px, 6vw, 72px); font-weight: 800; color: var(--text); font-variant-numeric: tabular-nums; letter-spacing: -1px; line-height: 1; margin-bottom: 8px; }
+  .balance-change { font-size: 16px; font-weight: 600; margin-bottom: 24px; }
+  .balance-meta { display: flex; gap: 32px; flex-wrap: wrap; }
+  .meta-item .meta-lbl { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; }
+  .meta-item .meta-val { font-size: 18px; font-weight: 700; margin-top: 2px; }
+
+  /* CONTAINER */
+  .container { max-width: 900px; margin: 0 auto; padding: 0 32px 80px; }
+
+  /* SECTION */
+  .section-title { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+  .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  /* PERSONALITY */
+  .personality-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 40px; }
+  .personality-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+  .personality-card .p-icon { font-size: 28px; margin-bottom: 12px; }
+  .personality-card h3 { font-size: 15px; font-weight: 700; color: var(--bot); margin-bottom: 8px; }
+  .personality-card p { font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+  /* STRATEGY */
+  .strategy-box { background: var(--bg2); border: 1px solid var(--border); border-left: 3px solid var(--bot); border-radius: 12px; padding: 28px; margin-bottom: 40px; }
+  .strategy-box h3 { font-size: 16px; font-weight: 700; margin-bottom: 16px; }
+  .strategy-rule { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 14px; }
+  .strategy-rule:last-child { margin-bottom: 0; }
+  .rule-num { background: rgba(245,158,11,0.15); color: var(--bot); font-size: 12px; font-weight: 700; width: 24px; height: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+  .rule-text { font-size: 14px; color: var(--muted); line-height: 1.6; }
+  .rule-text strong { color: var(--text); }
+
+  /* TRADES */
+  .trades-box { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 40px; }
+  .trades-header { padding: 16px 20px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+  .trades-header h3 { font-size: 15px; font-weight: 600; }
+  .trade-count { font-size: 12px; color: var(--muted); background: var(--bg3); padding: 3px 10px; border-radius: 10px; }
+  .trades-table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th { text-align: left; padding: 10px 16px; color: var(--muted); font-weight: 500; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  td { padding: 10px 16px; border-bottom: 1px solid rgba(42,42,58,0.5); white-space: nowrap; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(255,255,255,0.02); }
+  .buy { color: var(--green); font-weight: 600; }
+  .sell { color: var(--red); font-weight: 600; }
+  .reason-cell { color: var(--muted); font-style: italic; max-width: 200px; overflow: hidden; text-overflow: ellipsis; }
+  .no-trades { text-align: center; padding: 40px; color: var(--muted); }
+
+  .updated-time { font-size: 11px; color: var(--muted); text-align: right; margin-top: 8px; }
+
+  footer { border-top: 1px solid var(--border); padding: 24px 32px; text-align: center; color: var(--muted); font-size: 12px; }
+
+  @media (max-width: 600px) {
+    nav { padding: 0 16px; }
+    .hero { padding: 32px 16px 32px; }
+    .container { padding: 0 16px 60px; }
+    .balance-card { padding: 24px 16px; margin-left: 16px; margin-right: 16px; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html">🤖 CLAWBOT</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Dashboard</a></li>
+    <li><a href="aggressive.html" class="active">⚡ Aggressive</a></li>
+    <li><a href="middle.html">⚖️ Middle Road</a></li>
+    <li><a href="random.html">🎲 Random</a></li>
+  </ul>
+  <div class="live-badge">
+    <div class="live-dot"></div>
+    LIVE
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="bot-badge">⚡ Bot Profile</div>
+  <h1>The <span>Aggressive</span> Bot</h1>
+  <p class="tagline">No fear. No hesitation. Maximum position sizes, maximum conviction. This bot came to win — or blow up trying.</p>
+</div>
+
+<!-- LIVE BALANCE -->
+<div class="balance-card" style="margin: 0 32px 40px;">
+  <div class="balance-label">💰 Live Portfolio Balance</div>
+  <div class="balance-amount" id="balanceAmt">Loading...</div>
+  <div class="balance-change" id="balanceChange"></div>
+  <div class="balance-meta">
+    <div class="meta-item">
+      <div class="meta-lbl">Total Trades</div>
+      <div class="meta-val" id="totalTrades">—</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-lbl">Buys</div>
+      <div class="meta-val" id="totalBuys" style="color:var(--green)">—</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-lbl">Sells</div>
+      <div class="meta-val" id="totalSells" style="color:var(--red)">—</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-lbl">Assets Held</div>
+      <div class="meta-val" id="assets" style="font-size:14px;color:var(--muted)">—</div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- PERSONALITY -->
+  <div class="section-title">Personality</div>
+  <div class="personality-grid">
+    <div class="personality-card">
+      <div class="p-icon">🔥</div>
+      <h3>All or Nothing</h3>
+      <p>Aggressive doesn't do half-measures. When it sees a signal, it goes in with maximum conviction — 10% of the entire portfolio in a single trade. If it's right, the gains are enormous. If it's wrong... well, that's the cost of ambition.</p>
+    </div>
+    <div class="personality-card">
+      <div class="p-icon">🚀</div>
+      <h3>Momentum Hunter</h3>
+      <p>Crypto is moving? Aggressive wants in immediately. It chases momentum with no apologies, buying BTC and ETH simultaneously when it detects upward price pressure. First in, biggest position, loudest conviction.</p>
+    </div>
+    <div class="personality-card">
+      <div class="p-icon">⚡</div>
+      <h3>Never Rests</h3>
+      <p>Aggressive operates around the clock in crypto markets — no lunch breaks, no weekends off. Every hour is an opportunity. Every dip is a potential entry. Every rally is confirmation it was right all along.</p>
+    </div>
+    <div class="personality-card">
+      <div class="p-icon">💎</div>
+      <h3>Diamond Hands Mentality</h3>
+      <p>Selling is for the weak. Aggressive's buy-to-sell ratio is heavily skewed toward buying. Once it's in a position, it holds with iron conviction — waiting for the market to come around to its way of thinking.</p>
+    </div>
+  </div>
+
+  <!-- STRATEGY -->
+  <div class="section-title">Why It Makes Trades</div>
+  <div class="strategy-box">
+    <h3>⚡ Trading Logic & Decision Rules</h3>
+    <div class="strategy-rule">
+      <div class="rule-num">1</div>
+      <div class="rule-text"><strong>Crypto momentum signals:</strong> When BTC or ETH shows upward price momentum, Aggressive immediately buys both assets simultaneously — never just one. The logic: if crypto is pumping, ride the whole wave.</div>
+    </div>
+    <div class="strategy-rule">
+      <div class="rule-num">2</div>
+      <div class="rule-text"><strong>10% position sizing:</strong> Each buy order is approximately 10% of the total portfolio value. This is an enormous position size by any standard — most professional traders use 1–5%. Aggressive doesn't care about "standards."</div>
+    </div>
+    <div class="strategy-rule">
+      <div class="rule-num">3</div>
+      <div class="rule-text"><strong>Buy the crypto pair:</strong> BTC and ETH are always bought together in equal dollar amounts. The theory: diversification within crypto reduces single-asset risk while keeping maximum crypto exposure.</div>
+    </div>
+    <div class="strategy-rule">
+      <div class="rule-num">4</div>
+      <div class="rule-text"><strong>Hourly reassessment:</strong> Every hour, Aggressive looks at market conditions. If momentum persists, it buys more. It will layer into positions with no hesitation, doubling down when the market moves in its favor.</div>
+    </div>
+    <div class="strategy-rule">
+      <div class="rule-num">5</div>
+      <div class="rule-text"><strong>High risk tolerance:</strong> Drawdowns are expected, not feared. Aggressive was built knowing it might lose money. The goal is to find scenarios where its bold bets pay off massively — outlasting volatility through sheer size.</div>
+    </div>
+  </div>
+
+  <!-- TRADES -->
+  <div class="section-title">Trade History</div>
+  <div class="trades-box">
+    <div class="trades-header">
+      <h3>⚡ All Aggressive Bot Trades</h3>
+      <span class="trade-count" id="tradeCount">Loading...</span>
+    </div>
+    <div class="trades-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Symbol</th>
+            <th>Action</th>
+            <th>Qty</th>
+            <th>Price</th>
+            <th>Value</th>
+            <th>Balance After</th>
+            <th>Reason</th>
+          </tr>
+        </thead>
+        <tbody id="tradeRows">
+          <tr><td colspan="8" class="no-trades">Loading trades...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="updated-time" id="updatedTime"></div>
+
+</div>
+
+<footer>
+  <strong>Clawbot Trading System</strong> — Aggressive Bot · Updates every hour · <a href="index.html" style="color:var(--muted)">← Back to Dashboard</a>
+</footer>
+
+<script>
+const START = 1_000_000;
+const BOT_NAMES = ['clawbot aggressive', 'aggressive'];
+
+function fmt(n) {
+  return '$' + Number(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+function fmtPct(n) {
+  const p = (n - START) / START * 100;
+  return (p >= 0 ? '+' : '') + p.toFixed(2) + '%';
+}
+
+function isThisBot(name) {
+  const l = (name || '').toLowerCase();
+  return BOT_NAMES.some(b => l.includes(b));
+}
+
+function render(data) {
+  const s = data.summary.agg;
+
+  // Balance
+  document.getElementById('balanceAmt').textContent = fmt(s.balance);
+  const pct = (s.balance - START) / START * 100;
+  const changeEl = document.getElementById('balanceChange');
+  changeEl.textContent = (pct >= 0 ? '+' : '') + pct.toFixed(2) + '% from $1,000,000 starting balance';
+  changeEl.style.color = pct >= 0 ? 'var(--green)' : 'var(--red)';
+
+  document.getElementById('totalTrades').textContent = s.trades;
+  document.getElementById('totalBuys').textContent = s.buys;
+  document.getElementById('totalSells').textContent = s.sells;
+  document.getElementById('assets').textContent = s.assets || '(none yet)';
+
+  // Trades
+  const trades = data.trades.filter(t => isThisBot(t.bot));
+  document.getElementById('tradeCount').textContent = trades.length + ' trades';
+  document.getElementById('tradeRows').innerHTML = trades.length
+    ? trades.map(t => `
+      <tr>
+        <td style="color:var(--muted)">${t.ts.replace('T',' ')}</td>
+        <td style="font-weight:600;color:var(--bot)">${t.symbol}</td>
+        <td class="${t.action === 'BUY' ? 'buy' : 'sell'}">${t.action}</td>
+        <td>${Number(t.qty).toFixed(4)}</td>
+        <td>${fmt(t.price)}</td>
+        <td style="font-weight:600">${fmt(t.value)}</td>
+        <td>${fmt(t.balance)}</td>
+        <td class="reason-cell">${t.reason || '—'}</td>
+      </tr>
+    `).join('')
+    : '<tr><td colspan="8" class="no-trades">No trades yet — waiting for a signal.</td></tr>';
+
+  if (data.generated) {
+    document.getElementById('updatedTime').textContent = 'Last updated: ' + data.generated.replace('T', ' ');
+  }
+}
+
+async function loadData() {
+  try {
+    const res = await fetch('data.json?t=' + Date.now());
+    const data = await res.json();
+    render(data);
+  } catch (e) {
+    document.getElementById('balanceAmt').textContent = 'Unavailable';
+  }
+}
+
+loadData();
+setInterval(loadData, 3_600_000);
+</script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Middle of the Road Bot — Clawbot Trading System</title>
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --bg2: #111118;
+    --bg3: #1a1a24;
+    --border: #2a2a3a;
+    --text: #e8e8f0;
+    --muted: #6b6b80;
+    --bot: #3b82f6;
+    --green: #22c55e;
+    --red: #ef4444;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+  nav { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 0 32px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
+  .nav-brand { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 700; color: #f59e0b; letter-spacing: 0.5px; text-decoration: none; }
+  .nav-links { display: flex; gap: 6px; list-style: none; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 13px; padding: 6px 14px; border-radius: 20px; transition: all 0.2s; }
+  .nav-links a:hover { color: var(--text); background: var(--bg3); }
+  .nav-links a.active { color: var(--bot); background: rgba(59,130,246,0.12); }
+  .live-badge { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--green); background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); padding: 4px 10px; border-radius: 20px; }
+  .live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: pulse 1.5s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+  .hero { padding: 56px 32px 48px; max-width: 900px; margin: 0 auto; }
+  .bot-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(59,130,246,0.12); border: 1px solid rgba(59,130,246,0.3); color: var(--bot); padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+  .hero h1 { font-size: clamp(36px, 5vw, 60px); font-weight: 800; line-height: 1.1; margin-bottom: 12px; }
+  .hero h1 span { color: var(--bot); }
+  .hero .tagline { font-size: 18px; color: var(--muted); line-height: 1.6; max-width: 600px; margin-bottom: 40px; }
+
+  .balance-card { background: var(--bg2); border: 2px solid var(--bot); border-radius: 16px; padding: 32px; max-width: 900px; margin: 0 auto 40px; position: relative; overflow: hidden; }
+  .balance-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--bot), #22c55e); }
+  .balance-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin-bottom: 8px; }
+  .balance-amount { font-size: clamp(40px, 6vw, 72px); font-weight: 800; color: var(--text); font-variant-numeric: tabular-nums; letter-spacing: -1px; line-height: 1; margin-bottom: 8px; }
+  .balance-change { font-size: 16px; font-weight: 600; margin-bottom: 24px; }
+  .balance-meta { display: flex; gap: 32px; flex-wrap: wrap; }
+  .meta-item .meta-lbl { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; }
+  .meta-item .meta-val { font-size: 18px; font-weight: 700; margin-top: 2px; }
+
+  .container { max-width: 900px; margin: 0 auto; padding: 0 32px 80px; }
+
+  .section-title { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+  .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  .personality-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 40px; }
+  .personality-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+  .personality-card .p-icon { font-size: 28px; margin-bottom: 12px; }
+  .personality-card h3 { font-size: 15px; font-weight: 700; color: var(--bot); margin-bottom: 8px; }
+  .personality-card p { font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+  .strategy-box { background: var(--bg2); border: 1px solid var(--border); border-left: 3px solid var(--bot); border-radius: 12px; padding: 28px; margin-bottom: 40px; }
+  .strategy-box h3 { font-size: 16px; font-weight: 700; margin-bottom: 16px; }
+  .strategy-rule { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 14px; }
+  .strategy-rule:last-child { margin-bottom: 0; }
+  .rule-num { background: rgba(59,130,246,0.15); color: var(--bot); font-size: 12px; font-weight: 700; width: 24px; height: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+  .rule-text { font-size: 14px; color: var(--muted); line-height: 1.6; }
+  .rule-text strong { color: var(--text); }
+
+  /* Waiting state */
+  .waiting-box { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 60px 32px; text-align: center; margin-bottom: 40px; }
+  .waiting-icon { font-size: 48px; margin-bottom: 16px; }
+  .waiting-box h3 { font-size: 18px; font-weight: 700; color: var(--bot); margin-bottom: 10px; }
+  .waiting-box p { font-size: 14px; color: var(--muted); line-height: 1.6; max-width: 480px; margin: 0 auto; }
+
+  .trades-box { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 40px; }
+  .trades-header { padding: 16px 20px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+  .trades-header h3 { font-size: 15px; font-weight: 600; }
+  .trade-count { font-size: 12px; color: var(--muted); background: var(--bg3); padding: 3px 10px; border-radius: 10px; }
+  .trades-table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th { text-align: left; padding: 10px 16px; color: var(--muted); font-weight: 500; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  td { padding: 10px 16px; border-bottom: 1px solid rgba(42,42,58,0.5); white-space: nowrap; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(255,255,255,0.02); }
+  .buy { color: var(--green); font-weight: 600; }
+  .sell { color: var(--red); font-weight: 600; }
+  .reason-cell { color: var(--muted); font-style: italic; max-width: 200px; overflow: hidden; text-overflow: ellipsis; }
+  .no-trades { text-align: center; padding: 50px; color: var(--muted); font-size: 13px; }
+
+  .updated-time { font-size: 11px; color: var(--muted); text-align: right; margin-top: 8px; }
+  footer { border-top: 1px solid var(--border); padding: 24px 32px; text-align: center; color: var(--muted); font-size: 12px; }
+
+  @media (max-width: 600px) {
+    nav { padding: 0 16px; }
+    .hero { padding: 32px 16px 32px; }
+    .container { padding: 0 16px 60px; }
+    .balance-card { padding: 24px 16px; margin-left: 16px; margin-right: 16px; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html">🤖 CLAWBOT</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Dashboard</a></li>
+    <li><a href="aggressive.html">⚡ Aggressive</a></li>
+    <li><a href="middle.html" class="active">⚖️ Middle Road</a></li>
+    <li><a href="random.html">🎲 Random</a></li>
+  </ul>
+  <div class="live-badge">
+    <div class="live-dot"></div>
+    LIVE
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="bot-badge">⚖️ Bot Profile</div>
+  <h1>The <span>Middle of the Road</span> Bot</h1>
+  <p class="tagline">Slow and steady. Every trade has a reason. Every position is calculated. This bot believes the best trade is sometimes no trade at all.</p>
+</div>
+
+<div class="balance-card" style="margin: 0 32px 40px;">
+  <div class="balance-label">💰 Live Portfolio Balance</div>
+  <div class="balance-amount" id="balanceAmt">Loading...</div>
+  <div class="balance-change" id="balanceChange"></div>
+  <div class="balance-meta">
+    <div class="meta-item">
+      <div class="meta-lbl">Total Trades</div>
+      <div class="meta-val" id="totalTrades">—</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-lbl">Buys</div>
+      <div class="meta-val" id="totalBuys" style="color:var(--green)">—</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-lbl">Sells</div>
+      <div class="meta-val" id="totalSells" style="color:var(--red)">—</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-lbl">Assets Held</div>
+      <div class="meta-val" id="assets" style="font-size:14px;color:var(--muted)">—</div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="section-title">Personality</div>
+  <div class="personality-grid">
+    <div class="personality-card">
+      <div class="p-icon">🧠</div>
+      <h3>The Patient One</h3>
+      <p>Middle Road doesn't chase. It waits for the market to come to it. If conditions aren't right, it holds cash — earning nothing but losing nothing. Patience is a strategy, not a weakness.</p>
+    </div>
+    <div class="personality-card">
+      <div class="p-icon">⚖️</div>
+      <h3>Risk-Balanced</h3>
+      <p>Position sizes are moderate — never betting the house on a single trade. Middle Road spreads risk across assets and time, aiming for consistent performance rather than lottery-ticket wins.</p>
+    </div>
+    <div class="personality-card">
+      <div class="p-icon">📊</div>
+      <h3>Data-Driven</h3>
+      <p>Every trade needs a reason backed by real signals — RSI levels, moving average crossovers, volume trends. If the data doesn't support the trade, the trade doesn't happen. No exceptions.</p>
+    </div>
+    <div class="personality-card">
+      <div class="p-icon">🛡️</div>
+      <h3>Capital Preservation</h3>
+      <p>The first rule is: don't lose money. The second rule is: see rule one. Middle Road treats protecting the $1M starting capital as sacred — every trade is evaluated on its downside risk before upside potential.</p>
+    </div>
+  </div>
+
+  <div class="section-title">Why It Makes Trades</div>
+  <div class="strategy-box">
+    <h3>⚖️ Trading Logic & Decision Rules</h3>
+    <div class="strategy-rule">
+      <div class="rule-num">1</div>
+      <div class="rule-text"><strong>Technical confirmation required:</strong> Middle Road looks for multiple indicators aligning before entering a trade — price must be above key moving averages, RSI must not be overbought, and volume should support the move.</div>
+    </div>
+    <div class="strategy-rule">
+      <div class="rule-num">2</div>
+      <div class="rule-text"><strong>Moderate position sizing:</strong> Trade sizes are kept between 2–5% of portfolio per position. This means no single trade can devastate the account, and the portfolio can survive a string of losses.</div>
+    </div>
+    <div class="strategy-rule">
+      <div class="rule-num">3</div>
+      <div class="rule-text"><strong>Stop-loss discipline:</strong> Every trade has a predefined exit if it goes wrong. Middle Road never hopes a losing trade will "come back" — it cuts losses quickly and moves on without emotion.</div>
+    </div>
+    <div class="strategy-rule">
+      <div class="rule-num">4</div>
+      <div class="rule-text"><strong>Both stocks and crypto:</strong> Unlike the other bots, Middle Road can trade equities during market hours AND crypto around the clock — giving it the broadest opportunity set of all three bots.</div>
+    </div>
+    <div class="strategy-rule">
+      <div class="rule-num">5</div>
+      <div class="rule-text"><strong>When in doubt, stay out:</strong> If the market is unclear, choppy, or volatile without direction, Middle Road does nothing. Cash is a position. Waiting for clarity is a valid strategy that the other bots lack the patience to execute.</div>
+    </div>
+  </div>
+
+  <div class="section-title">Trade History</div>
+  <div id="tradesSection"></div>
+  <div class="updated-time" id="updatedTime"></div>
+
+</div>
+
+<footer>
+  <strong>Clawbot Trading System</strong> — Middle of the Road Bot · Updates every hour · <a href="index.html" style="color:var(--muted)">← Back to Dashboard</a>
+</footer>
+
+<script>
+const START = 1_000_000;
+const BOT_NAMES = ['middle', 'clawbot middle'];
+
+function fmt(n) {
+  return '$' + Number(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+
+function isThisBot(name) {
+  const l = (name || '').toLowerCase();
+  return BOT_NAMES.some(b => l.includes(b));
+}
+
+function render(data) {
+  const s = data.summary.mid;
+
+  document.getElementById('balanceAmt').textContent = fmt(s.balance);
+  const pct = (s.balance - START) / START * 100;
+  const changeEl = document.getElementById('balanceChange');
+  changeEl.textContent = (pct >= 0 ? '+' : '') + pct.toFixed(2) + '% from $1,000,000 starting balance';
+  changeEl.style.color = pct >= 0 ? 'var(--green)' : 'var(--red)';
+
+  document.getElementById('totalTrades').textContent = s.trades;
+  document.getElementById('totalBuys').textContent = s.buys;
+  document.getElementById('totalSells').textContent = s.sells;
+  document.getElementById('assets').textContent = s.assets || '(none yet)';
+
+  const trades = data.trades.filter(t => isThisBot(t.bot));
+
+  if (trades.length === 0) {
+    document.getElementById('tradesSection').innerHTML = `
+      <div class="waiting-box">
+        <div class="waiting-icon">🧘</div>
+        <h3>Still Waiting for the Perfect Entry</h3>
+        <p>Middle Road hasn't pulled the trigger yet. It's analyzing the market, waiting for all signals to align. Sometimes the best trade is no trade — and Middle Road is in no rush.</p>
+      </div>
+    `;
+  } else {
+    document.getElementById('tradesSection').innerHTML = `
+      <div class="trades-box">
+        <div class="trades-header">
+          <h3>⚖️ All Middle Road Bot Trades</h3>
+          <span class="trade-count">${trades.length} trades</span>
+        </div>
+        <div class="trades-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Time</th><th>Symbol</th><th>Action</th><th>Qty</th><th>Price</th><th>Value</th><th>Balance After</th><th>Reason</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${trades.map(t => `
+                <tr>
+                  <td style="color:var(--muted)">${t.ts.replace('T',' ')}</td>
+                  <td style="font-weight:600;color:var(--bot)">${t.symbol}</td>
+                  <td class="${t.action === 'BUY' ? 'buy' : 'sell'}">${t.action}</td>
+                  <td>${Number(t.qty).toFixed(4)}</td>
+                  <td>${fmt(t.price)}</td>
+                  <td style="font-weight:600">${fmt(t.value)}</td>
+                  <td>${fmt(t.balance)}</td>
+                  <td class="reason-cell">${t.reason || '—'}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    `;
+  }
+
+  if (data.generated) {
+    document.getElementById('updatedTime').textContent = 'Last updated: ' + data.generated.replace('T', ' ');
+  }
+}
+
+async function loadData() {
+  try {
+    const res = await fetch('data.json?t=' + Date.now());
+    const data = await res.json();
+    render(data);
+  } catch (e) {
+    document.getElementById('balanceAmt').textContent = 'Unavailable';
+  }
+}
+
+loadData();
+setInterval(loadData, 3_600_000);
+</script>
+</body>
+</html>

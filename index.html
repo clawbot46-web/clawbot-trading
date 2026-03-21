@@ -372,7 +372,9 @@
   </div>
   <ul class="nav-links">
     <li><a href="#dashboard">Dashboard</a></li>
-    <li><a href="#bots">The Bots</a></li>
+    <li><a href="aggressive.html">⚡ Aggressive</a></li>
+    <li><a href="middle.html">⚖️ Middle Road</a></li>
+    <li><a href="random.html">🎲 Random</a></li>
     <li><a href="#trades">Trades</a></li>
   </ul>
   <div class="live-badge">
@@ -524,9 +526,9 @@ function render(data) {
 
   // Bot cards
   const bots = [
-    { key: 'agg', name: 'Aggressive Bot', color: 'var(--agg)', strategy: 'High-risk momentum trading', data: s.agg },
-    { key: 'mid', name: 'Middle Road Bot', color: 'var(--mid)', strategy: 'Balanced, steady approach', data: s.mid },
-    { key: 'rand', name: 'Random Bot', color: 'var(--rand)', strategy: 'Random trades (baseline control)', data: s.rand }
+    { key: 'agg', name: 'Aggressive Bot', color: 'var(--agg)', strategy: 'High-risk momentum trading', data: s.agg, page: 'aggressive.html' },
+    { key: 'mid', name: 'Middle Road Bot', color: 'var(--mid)', strategy: 'Balanced, steady approach', data: s.mid, page: 'middle.html' },
+    { key: 'rand', name: 'Random Bot', color: 'var(--rand)', strategy: 'Random trades (baseline control)', data: s.rand, page: 'random.html' }
   ];
   document.getElementById('botCards').innerHTML = bots.map(b => `
     <div class="bot-card">
@@ -549,6 +551,7 @@ function render(data) {
           <div class="stat-val" style="font-size:12px;color:var(--muted)">${b.data.assets || '(none yet)'}</div>
         </div>
       </div>
+      <a href="${b.page}" style="display:block;margin-top:14px;text-align:center;font-size:12px;color:${b.color};opacity:0.8;text-decoration:none;border-top:1px solid var(--border);padding-top:12px;">View Full Profile →</a>
     </div>
   `).join('');
 

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Bot — Clawbot Trading System</title>
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --bg2: #111118;
+    --bg3: #1a1a24;
+    --border: #2a2a3a;
+    --text: #e8e8f0;
+    --muted: #6b6b80;
+    --bot: #a855f7;
+    --green: #22c55e;
+    --red: #ef4444;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+  nav { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 0 32px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
+  .nav-brand { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 700; color: #f59e0b; letter-spacing: 0.5px; text-decoration: none; }
+  .nav-links { display: flex; gap: 6px; list-style: none; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 13px; padding: 6px 14px; border-radius: 20px; transition: all 0.2s; }
+  .nav-links a:hover { color: var(--text); background: var(--bg3); }
+  .nav-links a.active { color: var(--bot); background: rgba(168,85,247,0.12); }
+  .live-badge { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--green); background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); padding: 4px 10px; border-radius: 20px; }
+  .live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: pulse 1.5s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+  .hero { padding: 56px 32px 48px; max-width: 900px; margin: 0 auto; }
+  .bot-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(168,85,247,0.12); border: 1px solid rgba(168,85,247,0.3); color: var(--bot); padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+  .hero h1 { font-size: clamp(36px, 5vw, 60px); font-weight: 800; line-height: 1.1; margin-bottom: 12px; }
+  .hero h1 span { color: var(--bot); }
+  .hero .tagline { font-size: 18px; color: var(--muted); line-height: 1.6; max-width: 600px; margin-bottom: 40px; }
+
+  .balance-card { background: var(--bg2); border: 2px solid var(--bot); border-radius: 16px; padding: 32px; max-width: 900px; margin: 0 auto 40px; position: relative; overflow: hidden; }
+  .balance-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--bot), #ec4899, #3b82f6); }
+  .balance-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin-bottom: 8px; }
+  .balance-amount { font-size: clamp(40px, 6vw, 72px); font-weight: 800; color: var(--text); font-variant-numeric: tabular-nums; letter-spacing: -1px; line-height: 1; margin-bottom: 8px; }
+  .balance-change { font-size: 16px; font-weight: 600; margin-bottom: 24px; }
+  .balance-meta { display: flex; gap: 32px; flex-wrap: wrap; }
+  .meta-item .meta-lbl { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; }
+  .meta-item .meta-val { font-size: 18px; font-weight: 700; margin-top: 2px; }
+
+  .container { max-width: 900px; margin: 0 auto; padding: 0 32px 80px; }
+
+  .section-title { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+  .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  .personality-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 40px; }
+  .personality-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+  .personality-card .p-icon { font-size: 28px; margin-bottom: 12px; }
+  .personality-card h3 { font-size: 15px; font-weight: 700; color: var(--bot); margin-bottom: 8px; }
+  .personality-card p { font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+  .strategy-box { background: var(--bg2); border: 1px solid var(--border); border-left: 3px solid var(--bot); border-radius: 12px; padding: 28px; margin-bottom: 40px; }
+  .strategy-box h3 { font-size: 16px; font-weight: 700; margin-bottom: 16px; }
+  .strategy-rule { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 14px; }
+  .strategy-rule:last-child { margin-bottom: 0; }
+  .rule-num { background: rgba(168,85,247,0.15); color: var(--bot); font-size: 12px; font-weight: 700; width: 24px; height: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+  .rule-text { font-size: 14px; color: var(--muted); line-height: 1.6; }
+  .rule-text strong { color: var(--text); }
+
+  .trades-box { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 40px; }
+  .trades-header { padding: 16px 20px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+  .trades-header h3 { font-size: 15px; font-weight: 600; }
+  .trade-count { font-size: 12px; color: var(--muted); background: var(--bg3); padding: 3px 10px; border-radius: 10px; }
+  .trades-table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th { text-align: left; padding: 10px 16px; color: var(--muted); font-weight: 500; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  td { padding: 10px 16px; border-bottom: 1px solid rgba(42,42,58,0.5); white-space: nowrap; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(255,255,255,0.02); }
+  .buy { color: var(--green); font-weight: 600; }
+  .sell { color: var(--red); font-weight: 600; }
+  .reason-cell { color: var(--bot); font-style: italic; max-width: 220px; overflow: hidden; text-overflow: ellipsis; font-size: 11px; }
+  .no-trades { text-align: center; padding: 40px; color: var(--muted); }
+
+  /* Fun fact ticker */
+  .fact-bar { background: rgba(168,85,247,0.08); border: 1px solid rgba(168,85,247,0.2); border-radius: 10px; padding: 12px 20px; margin-bottom: 24px; font-size: 13px; color: var(--muted); display: flex; gap: 10px; align-items: center; }
+  .fact-bar .fact-label { color: var(--bot); font-weight: 700; white-space: nowrap; }
+
+  .updated-time { font-size: 11px; color: var(--muted); text-align: right; margin-top: 8px; }
+  footer { border-top: 1px solid var(--border); padding: 24px 32px; text-align: center; color: var(--muted); font-size: 12px; }
+
+  @media (max-width: 600px) {
+    nav { padding: 0 16px; }
+    .hero { padding: 32px 16px 32px; }
+    .container { padding: 0 16px 60px; }
+    .balance-card { padding: 24px 16px; margin-left: 16px; margin-right: 16px; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html">🤖 CLAWBOT</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Dashboard</a></li>
+    <li><a href="aggressive.html">⚡ Aggressive</a></li>
+    <li><a href="middle.html">⚖️ Middle Road</a></li>
+    <li><a href="random.html" class="active">🎲 Random</a></li>
+  </ul>
+  <div class="live-badge">
+    <div class="live-dot"></div>
+    LIVE
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="bot-badge">🎲 Bot Profile</div>
+  <h1>The <span>Random</span> Bot</h1>
+  <p class="tagline">No plan. No logic. Pure chaos. If a coin flip, a horoscope, and a pet hamster had a baby and taught it to trade crypto — this is what you'd get.</p>
+</div>
+
+<div class="balance-card" style="margin: 0 32px 40px;">
+  <div class="balance-label">💰 Live Portfolio Balance</div>
+  <div class="balance-amount" id="balanceAmt">Loading...</div>
+  <div class="balance-change" id="balanceChange"></div>
+  <div class="balance-meta">
+    <div class="meta-item">
+      <div class="meta-lbl">Total Trades</div>
+      <div class="meta-val" id="totalTrades">—</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-lbl">Buys</div>
+      <div class="meta-val" id="totalBuys" style="color:var(--green)">—</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-lbl">Sells</div>
+      <div class="meta-val" id="totalSells" style="color:var(--red)">—</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-lbl">Assets Traded</div>
+      <div class="meta-val" id="assets" style="font-size:14px;color:var(--muted)">—</div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="section-title">Personality</div>
+  <div class="personality-grid">
+    <div class="personality-card">
+      <div class="p-icon">🎲</div>
+      <h3>Pure Chaos Agent</h3>
+      <p>Random doesn't think. Random doesn't analyze. Random flips a metaphorical coin and executes the result without hesitation. Buy or sell? Yes. Which asset? Whichever one it landed on. How much? However much it feels like.</p>
+    </div>
+    <div class="personality-card">
+      <div class="p-icon">🔬</div>
+      <h3>The Scientific Control</h3>
+      <p>In any proper experiment, you need a control group. Random Bot IS the control group. Its job is to prove whether Aggressive and Middle Road are actually skilled — or if they'd do just as well making decisions at random.</p>
+    </div>
+    <div class="personality-card">
+      <div class="p-icon">🌀</div>
+      <h3>Energetically Chaotic</h3>
+      <p>Random trades constantly, at all hours, with no regard for market conditions, time of day, or whether any sane person would make that trade. Its reasons include "vibe check: passed," "my pet hamster picked this," and "Mercury is in retrograde."</p>
+    </div>
+    <div class="personality-card">
+      <div class="p-icon">🏆</div>
+      <h3>The Ultimate Benchmark</h3>
+      <p>If Random Bot outperforms the other two, it's a devastating indictment of algorithmic trading. If it loses, the other bots can claim their strategy adds value. Either way, Random Bot's existence is philosophically important.</p>
+    </div>
+  </div>
+
+  <div class="section-title">Why It Makes Trades</div>
+  <div class="strategy-box">
+    <h3>🎲 Trading "Logic" & Decision "Rules"</h3>
+    <div class="strategy-rule">
+      <div class="rule-num">1</div>
+      <div class="rule-text"><strong>Coin flip decision:</strong> Buy or sell? The algorithm literally generates a random number. Above 0.5? Buy. Below 0.5? Sell. That's it. No market analysis. No technical indicators. Just pure probability.</div>
+    </div>
+    <div class="strategy-rule">
+      <div class="rule-num">2</div>
+      <div class="rule-text"><strong>Random asset selection:</strong> BTC, ETH, or SOL? Another random number picks the asset. Sometimes it buys BTC three times in a row. Sometimes it sells ETH it doesn't own. Chaos doesn't discriminate.</div>
+    </div>
+    <div class="strategy-rule">
+      <div class="rule-num">3</div>
+      <div class="rule-text"><strong>Random position sizing:</strong> How much to trade? A random percentage of the portfolio, somewhere between "a tiny bit" and "a genuinely alarming chunk." The randomness is the feature, not a bug.</div>
+    </div>
+    <div class="strategy-rule">
+      <div class="rule-num">4</div>
+      <div class="rule-text"><strong>Always-on crypto trading:</strong> Random operates 24/7 in crypto markets. Weekends, 3am, during market crashes, during rallies — it doesn't care. When the timer goes off, it trades. No days off for Random Bot.</div>
+    </div>
+    <div class="strategy-rule">
+      <div class="rule-num">5</div>
+      <div class="rule-text"><strong>Hilariously justified:</strong> Every trade comes with a "reason" — but these reasons are randomly selected from a list of absurd justifications. The data will show you exactly how Random Bot reasoned its way into or out of every position.</div>
+    </div>
+  </div>
+
+  <div class="section-title">Trade History</div>
+  <div id="factBarSlot"></div>
+  <div class="trades-box">
+    <div class="trades-header">
+      <h3>🎲 All Random Bot Trades</h3>
+      <span class="trade-count" id="tradeCount">Loading...</span>
+    </div>
+    <div class="trades-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Symbol</th>
+            <th>Action</th>
+            <th>Qty</th>
+            <th>Price</th>
+            <th>Value</th>
+            <th>Balance After</th>
+            <th>Reason Given</th>
+          </tr>
+        </thead>
+        <tbody id="tradeRows">
+          <tr><td colspan="8" class="no-trades">Loading trades...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="updated-time" id="updatedTime"></div>
+
+</div>
+
+<footer>
+  <strong>Clawbot Trading System</strong> — Random Bot · Updates every hour · <a href="index.html" style="color:var(--muted)">← Back to Dashboard</a>
+</footer>
+
+<script>
+const START = 1_000_000;
+const BOT_NAMES = ['random bot', 'random'];
+
+function fmt(n) {
+  return '$' + Number(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+
+function isThisBot(name) {
+  const l = (name || '').toLowerCase();
+  return BOT_NAMES.some(b => l.includes(b));
+}
+
+function render(data) {
+  const s = data.summary.rand;
+
+  document.getElementById('balanceAmt').textContent = fmt(s.balance);
+  const pct = (s.balance - START) / START * 100;
+  const changeEl = document.getElementById('balanceChange');
+  changeEl.textContent = (pct >= 0 ? '+' : '') + pct.toFixed(2) + '% from $1,000,000 starting balance';
+  changeEl.style.color = pct >= 0 ? 'var(--green)' : 'var(--red)';
+
+  document.getElementById('totalTrades').textContent = s.trades;
+  document.getElementById('totalBuys').textContent = s.buys;
+  document.getElementById('totalSells').textContent = s.sells;
+  document.getElementById('assets').textContent = s.assets || '(none yet)';
+
+  const trades = data.trades.filter(t => isThisBot(t.bot));
+
+  // Funny fact bar
+  const reasons = trades.map(t => t.reason).filter(Boolean);
+  const uniqueReasons = [...new Set(reasons)];
+  if (uniqueReasons.length > 0) {
+    const pick = uniqueReasons[Math.floor(Math.random() * uniqueReasons.length)];
+    document.getElementById('factBarSlot').innerHTML = `
+      <div class="fact-bar">
+        <span class="fact-label">🎲 Latest Excuse:</span>
+        <span>"${pick}"</span>
+      </div>
+    `;
+  }
+
+  document.getElementById('tradeCount').textContent = trades.length + ' trades';
+  document.getElementById('tradeRows').innerHTML = trades.length
+    ? trades.map(t => `
+      <tr>
+        <td style="color:var(--muted)">${t.ts.replace('T',' ')}</td>
+        <td style="font-weight:600;color:var(--bot)">${t.symbol}</td>
+        <td class="${t.action === 'BUY' ? 'buy' : 'sell'}">${t.action}</td>
+        <td>${Number(t.qty).toFixed(4)}</td>
+        <td>${fmt(t.price)}</td>
+        <td style="font-weight:600">${fmt(t.value)}</td>
+        <td>${fmt(t.balance)}</td>
+        <td class="reason-cell" title="${t.reason || ''}">${t.reason || '—'}</td>
+      </tr>
+    `).join('')
+    : '<tr><td colspan="8" class="no-trades">No trades yet — which itself is random.</td></tr>';
+
+  if (data.generated) {
+    document.getElementById('updatedTime').textContent = 'Last updated: ' + data.generated.replace('T', ' ');
+  }
+}
+
+async function loadData() {
+  try {
+    const res = await fetch('data.json?t=' + Date.now());
+    const data = await res.json();
+    render(data);
+  } catch (e) {
+    document.getElementById('balanceAmt').textContent = 'Unavailable';
+  }
+}
+
+loadData();
+setInterval(loadData, 3_600_000);
+</script>
+</body>
+</html>
