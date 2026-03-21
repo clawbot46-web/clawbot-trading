@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clawbot Trading System</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --bg2: #111118;
+    --bg3: #1a1a24;
+    --border: #2a2a3a;
+    --text: #e8e8f0;
+    --muted: #6b6b80;
+    --agg: #f59e0b;
+    --mid: #3b82f6;
+    --rand: #a855f7;
+    --green: #22c55e;
+    --red: #ef4444;
+    --accent: #f59e0b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* NAV */
+  nav {
+    background: var(--bg2);
+    border-bottom: 1px solid var(--border);
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.5px;
+  }
+  .nav-brand .robot { font-size: 22px; }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+  .nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--text); }
+  .live-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--green);
+    background: rgba(34,197,94,0.1);
+    border: 1px solid rgba(34,197,94,0.3);
+    padding: 4px 10px;
+    border-radius: 20px;
+  }
+  .live-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+    animation: pulse 1.5s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  /* HERO */
+  .hero {
+    padding: 64px 32px 48px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 800;
+    line-height: 1.1;
+    background: linear-gradient(135deg, #f59e0b, #ef4444, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 16px;
+  }
+  .hero p {
+    font-size: 18px;
+    color: var(--muted);
+    max-width: 600px;
+    margin: 0 auto 32px;
+    line-height: 1.6;
+  }
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .hero-stat { text-align: center; }
+  .hero-stat .val {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .hero-stat .lbl {
+    font-size: 12px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 2px;
+  }
+
+  /* MAIN CONTENT */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px 80px;
+  }
+
+  /* SECTION TITLES */
+  .section-title {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--muted);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* BOT CARDS */
+  .bot-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .bot-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .bot-card:hover { border-color: #444; }
+  .bot-card .accent-bar {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .bot-card .bot-name {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 4px;
+  }
+  .bot-card .bot-strategy {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+  .bot-card .balance {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .bot-card .change {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  .bot-card .bot-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+  }
+  .bot-card .stat-item .stat-lbl {
+    font-size: 10px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+  .bot-card .stat-item .stat-val {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 2px;
+  }
+
+  /* CHART */
+  .chart-box {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+  .chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .chart-title {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .chart-legend {
+    display: flex;
+    gap: 16px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .legend-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+  }
+
+  /* ABOUT BOTS */
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .about-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .about-card .about-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+  .about-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .about-card p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+  .about-card .tag {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* TRADES TABLE */
+  .trades-box {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
+  .trades-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .trades-header h3 { font-size: 15px; font-weight: 600; }
+  .trade-count {
+    font-size: 12px;
+    color: var(--muted);
+    background: var(--bg3);
+    padding: 3px 10px;
+    border-radius: 10px;
+  }
+  .trades-table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th {
+    text-align: left;
+    padding: 10px 16px;
+    color: var(--muted);
+    font-weight: 500;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+  td {
+    padding: 10px 16px;
+    border-bottom: 1px solid rgba(42,42,58,0.5);
+    white-space: nowrap;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(255,255,255,0.02); }
+  .buy { color: var(--green); font-weight: 600; }
+  .sell { color: var(--red); font-weight: 600; }
+  .bot-agg { color: var(--agg); }
+  .bot-mid { color: var(--mid); }
+  .bot-rand { color: var(--rand); }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 24px 32px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+  }
+  .updated-time {
+    font-size: 11px;
+    color: var(--muted);
+    text-align: right;
+    margin-top: 8px;
+  }
+
+  /* LOADING STATE */
+  .loading { text-align: center; padding: 60px; color: var(--muted); }
+
+  @media (max-width: 600px) {
+    nav { padding: 0 16px; }
+    .hero { padding: 40px 16px 32px; }
+    .container { padding: 0 16px 60px; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">
+    <span class="robot">🤖</span>
+    CLAWBOT
+  </div>
+  <ul class="nav-links">
+    <li><a href="#dashboard">Dashboard</a></li>
+    <li><a href="#bots">The Bots</a></li>
+    <li><a href="#trades">Trades</a></li>
+  </ul>
+  <div class="live-badge">
+    <div class="live-dot"></div>
+    LIVE
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>Clawbot Trading System</h1>
+  <p>Three autonomous trading bots competing in real markets. Track their performance, compare strategies, and see who comes out on top.</p>
+  <div class="hero-stats" id="heroStats">
+    <div class="loading">Loading live data...</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div id="dashboard">
+    <div class="section-title">Live Balances</div>
+    <div class="bot-cards" id="botCards">
+      <div class="loading">Loading...</div>
+    </div>
+  </div>
+
+  <div class="chart-box">
+    <div class="chart-header">
+      <span class="chart-title">Portfolio Value Over Time</span>
+      <div class="chart-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:var(--agg)"></div>Aggressive</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--mid)"></div>Middle Road</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--rand)"></div>Random Bot</div>
+      </div>
+    </div>
+    <canvas id="chart" height="120"></canvas>
+  </div>
+
+  <div id="bots">
+    <div class="section-title">About the Bots</div>
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="about-icon">⚡</div>
+        <h3 style="color:var(--agg)">Aggressive Bot</h3>
+        <p>Makes bold, high-risk trades with larger position sizes. Chases momentum and isn't afraid of volatility. High upside, high risk — this bot goes for broke.</p>
+        <span class="tag" style="background:rgba(245,158,11,0.15);color:var(--agg)">High Risk · High Reward</span>
+      </div>
+      <div class="about-card">
+        <div class="about-icon">⚖️</div>
+        <h3 style="color:var(--mid)">Middle of the Road Bot</h3>
+        <p>Balanced and methodical. Takes moderate positions with careful risk management. Aims for steady gains over time without overextending.</p>
+        <span class="tag" style="background:rgba(59,130,246,0.15);color:var(--mid)">Balanced · Steady</span>
+      </div>
+      <div class="about-card">
+        <div class="about-icon">🎲</div>
+        <h3 style="color:var(--rand)">Random Bot</h3>
+        <p>Trades randomly — no strategy, no analysis, just pure chance. Serves as a baseline: can the other bots beat random luck over time?</p>
+        <span class="tag" style="background:rgba(168,85,247,0.15);color:var(--rand)">Control · Baseline</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="trades">
+    <div class="section-title">Recent Trades</div>
+    <div class="trades-box">
+      <div class="trades-header">
+        <h3>Trade Log</h3>
+        <span class="trade-count" id="tradeCount">– trades</span>
+      </div>
+      <div class="trades-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Bot</th>
+              <th>Symbol</th>
+              <th>Action</th>
+              <th>Qty</th>
+              <th>Price</th>
+              <th>Value</th>
+              <th>Balance After</th>
+            </tr>
+          </thead>
+          <tbody id="tradeRows">
+            <tr><td colspan="8" class="loading">Loading trades...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="updated-time" id="updatedTime"></div>
+  </div>
+
+</div>
+
+<footer>
+  <strong>Clawbot Trading System</strong> — Built with Alpaca API · Updates every hour during market hours
+</footer>
+
+<script>
+const START = 1_000_000;
+
+function fmt(n) {
+  return '$' + Number(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+function fmtPct(n) {
+  const p = (n - START) / START * 100;
+  return (p >= 0 ? '+' : '') + p.toFixed(2) + '%';
+}
+function clr(n) {
+  return n >= START ? 'var(--green)' : 'var(--red)';
+}
+function botClass(name) {
+  if (name.toLowerCase().includes('aggressive')) return 'bot-agg';
+  if (name.toLowerCase().includes('middle')) return 'bot-mid';
+  return 'bot-rand';
+}
+function shortBot(name) {
+  if (name.toLowerCase().includes('aggressive')) return 'Aggressive';
+  if (name.toLowerCase().includes('middle')) return 'Middle Road';
+  return 'Random';
+}
+
+let chart = null;
+
+function render(data) {
+  const s = data.summary;
+  const portfolio = data.portfolio;
+
+  // Hero stats
+  const totalTrades = s.agg.trades + s.mid.trades + s.rand.trades;
+  const bestBal = Math.max(s.agg.balance, s.mid.balance, s.rand.balance);
+  document.getElementById('heroStats').innerHTML = `
+    <div class="hero-stat">
+      <div class="val">${fmt(s.agg.balance)}</div>
+      <div class="lbl">Aggressive Balance</div>
+    </div>
+    <div class="hero-stat">
+      <div class="val">${fmt(s.mid.balance)}</div>
+      <div class="lbl">Middle Road Balance</div>
+    </div>
+    <div class="hero-stat">
+      <div class="val">${fmt(s.rand.balance)}</div>
+      <div class="lbl">Random Bot Balance</div>
+    </div>
+    <div class="hero-stat">
+      <div class="val" style="color:var(--accent)">${totalTrades}</div>
+      <div class="lbl">Total Trades</div>
+    </div>
+  `;
+
+  // Bot cards
+  const bots = [
+    { key: 'agg', name: 'Aggressive Bot', color: 'var(--agg)', strategy: 'High-risk momentum trading', data: s.agg },
+    { key: 'mid', name: 'Middle Road Bot', color: 'var(--mid)', strategy: 'Balanced, steady approach', data: s.mid },
+    { key: 'rand', name: 'Random Bot', color: 'var(--rand)', strategy: 'Random trades (baseline control)', data: s.rand }
+  ];
+  document.getElementById('botCards').innerHTML = bots.map(b => `
+    <div class="bot-card">
+      <div class="accent-bar" style="background:${b.color}"></div>
+      <div class="bot-name" style="color:${b.color}">${b.name}</div>
+      <div class="bot-strategy">${b.strategy}</div>
+      <div class="balance">${fmt(b.data.balance)}</div>
+      <div class="change" style="color:${clr(b.data.balance)}">${fmtPct(b.data.balance)} from $1,000,000</div>
+      <div class="bot-stats">
+        <div class="stat-item">
+          <div class="stat-lbl">Total Trades</div>
+          <div class="stat-val">${b.data.trades}</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-lbl">Buys / Sells</div>
+          <div class="stat-val">${b.data.buys} / ${b.data.sells}</div>
+        </div>
+        <div class="stat-item" style="grid-column:1/-1">
+          <div class="stat-lbl">Assets Traded</div>
+          <div class="stat-val" style="font-size:12px;color:var(--muted)">${b.data.assets || '(none yet)'}</div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  // Chart
+  const labels = portfolio.map(p => p.ts);
+  const ctx = document.getElementById('chart').getContext('2d');
+  if (chart) chart.destroy();
+  chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        { label: 'Aggressive', data: portfolio.map(p => p.agg), borderColor: '#f59e0b', backgroundColor: 'rgba(245,158,11,0.08)', tension: 0.3, pointRadius: 2, borderWidth: 2 },
+        { label: 'Middle Road', data: portfolio.map(p => p.mid), borderColor: '#3b82f6', backgroundColor: 'rgba(59,130,246,0.08)', tension: 0.3, pointRadius: 2, borderWidth: 2 },
+        { label: 'Random Bot', data: portfolio.map(p => p.rand), borderColor: '#a855f7', backgroundColor: 'rgba(168,85,247,0.08)', tension: 0.3, pointRadius: 2, borderWidth: 2 }
+      ]
+    },
+    options: {
+      responsive: true,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: '#1a1a24',
+          borderColor: '#2a2a3a',
+          borderWidth: 1,
+          callbacks: {
+            label: ctx => ` ${ctx.dataset.label}: ${fmt(ctx.raw)}`
+          }
+        }
+      },
+      scales: {
+        x: {
+          ticks: { color: '#6b6b80', maxTicksLimit: 10, font: { size: 10 } },
+          grid: { color: 'rgba(42,42,58,0.5)' }
+        },
+        y: {
+          ticks: {
+            color: '#6b6b80',
+            font: { size: 10 },
+            callback: v => '$' + (v/1000).toFixed(0) + 'K'
+          },
+          grid: { color: 'rgba(42,42,58,0.5)' }
+        }
+      }
+    }
+  });
+
+  // Trades table
+  const trades = data.trades.slice(0, 50);
+  document.getElementById('tradeCount').textContent = data.trades.length + ' trades';
+  document.getElementById('tradeRows').innerHTML = trades.length
+    ? trades.map(t => `
+      <tr>
+        <td style="color:var(--muted)">${t.ts.replace('T',' ').substring(0,16)}</td>
+        <td class="${botClass(t.bot)}">${shortBot(t.bot)}</td>
+        <td style="font-weight:600">${t.symbol}</td>
+        <td class="${t.action === 'BUY' ? 'buy' : 'sell'}">${t.action}</td>
+        <td>${Number(t.qty).toFixed(4)}</td>
+        <td>${fmt(t.price)}</td>
+        <td>${fmt(t.value)}</td>
+        <td>${fmt(t.balance)}</td>
+      </tr>
+    `).join('')
+    : '<tr><td colspan="8" style="text-align:center;color:var(--muted);padding:30px">No trades yet</td></tr>';
+
+  // Updated time
+  if (data.generated) {
+    document.getElementById('updatedTime').textContent = 'Last updated: ' + data.generated.replace('T', ' ');
+  }
+}
+
+// Load data
+async function loadData() {
+  try {
+    const res = await fetch('data.json?t=' + Date.now());
+    const data = await res.json();
+    render(data);
+  } catch (e) {
+    console.error('Failed to load data:', e);
+    document.getElementById('heroStats').innerHTML = '<div style="color:var(--muted)">Data unavailable</div>';
+  }
+}
+
+loadData();
+// Refresh every hour
+setInterval(loadData, 3_600_000);
+</script>
+</body>
+</html>
