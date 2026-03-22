@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-21T16:15:16",
+  "generated": "2026-03-21T22:22:40",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -189,9 +189,139 @@
       "mid": 1000000.0,
       "rand": 993247.42,
       "spy": 0.0
+    },
+    {
+      "ts": "4:49PM",
+      "agg": 998597.32,
+      "mid": 1000000.0,
+      "rand": 994492.19,
+      "spy": 0.0
+    },
+    {
+      "ts": "5:50PM",
+      "agg": 998046.54,
+      "mid": 1000000.0,
+      "rand": 994051.77,
+      "spy": 0.0
+    },
+    {
+      "ts": "6:50PM",
+      "agg": 997104.02,
+      "mid": 1000000.0,
+      "rand": 991285.37,
+      "spy": 0.0
+    },
+    {
+      "ts": "7:50PM",
+      "agg": 992824.11,
+      "mid": 1000000.0,
+      "rand": 987279.39,
+      "spy": 0.0
+    },
+    {
+      "ts": "8:50PM",
+      "agg": 985704.33,
+      "mid": 1000000.0,
+      "rand": 973281.67,
+      "spy": 0.0
+    },
+    {
+      "ts": "9:50PM",
+      "agg": 985379.46,
+      "mid": 1000000.0,
+      "rand": 973356.4,
+      "spy": 0.0
     }
   ],
   "trades": [
+    {
+      "ts": "2026-03-21 21:50:46",
+      "bot": "Random Bot",
+      "symbol": "ETH/USD",
+      "action": "BUY",
+      "qty": 9.902463,
+      "price": 2085.9382,
+      "value": 20655.93,
+      "reason": "Totally random, no regrets (crypto edition)",
+      "balance": 973356.4
+    },
+    {
+      "ts": "2026-03-21 19:50:23",
+      "bot": "Random Bot",
+      "symbol": "ETH/USD",
+      "action": "BUY",
+      "qty": 11.441164,
+      "price": 2143.8271,
+      "value": 24527.88,
+      "reason": "Vibe check: passed (crypto edition)",
+      "balance": 987279.39
+    },
+    {
+      "ts": "2026-03-21 19:50:22",
+      "bot": "Random Bot",
+      "symbol": "ETH/USD",
+      "action": "BUY",
+      "qty": 13.808347,
+      "price": 2143.8271,
+      "value": 29602.71,
+      "reason": "Throwing darts at a ticker board (crypto edition)",
+      "balance": 987205.4
+    },
+    {
+      "ts": "2026-03-21 18:50:14",
+      "bot": "Random Bot",
+      "symbol": "SOL/USD",
+      "action": "BUY",
+      "qty": 116.502471,
+      "price": 89.9384,
+      "value": 10478.05,
+      "reason": "My pet hamster picked this one (crypto edition)",
+      "balance": 991285.37
+    },
+    {
+      "ts": "2026-03-21 18:50:13",
+      "bot": "Random Bot",
+      "symbol": "BTC/USD",
+      "action": "BUY",
+      "qty": 0.599897,
+      "price": 70295.8438,
+      "value": 42170.28,
+      "reason": "Chart looked like a rocket (crypto edition)",
+      "balance": 991339.85
+    },
+    {
+      "ts": "2026-03-21 18:50:11",
+      "bot": "Random Bot",
+      "symbol": "BTC/USD",
+      "action": "BUY",
+      "qty": 0.555665,
+      "price": 70295.8438,
+      "value": 39060.95,
+      "reason": "Throwing darts at a ticker board (crypto edition)",
+      "balance": 991495.5
+    },
+    {
+      "ts": "2026-03-21 17:50:03",
+      "bot": "Random Bot",
+      "symbol": "SOL/USD",
+      "action": "BUY",
+      "qty": 389.376976,
+      "price": 90.0274,
+      "value": 35054.58,
+      "reason": "Chaos theory in action (crypto edition)",
+      "balance": 994051.77
+    },
+    {
+      "ts": "2026-03-21 16:49:55",
+      "bot": "Random Bot",
+      "symbol": "ETH/USD",
+      "action": "BUY",
+      "qty": 8.428804,
+      "price": 2155.4609,
+      "value": 18167.96,
+      "reason": "I heard someone mention it at the gym (crypto edition)",
+      "balance": 994492.19
+    },
     {
       "ts": "2026-03-21 15:49:43",
       "bot": "Random Bot",
@@ -701,7 +831,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 997720.15,
+      "balance": 985379.46,
       "trades": 6,
       "buys": 6,
       "sells": 0,
@@ -715,9 +845,9 @@
       "assets": "(none)"
     },
     "rand": {
-      "balance": 993247.42,
-      "trades": 40,
-      "buys": 36,
+      "balance": 973356.4,
+      "trades": 48,
+      "buys": 44,
       "sells": 4,
       "assets": "BTC, ETH, SOL"
     }
