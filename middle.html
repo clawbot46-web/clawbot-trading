@@ -89,6 +89,18 @@
   .waiting-box h3 { font-size: 18px; font-weight: 700; color: var(--bot); margin-bottom: 10px; }
   .waiting-box p { font-size: 14px; color: var(--muted); line-height: 1.6; max-width: 480px; margin: 0 auto; }
 
+  /* HOLDINGS */
+  .holdings-box { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 40px; }
+  .holdings-header { padding: 16px 20px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+  .holdings-header h3 { font-size: 15px; font-weight: 600; }
+  .holdings-total { font-size: 13px; color: var(--green); font-weight: 600; background: rgba(34,197,94,0.1); padding: 3px 10px; border-radius: 10px; }
+  .holdings-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .holdings-table th { padding: 10px 16px; text-align: left; color: var(--muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid var(--border); }
+  .holdings-table td { padding: 12px 16px; border-bottom: 1px solid var(--border); }
+  .holdings-table tr:last-child td { border-bottom: none; }
+  .holdings-table tr:hover td { background: var(--bg3); }
+  .no-holdings { text-align: center; padding: 32px; color: var(--muted); font-size: 13px; }
+
   .trades-box { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 40px; }
   .trades-header { padding: 16px 20px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
   .trades-header h3 { font-size: 15px; font-weight: 600; }
@@ -278,6 +290,33 @@
     </div>
   </div>
 
+  <div class="section-title">Assets Held</div>
+  <div class="holdings-box">
+    <div class="holdings-header">
+      <h3>📦 Current Positions</h3>
+      <span class="holdings-total" id="heldValue">$0.00 in assets</span>
+    </div>
+    <div style="overflow-x:auto">
+      <table class="holdings-table">
+        <thead><tr>
+          <th>Asset</th>
+          <th>Quantity Held</th>
+          <th>Last Price</th>
+          <th>Current Value</th>
+        </tr></thead>
+        <tbody id="holdingsRows"><tr><td colspan="4" class="no-holdings">Loading…</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="section-title">Assets Traded</div>
+  <div class="holdings-box" style="margin-bottom:40px">
+    <div class="holdings-header">
+      <h3>🔄 All Assets Traded</h3>
+      <span class="holdings-total" id="assetsTraded" style="color:var(--bot);background:rgba(245,158,11,0.1)"></span>
+    </div>
+  </div>
+
   <div class="section-title">Trade History</div>
   <div id="tradesSection"></div>
   <div class="updated-time" id="updatedTime"></div>
@@ -326,6 +365,27 @@ function render(data) {
   document.getElementById('totalBuys').textContent = s.buys;
   document.getElementById('totalSells').textContent = s.sells;
   document.getElementById('assets').textContent = s.assets || '(none yet)';
+
+  // Assets traded
+  const assetsEl = document.getElementById('assetsTraded');
+  if (assetsEl) assetsEl.textContent = s.assets || '(none yet)';
+
+  // Holdings
+  const holdings = s.holdings || [];
+  const heldValueEl = document.getElementById('heldValue');
+  if (heldValueEl) heldValueEl.textContent = fmt(s.held_value || 0) + ' in assets';
+  const holdingsRows = document.getElementById('holdingsRows');
+  if (holdingsRows) {
+    holdingsRows.innerHTML = holdings.length
+      ? holdings.map(h => `
+        <tr>
+          <td style="font-weight:700;color:var(--bot)">${h.symbol}</td>
+          <td>${Number(h.qty).toLocaleString(undefined,{maximumFractionDigits:6})}</td>
+          <td>${fmt(h.last_price)}</td>
+          <td style="font-weight:600;color:var(--green)">${fmt(h.value)}</td>
+        </tr>`).join('')
+      : '<tr><td colspan="4" class="no-holdings">No positions currently held.</td></tr>';
+  }
 
   const trades = data.trades.filter(t => isThisBot(t.bot));
 
