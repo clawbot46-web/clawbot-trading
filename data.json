@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-21T22:22:40",
+  "generated": "2026-03-22T12:18:20",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -231,9 +231,195 @@
       "mid": 1000000.0,
       "rand": 973356.4,
       "spy": 0.0
+    },
+    {
+      "ts": "10:50PM",
+      "agg": 988231.6,
+      "mid": 1000000.0,
+      "rand": 977780.78,
+      "spy": 0.0
+    },
+    {
+      "ts": "11:51PM",
+      "agg": 989676.34,
+      "mid": 1000000.0,
+      "rand": 982809.2,
+      "spy": 0.0
+    },
+    {
+      "ts": "12:51AM",
+      "agg": 990476.05,
+      "mid": 1000000.0,
+      "rand": 983061.51,
+      "spy": 0.0
+    },
+    {
+      "ts": "1:51AM",
+      "agg": 989166.62,
+      "mid": 1000000.0,
+      "rand": 979474.51,
+      "spy": 0.0
+    },
+    {
+      "ts": "2:51AM",
+      "agg": 988005.94,
+      "mid": 1000000.0,
+      "rand": 978509.22,
+      "spy": 0.0
+    },
+    {
+      "ts": "3:51AM",
+      "agg": 986362.32,
+      "mid": 1000000.0,
+      "rand": 975635.38,
+      "spy": 0.0
+    },
+    {
+      "ts": "4:51AM",
+      "agg": 982883.58,
+      "mid": 1000000.0,
+      "rand": 968990.03,
+      "spy": 0.0
+    },
+    {
+      "ts": "5:51AM",
+      "agg": 983236.42,
+      "mid": 1000000.0,
+      "rand": 969620.46,
+      "spy": 0.0
+    },
+    {
+      "ts": "6:52AM",
+      "agg": 981824.66,
+      "mid": 1000000.0,
+      "rand": 967867.55,
+      "spy": 0.0
+    },
+    {
+      "ts": "7:52AM",
+      "agg": 979975.48,
+      "mid": 1000000.0,
+      "rand": 965366.08,
+      "spy": 0.0
+    },
+    {
+      "ts": "8:52AM",
+      "agg": 981872.71,
+      "mid": 1000000.0,
+      "rand": 967572.85,
+      "spy": 0.0
+    },
+    {
+      "ts": "9:52AM",
+      "agg": 981783.99,
+      "mid": 1000000.0,
+      "rand": 967845.11,
+      "spy": 0.0
+    },
+    {
+      "ts": "10:52AM",
+      "agg": 982571.44,
+      "mid": 1000000.0,
+      "rand": 969165.67,
+      "spy": 0.0
+    },
+    {
+      "ts": "11:52AM",
+      "agg": 982503.27,
+      "mid": 1000000.0,
+      "rand": 969165.72,
+      "spy": 0.0
     }
   ],
   "trades": [
+    {
+      "ts": "2026-03-22 05:51:58",
+      "bot": "Random Bot",
+      "symbol": "ETH/USD",
+      "action": "BUY",
+      "qty": 10.684566,
+      "price": 2085.5049,
+      "value": 22282.72,
+      "reason": "The algorithm whispered this ticker in my ear (crypto edition)",
+      "balance": 969620.46
+    },
+    {
+      "ts": "2026-03-22 04:51:48",
+      "bot": "Random Bot",
+      "symbol": "ETH/USD",
+      "action": "BUY",
+      "qty": 9.725255,
+      "price": 2083.9941,
+      "value": 20267.37,
+      "reason": "Vibe check: passed (crypto edition)",
+      "balance": 968990.03
+    },
+    {
+      "ts": "2026-03-22 02:51:31",
+      "bot": "Random Bot",
+      "symbol": "ETH/USD",
+      "action": "BUY",
+      "qty": 17.826945,
+      "price": 2109.0557,
+      "value": 37598.02,
+      "reason": "The stars aligned (crypto edition)",
+      "balance": 978509.22
+    },
+    {
+      "ts": "2026-03-22 02:51:30",
+      "bot": "Random Bot",
+      "symbol": "BTC/USD",
+      "action": "BUY",
+      "qty": 0.47528,
+      "price": 69165.7344,
+      "value": 32873.11,
+      "reason": "I heard someone mention it at the gym (crypto edition)",
+      "balance": 978614.48
+    },
+    {
+      "ts": "2026-03-22 02:51:28",
+      "bot": "Clawbot Aggressive",
+      "symbol": "SOL/USD",
+      "action": "BUY",
+      "qty": 1120.011249,
+      "price": 88.2761,
+      "value": 98870.19,
+      "reason": "Crypto momentum buy",
+      "balance": 988005.94
+    },
+    {
+      "ts": "2026-03-22 00:51:10",
+      "bot": "Random Bot",
+      "symbol": "SOL/USD",
+      "action": "BUY",
+      "qty": 453.19896,
+      "price": 88.9739,
+      "value": 40322.86,
+      "reason": "Mercury is in retrograde (crypto edition)",
+      "balance": 983061.51
+    },
+    {
+      "ts": "2026-03-22 00:51:08",
+      "bot": "Random Bot",
+      "symbol": "ETH/USD",
+      "action": "BUY",
+      "qty": 7.150199,
+      "price": 2119.3982,
+      "value": 15154.12,
+      "reason": "Throwing darts at a ticker board (crypto edition)",
+      "balance": 983403.43
+    },
+    {
+      "ts": "2026-03-21 23:51:01",
+      "bot": "Random Bot",
+      "symbol": "ETH/USD",
+      "action": "BUY",
+      "qty": 14.800558,
+      "price": 2116.9128,
+      "value": 31331.49,
+      "reason": "I heard someone mention it at the gym (crypto edition)",
+      "balance": 982809.2
+    },
     {
       "ts": "2026-03-21 21:50:46",
       "bot": "Random Bot",
@@ -831,11 +1017,11 @@
   ],
   "summary": {
     "agg": {
-      "balance": 985379.46,
-      "trades": 6,
-      "buys": 6,
+      "balance": 982503.27,
+      "trades": 7,
+      "buys": 7,
       "sells": 0,
-      "assets": "BTC, ETH"
+      "assets": "BTC, ETH, SOL"
     },
     "mid": {
       "balance": 1000000.0,
@@ -845,9 +1031,9 @@
       "assets": "(none)"
     },
     "rand": {
-      "balance": 973356.4,
-      "trades": 48,
-      "buys": 44,
+      "balance": 969165.72,
+      "trades": 55,
+      "buys": 51,
       "sells": 4,
       "assets": "BTC, ETH, SOL"
     }
