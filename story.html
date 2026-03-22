@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Story — Clawbot Trading System</title>
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --bg2: #111118;
+    --bg3: #1a1a24;
+    --border: #2a2a3a;
+    --text: #e8e8f0;
+    --muted: #6b6b80;
+    --gold: #f59e0b;
+    --agg: #f59e0b;
+    --mid: #3b82f6;
+    --rand: #a855f7;
+    --green: #22c55e;
+    --red: #ef4444;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+  nav { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 0 32px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
+  .nav-brand { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 700; color: var(--gold); letter-spacing: 0.5px; text-decoration: none; }
+  .nav-links { display: flex; gap: 6px; list-style: none; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 13px; padding: 6px 14px; border-radius: 20px; transition: all 0.2s; }
+  .nav-links a:hover { color: var(--text); background: var(--bg3); }
+  .nav-links a.active { color: var(--gold); background: rgba(245,158,11,0.12); }
+  .live-badge { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--green); background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); padding: 4px 10px; border-radius: 20px; }
+  .live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: pulse 1.5s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+  /* HERO */
+  .hero { padding: 72px 32px 56px; max-width: 860px; margin: 0 auto; text-align: center; }
+  .story-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.3); color: var(--gold); padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 24px; }
+  .hero h1 { font-size: clamp(40px, 6vw, 72px); font-weight: 800; line-height: 1.05; margin-bottom: 20px; }
+  .hero h1 span { color: var(--gold); }
+  .hero .subtitle { font-size: 18px; color: var(--muted); line-height: 1.7; max-width: 600px; margin: 0 auto 40px; }
+  .stat-strip { display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; padding: 28px 32px; background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 16px; }
+  .stat-item { text-align: center; }
+  .stat-num { font-size: 32px; font-weight: 800; color: var(--gold); font-variant-numeric: tabular-nums; line-height: 1; }
+  .stat-lbl { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.8px; }
+
+  /* TIMELINE */
+  .timeline-wrap { max-width: 860px; margin: 0 auto; padding: 48px 32px 80px; }
+  .timeline { position: relative; }
+  .timeline::before { content: ''; position: absolute; left: 28px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, var(--gold), var(--mid), var(--rand), transparent); opacity: 0.3; }
+
+  .day-block { margin-bottom: 64px; position: relative; }
+  .day-header { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+  .day-dot { width: 58px; height: 58px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; border: 2px solid; position: relative; z-index: 1; }
+  .day-dot.sat { background: rgba(245,158,11,0.12); border-color: rgba(245,158,11,0.4); }
+  .day-dot.sun { background: rgba(59,130,246,0.12); border-color: rgba(59,130,246,0.4); }
+  .day-dot.wed { background: rgba(239,68,68,0.12); border-color: rgba(239,68,68,0.4); }
+  .day-dot.fri { background: rgba(34,197,94,0.12); border-color: rgba(34,197,94,0.4); }
+  .day-dot.sat2 { background: rgba(168,85,247,0.12); border-color: rgba(168,85,247,0.4); }
+  .day-label h2 { font-size: 22px; font-weight: 800; }
+  .day-label .date-tag { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .day-label .day-summary { font-size: 13px; color: var(--muted); margin-top: 4px; }
+
+  /* EVENT CARDS */
+  .events { margin-left: 74px; display: flex; flex-direction: column; gap: 14px; }
+  .event { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; position: relative; overflow: hidden; }
+  .event::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; }
+  .event.success::before { background: var(--green); }
+  .event.struggle::before { background: var(--red); }
+  .event.neutral::before { background: var(--border); }
+  .event.milestone::before { background: var(--gold); }
+  .event.disaster::before { background: #ef4444; }
+  .event.discovery::before { background: var(--mid); }
+  .event.epic::before { background: linear-gradient(to bottom, var(--gold), var(--rand)); }
+  .event-header { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 8px; }
+  .event-icon { font-size: 20px; flex-shrink: 0; line-height: 1.4; }
+  .event-title { font-size: 15px; font-weight: 700; color: var(--text); line-height: 1.3; }
+  .event-body { font-size: 13px; color: var(--muted); line-height: 1.75; margin-left: 32px; }
+  .event-body strong { color: var(--text); }
+  .event-tag { display: inline-block; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 2px 8px; border-radius: 6px; margin-bottom: 8px; margin-left: 32px; }
+  .tag-win { background: rgba(34,197,94,0.12); color: var(--green); }
+  .tag-loss { background: rgba(239,68,68,0.12); color: var(--red); }
+  .tag-grind { background: rgba(107,107,128,0.15); color: var(--muted); }
+  .tag-big { background: rgba(245,158,11,0.12); color: var(--gold); }
+
+  /* QUOTE BLOCK */
+  .quote-block { background: var(--bg2); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 12px; padding: 28px 32px; max-width: 860px; margin: 0 auto 48px; }
+  .quote-text { font-size: 18px; font-style: italic; color: var(--text); line-height: 1.7; margin-bottom: 12px; }
+  .quote-attr { font-size: 13px; color: var(--muted); }
+
+  /* WHAT WAS BUILT */
+  .built-section { max-width: 860px; margin: 0 auto; padding: 0 32px 48px; }
+  .built-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 20px; }
+  .built-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 22px; }
+  .built-icon { font-size: 28px; margin-bottom: 10px; }
+  .built-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+  .built-card p { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+  .section-title { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+  .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  footer { border-top: 1px solid var(--border); padding: 24px 32px; text-align: center; color: var(--muted); font-size: 12px; }
+
+  @media (max-width: 600px) {
+    nav { padding: 0 16px; }
+    .hero { padding: 40px 16px 40px; }
+    .timeline-wrap { padding: 32px 16px 60px; }
+    .built-section { padding: 0 16px 48px; }
+    .timeline::before { left: 22px; }
+    .day-dot { width: 46px; height: 46px; font-size: 18px; }
+    .day-label h2 { font-size: 18px; }
+    .events { margin-left: 60px; }
+    .stat-strip { gap: 24px; padding: 20px; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html">🤖 CLAWBOT</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Dashboard</a></li>
+    <li><a href="aggressive.html">⚡ Aggressive</a></li>
+    <li><a href="middle.html">⚖️ Middle Road</a></li>
+    <li><a href="random.html">🎲 Random</a></li>
+    <li><a href="story.html" class="active">📖 Our Story</a></li>
+  </ul>
+  <div class="live-badge">
+    <div class="live-dot"></div>
+    LIVE
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="story-badge">📖 The Origin Story</div>
+  <h1>From Zero to<br><span>Trading Bots</span></h1>
+  <p class="subtitle">What started as an experiment with an AI assistant on a Saturday afternoon turned into a fully automated trading system with three competing bots and a live public dashboard — all in under three weeks.</p>
+
+  <div class="stat-strip">
+    <div class="stat-item">
+      <div class="stat-num">14</div>
+      <div class="stat-lbl">Days to Build</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">3</div>
+      <div class="stat-lbl">Trading Bots</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">$3M</div>
+      <div class="stat-lbl">Paper Money Deployed</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">30</div>
+      <div class="stat-lbl">Day Challenge</div>
+    </div>
+  </div>
+</div>
+
+<!-- TIMELINE -->
+<div class="timeline-wrap">
+  <div class="timeline">
+
+    <!-- DAY 1 — MARCH 7 -->
+    <div class="day-block">
+      <div class="day-header">
+        <div class="day-dot sat">🐧</div>
+        <div class="day-label">
+          <div class="date-tag">Day 1 — Saturday, March 7, 2026</div>
+          <h2>The First Day (The Hard One)</h2>
+          <div class="day-summary">Installing Ubuntu, breaking things, fixing things, breaking them again.</div>
+        </div>
+      </div>
+      <div class="events">
+
+        <div class="event neutral">
+          <div class="event-header">
+            <div class="event-icon">🐧</div>
+            <div class="event-title">Installing Ubuntu — One Hour of Real Work</div>
+          </div>
+          <div class="event-body">
+            It started with a decision: build something serious. The first step was getting a proper Linux environment set up. <strong>Ubuntu took about an hour to install</strong> — partitioning, formatting, configuring. Not glamorous, but every big project starts with something boring.
+          </div>
+        </div>
+
+        <div class="event struggle">
+          <span class="event-tag tag-loss">Failed Attempt</span>
+          <div class="event-header">
+            <div class="event-icon">💀</div>
+            <div class="event-title">OpenClaw in Terminal Refuses to Cooperate</div>
+          </div>
+          <div class="event-body">
+            The plan was to install OpenClaw — an AI assistant tool — directly through the Linux terminal. It kept failing. Dependencies were wrong, paths were broken, error messages multiplied. Every fix created a new problem. The terminal was not cooperating.
+          </div>
+        </div>
+
+        <div class="event neutral">
+          <div class="event-header">
+            <div class="event-icon">🖥️</div>
+            <div class="event-title">Setting Up Remote Desktop Access</div>
+          </div>
+          <div class="event-body">
+            If the terminal wasn't going to play nice, maybe approaching it from a different angle would help. <strong>Remote desktop was installed</strong> so the machine could be controlled from a PC — a more comfortable environment for debugging the installation issues.
+          </div>
+        </div>
+
+        <div class="event success">
+          <span class="event-tag tag-win">Progress</span>
+          <div class="event-header">
+            <div class="event-icon">🔑</div>
+            <div class="event-title">Securing a Free API Key</div>
+          </div>
+          <div class="event-body">
+            With the remote setup in place, it was time to get access to OpenClaw's API. <strong>A free API key was obtained</strong> — the credential that would let the system actually authenticate and run. Small win, but an important one.
+          </div>
+        </div>
+
+        <div class="event success">
+          <span class="event-tag tag-win">It Works (Sort Of)</span>
+          <div class="event-header">
+            <div class="event-icon">🌐</div>
+            <div class="event-title">OpenClaw Website Is Up — Celebrating Too Early</div>
+          </div>
+          <div class="event-body">
+            After hours of grinding, OpenClaw finally seemed to be working. The web interface loaded. Things looked promising. <strong>The website was running.</strong> This felt like a breakthrough moment — it wasn't. But the optimism was real and completely understandable.
+          </div>
+        </div>
+
+        <div class="event disaster">
+          <span class="event-tag tag-loss">6 Hours Lost</span>
+          <div class="event-header">
+            <div class="event-icon">🗑️</div>
+            <div class="event-title">The Corrupted File Discovery — The Biggest Waste of the Project</div>
+          </div>
+          <div class="event-body">
+            Six hours of debugging, reinstalling, trying different configurations — and the real culprit finally revealed itself: <strong>the original OpenClaw installation file was corrupted.</strong> Nothing was ever going to work with it. Every hour spent on that install was wasted. Six hours. Gone. This is the most painful entry in the entire story — but also the most important lesson: always verify your source files first.
+          </div>
+        </div>
+
+        <div class="event milestone">
+          <span class="event-tag tag-win">Finally Working</span>
+          <div class="event-header">
+            <div class="event-icon">✅</div>
+            <div class="event-title">Clean Install — OpenClaw Actually Works</div>
+          </div>
+          <div class="event-body">
+            A fresh, uncorrupted copy of OpenClaw was downloaded. The installation went smoothly. The terminal commands ran without errors. <strong>OpenClaw was up and running properly for the first time.</strong> After a brutal day of fighting broken files and failed installs, this was the payoff. The system was alive.
+          </div>
+        </div>
+
+        <div class="event neutral">
+          <div class="event-header">
+            <div class="event-icon">😴</div>
+            <div class="event-title">End of Day 1 — Going to Bed</div>
+          </div>
+          <div class="event-body">
+            Day one ended at an unknown hour — late enough that bed was more than deserved. The machine was working. The foundation was laid. Tomorrow would be the day to actually build something.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- DAY 2 — MARCH 8 -->
+    <div class="day-block">
+      <div class="day-header">
+        <div class="day-dot sun">💬</div>
+        <div class="day-label">
+          <div class="date-tag">Day 2 — Sunday, March 8, 2026</div>
+          <h2>Teaching It to Talk</h2>
+          <div class="day-summary">WhatsApp integration, new capabilities, more browser drama, and the first real AI trick.</div>
+        </div>
+      </div>
+      <div class="events">
+
+        <div class="event milestone">
+          <span class="event-tag tag-big">First Real Feature</span>
+          <div class="event-header">
+            <div class="event-icon">📱</div>
+            <div class="event-title">WhatsApp Integration — The AI Can Now Text Back</div>
+          </div>
+          <div class="event-body">
+            The first big feature of Day 2: <strong>OpenClaw was connected to WhatsApp.</strong> Now you could send it a message on your phone and it would respond — an actual AI assistant you could talk to from anywhere. This made it feel real. This made it feel like something worth building.
+          </div>
+        </div>
+
+        <div class="event success">
+          <span class="event-tag tag-win">More Power</span>
+          <div class="event-header">
+            <div class="event-icon">🔌</div>
+            <div class="event-title">Installing Skills — Expanding What It Could Do</div>
+          </div>
+          <div class="event-body">
+            OpenClaw supports "skills" — modular add-ons that give the AI assistant new capabilities. <strong>Skills were installed</strong> to expand what the system could do: searching the web, handling files, and more. Each skill was another tool in the toolbox.
+          </div>
+        </div>
+
+        <div class="event struggle">
+          <span class="event-tag tag-loss">Here We Go Again</span>
+          <div class="event-header">
+            <div class="event-icon">💥</div>
+            <div class="event-title">Chromium Browser Install — Corrupted (Again)</div>
+          </div>
+          <div class="event-body">
+            Installing Chromium for browser-based capabilities seemed straightforward. It was not. <strong>The Chromium install was corrupted</strong> — Day 1's corrupted file problem made a second appearance. Fool me once. The corrupted install was cleared out and a clean version was brought in.
+          </div>
+        </div>
+
+        <div class="event success">
+          <span class="event-tag tag-win">Fixed</span>
+          <div class="event-header">
+            <div class="event-icon">🌐</div>
+            <div class="event-title">Chromium Reinstalled — Browser Working</div>
+          </div>
+          <div class="event-body">
+            Second attempt at Chromium: success. The browser installed cleanly and the AI assistant now had the ability to <strong>navigate the web, read pages, and use browser-based tools.</strong> This opened up a lot of new possibilities.
+          </div>
+        </div>
+
+        <div class="event milestone">
+          <span class="event-tag tag-big">First AI Party Trick</span>
+          <div class="event-header">
+            <div class="event-icon">📰</div>
+            <div class="event-title">The AI Can Summarize the News</div>
+          </div>
+          <div class="event-body">
+            After a bunch of coding and configuration, something genuinely impressive came together: <strong>OpenClaw could now go out to the internet, find current news stories, and summarize them</strong> — all triggered by a WhatsApp message. Ask it what's happening in the world, and it would tell you. That's real AI utility, not just a chatbot.
+          </div>
+        </div>
+
+        <div class="event success">
+          <span class="event-tag tag-win">Good Progress</span>
+          <div class="event-header">
+            <div class="event-icon">🐙</div>
+            <div class="event-title">GitHub and Skill Scanner Installed</div>
+          </div>
+          <div class="event-body">
+            To round out Day 2: <strong>GitHub was set up</strong> for version control and code storage, and a skill scanner was installed to help identify and load new capabilities. The system was growing. The infrastructure was getting real.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- DAY 3 — MARCH 11 -->
+    <div class="day-block">
+      <div class="day-header">
+        <div class="day-dot wed">📱</div>
+        <div class="day-label">
+          <div class="date-tag">Day 5 — Wednesday, March 11, 2026</div>
+          <h2>The New Phone Disaster</h2>
+          <div class="day-summary">A simple phone upgrade breaks everything. A lesson in dependencies.</div>
+        </div>
+      </div>
+      <div class="events">
+
+        <div class="event disaster">
+          <span class="event-tag tag-loss">Unexpected Setback</span>
+          <div class="event-header">
+            <div class="event-icon">📲</div>
+            <div class="event-title">New Phone + WhatsApp = System Broken</div>
+          </div>
+          <div class="event-body">
+            A new phone was a perfectly normal thing to get. But WhatsApp links to a specific device — and when the phone changed, <strong>the WhatsApp connection that OpenClaw depended on broke immediately.</strong> The integration that had taken hours to build on Sunday was suddenly dead.
+          </div>
+        </div>
+
+        <div class="event disaster">
+          <span class="event-tag tag-loss">Full Stop</span>
+          <div class="event-header">
+            <div class="event-icon">🔴</div>
+            <div class="event-title">OpenClaw Stops Working Entirely</div>
+          </div>
+          <div class="event-body">
+            It wasn't just WhatsApp. Without its messaging interface and with the disruption from the phone change, <strong>OpenClaw stopped working altogether.</strong> The whole system went dark. Day 11 ended with the AI assistant completely offline — and no clear path to fixing it quickly. A pause was forced on the project.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- DAY 4 — MARCH 20 -->
+    <div class="day-block">
+      <div class="day-header">
+        <div class="day-dot fri">🤖</div>
+        <div class="day-label">
+          <div class="date-tag">Day 14 — Friday, March 20, 2026</div>
+          <h2>The Upgrade: Enter Claude</h2>
+          <div class="day-summary">A proper server. A smarter AI. Three bots. $3,000,000. Game on.</div>
+        </div>
+      </div>
+      <div class="events">
+
+        <div class="event milestone">
+          <span class="event-tag tag-big">Major Upgrade</span>
+          <div class="event-header">
+            <div class="event-icon">🖥️</div>
+            <div class="event-title">A Real Server — Proper Infrastructure</div>
+          </div>
+          <div class="event-body">
+            After the March 11 collapse, it was time to start fresh — and do it right. <strong>A proper server was acquired</strong>, giving the project real compute power, stability, and a permanent home that didn't depend on a laptop staying on or a phone staying connected.
+          </div>
+        </div>
+
+        <div class="event epic">
+          <span class="event-tag tag-big">Everything Changes</span>
+          <div class="event-header">
+            <div class="event-icon">⚡</div>
+            <div class="event-title">OpenClaw Out, Claude In — A Massive Intelligence Upgrade</div>
+          </div>
+          <div class="event-body">
+            OpenClaw was replaced with <strong>Claude — built by Anthropic</strong> and in a completely different league. Where OpenClaw required constant babysitting, Claude could be given a complex goal and execute it autonomously. It could write code, run it, debug it, fix errors, and iterate — all without hand-holding. This changed everything.
+          </div>
+        </div>
+
+        <div class="event milestone">
+          <span class="event-tag tag-big">The Main Event</span>
+          <div class="event-header">
+            <div class="event-icon">🤖</div>
+            <div class="event-title">Three Trading Bots Built — Each With a Personality</div>
+          </div>
+          <div class="event-body">
+            Claude was given a mission: <strong>build three autonomous trading bots with completely different strategies.</strong>
+            <br><br>
+            <strong>⚡ The Aggressive Bot</strong> — High conviction, 10% position sizes, chases crypto momentum, never sleeps, never hesitates. Maximum risk, maximum potential reward.<br><br>
+            <strong>⚖️ The Middle Road Bot</strong> — Disciplined, data-driven, technical indicators, stop-losses, moderate position sizes. The thoughtful professional.<br><br>
+            <strong>🎲 The Random Bot</strong> — Literally random. Coin flip decisions, random assets, random sizes, hilariously random justifications. The scientific control group.
+          </div>
+        </div>
+
+        <div class="event milestone">
+          <span class="event-tag tag-big">The Challenge Begins</span>
+          <div class="event-header">
+            <div class="event-icon">💰</div>
+            <div class="event-title">$1,000,000 Each — 30 Days — May the Best Bot Win</div>
+          </div>
+          <div class="event-body">
+            Each bot was given <strong>$1,000,000 in paper trading capital</strong> (through Alpaca's paper trading environment — real market data, simulated money). The rules: trade every hour, 30 days, no manual interference. At the end: whoever has the most money wins. The experiment is fully live and you're looking at the results right now.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- DAY 5 — MARCH 21 -->
+    <div class="day-block">
+      <div class="day-header">
+        <div class="day-dot sat2">🌐</div>
+        <div class="day-label">
+          <div class="date-tag">Day 15 — Saturday, March 21, 2026</div>
+          <h2>Building the Website — All Day</h2>
+          <div class="day-summary">One full day. From blank HTML file to a live, auto-updating public dashboard.</div>
+        </div>
+      </div>
+      <div class="events">
+
+        <div class="event epic">
+          <span class="event-tag tag-big">Full Day Grind</span>
+          <div class="event-header">
+            <div class="event-icon">🌐</div>
+            <div class="event-title">Entire Day Spent Building This Website</div>
+          </div>
+          <div class="event-body">
+            The bots were running, the data was being generated — but it was all sitting in CSV files on a server. <strong>Saturday, March 21 was dedicated entirely to building the public-facing website</strong> you're reading right now.
+            <br><br>
+            Starting from nothing: dark theme, live balance counters, performance charts, trade history tables, navigation between pages. Then the bot profile pages — each one with personality descriptions, origin stories, trading rules, and goals. Then GitHub Pages to host it all for free. Then the auto-push pipeline so the data updates every hour without anyone doing anything.
+            <br><br>
+            <strong>One full day. Multiple setbacks.</strong> A Unicode bug that silently broke the auto-push for hours. A balance card that wouldn't center. Data that was six hours stale before anyone noticed. Each problem found and fixed.
+            <br><br>
+            By the end of the day: a fully automated, publicly accessible trading dashboard — live data, live countdowns, live everything. The website you're on right now.
+          </div>
+        </div>
+
+        <div class="event success">
+          <span class="event-tag tag-win">Live</span>
+          <div class="event-header">
+            <div class="event-icon">🚀</div>
+            <div class="event-title">It's All Live — The Experiment Is Public</div>
+          </div>
+          <div class="event-body">
+            Three bots. Three strategies. $3,000,000 in paper money. Thirty days on the clock. <strong>All of it visible to anyone with the link.</strong> Every trade logged. Every balance tracked. Every hour updated automatically.
+            <br><br>
+            What started as an attempt to install an AI tool on a Saturday afternoon in early March became, two weeks later, a live, automated financial experiment with its own public website. That's the story so far.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- /timeline -->
+</div><!-- /timeline-wrap -->
+
+<!-- WHAT WAS BUILT -->
+<div class="built-section">
+  <div class="section-title">What We Built</div>
+  <div class="built-grid">
+    <div class="built-card">
+      <div class="built-icon">🐧</div>
+      <h4>Linux Server</h4>
+      <p>Ubuntu-based environment running 24/7, hosting all three bots and the data pipeline that powers the website.</p>
+    </div>
+    <div class="built-card">
+      <div class="built-icon">⚡</div>
+      <h4>Claude AI</h4>
+      <p>Anthropic's Claude replaced OpenClaw as the brain — capable of writing, running, and debugging code autonomously.</p>
+    </div>
+    <div class="built-card">
+      <div class="built-icon">📈</div>
+      <h4>Alpaca Trading API</h4>
+      <p>Real market data, simulated execution. Paper trading with real prices so the results are meaningful.</p>
+    </div>
+    <div class="built-card">
+      <div class="built-icon">🤖</div>
+      <h4>Three Bots</h4>
+      <p>Aggressive, Middle Road, and Random — each trading independently every hour with their own strategy and $1M.</p>
+    </div>
+    <div class="built-card">
+      <div class="built-icon">🔄</div>
+      <h4>Auto-Updating Pipeline</h4>
+      <p>After every bot run, data is exported to JSON and pushed to GitHub automatically. No manual steps needed.</p>
+    </div>
+    <div class="built-card">
+      <div class="built-icon">🌐</div>
+      <h4>This Website</h4>
+      <p>Live dashboard on GitHub Pages — auto-refreshes every hour, works on any device, completely free to host.</p>
+    </div>
+  </div>
+</div>
+
+<!-- WHY CLAWBOT -->
+<div class="built-section" style="padding-bottom: 0;">
+  <div class="section-title">Why "Clawbot"?</div>
+  <div style="background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:12px;padding:40px 36px;margin-bottom:48px;">
+    <div style="display:flex;gap:20px;align-items:flex-start;margin-bottom:28px;">
+      <div style="font-size:48px;line-height:1;flex-shrink:0;">🐾</div>
+      <div>
+        <h3 style="font-size:22px;font-weight:800;margin-bottom:10px;">A Nod to Where It All Started</h3>
+        <p style="font-size:15px;color:var(--muted);line-height:1.75;">Everything in this project — the bots, the website, the system — is named <strong style="color:var(--text)">Clawbot</strong>. Not because it's the most obvious name for a trading dashboard. But because of where this whole journey actually began.</p>
+      </div>
+    </div>
+    <p style="font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:20px;">The very first AI system we ever ran was <strong style="color:var(--gold)">OpenClaw</strong>. It wasn't perfect. It broke constantly. It took hours to install, the first file was corrupted, the browser corrupted, and eventually a new phone killed it entirely. But OpenClaw was where we learned what an AI agent actually was — not just a chatbot, but something that could run on a machine, connect to the world, and take actions on your behalf.</p>
+    <p style="font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:20px;">Every frustrating hour spent fighting OpenClaw's installation errors was an education. Every failed attempt taught us something about how these systems work — dependencies, API keys, authentication flows, what "corrupted" actually means in practice. OpenClaw was our teacher, even when it was a terrible student.</p>
+    <p style="font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:20px;">When we upgraded to Claude and built something that actually worked properly, we didn't want to forget where we came from. <strong style="color:var(--text)">Clawbot</strong> is a direct nod to OpenClaw — keeping "Claw" front and centre as a permanent reminder that the messy, broken, frustrating first attempt is what made everything else possible.</p>
+    <div style="background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:20px 24px;display:flex;gap:16px;align-items:center;">
+      <div style="font-size:28px;">🐾 → 🤖</div>
+      <div>
+        <div style="font-size:13px;font-weight:700;color:var(--gold);margin-bottom:4px;">OpenClaw → Clawbot</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;">Our first AI. Broken, corrupted, and replaced — but never forgotten. The "Claw" lives on in everything we've built since.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CLOSING QUOTE -->
+<div style="max-width:860px;margin:0 auto;padding:0 32px 80px;">
+  <div class="quote-block">
+    <div class="quote-text">"We didn't know what we were doing on Day 1. By Day 15 we had three AI bots trading on the stock market and a live website tracking every move. That's the whole point — you figure it out as you go."</div>
+    <div class="quote-attr">— The Clawbot Project, March 2026</div>
+  </div>
+</div>
+
+<footer>
+  <strong>Clawbot Trading System</strong> — Our Story · Started March 7, 2026 · <a href="index.html" style="color:var(--muted)">← Back to Dashboard</a>
+</footer>
+
+</body>
+</html>
