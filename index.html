@@ -649,9 +649,11 @@ function render(data) {
     `).join('')
     : '<tr><td colspan="9" style="text-align:center;color:var(--muted);padding:30px">No trades yet</td></tr>';
 
-  // Updated time
+  // Updated time + set countdown from when bots last ran
   if (data.generated) {
     document.getElementById('updatedTime').textContent = 'Last updated: ' + data.generated.replace('T', ' ');
+    const lastRun = new Date(data.generated.replace('T', ' ')).getTime();
+    nextRefresh = lastRun + REFRESH_MS;
   }
 }
 

@@ -435,6 +435,8 @@ function render(data) {
     const luEl = document.getElementById('lastUpdated');
     if (luEl) luEl.textContent = 'Last updated: ' + data.generated.replace('T', ' ');
     document.getElementById('updatedTime').textContent = 'Last updated: ' + data.generated.replace('T', ' ');
+    const lastRun = new Date(data.generated.replace('T', ' ')).getTime();
+    nextRefreshAt = lastRun + REFRESH_MS;
   }
 }
 
