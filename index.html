@@ -654,6 +654,7 @@ function render(data) {
     document.getElementById('updatedTime').textContent = 'Last updated: ' + data.generated.replace('T', ' ');
     const lastRun = new Date(data.generated.replace('T', ' ')).getTime();
     nextRefresh = lastRun + REFRESH_MS;
+    localStorage.setItem(LS_KEY, nextRefresh);
   }
 }
 
@@ -670,7 +671,10 @@ async function loadData() {
 }
 
 const REFRESH_MS = 3_600_000;
-let nextRefresh = Date.now() + REFRESH_MS;
+const LS_KEY = 'clawbot_next_refresh';
+const _stored = parseInt(localStorage.getItem(LS_KEY) || '0');
+let nextRefresh = (_stored > Date.now()) ? _stored : Date.now() + REFRESH_MS;
+if (!(_stored > Date.now())) localStorage.setItem(LS_KEY, nextRefresh);
 
 function resetAndLoad() {
   nextRefresh = Date.now() + REFRESH_MS;

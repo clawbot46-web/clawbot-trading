@@ -353,7 +353,10 @@
 const START = 1_000_000;
 const BOT_NAMES = ['random bot', 'random'];
 const REFRESH_MS = 3_600_000;
-let nextRefreshAt = Date.now() + REFRESH_MS;
+const LS_KEY = 'clawbot_next_refresh';
+const _stored = parseInt(localStorage.getItem(LS_KEY) || '0');
+let nextRefreshAt = (_stored > Date.now()) ? _stored : Date.now() + REFRESH_MS;
+if (!(_stored > Date.now())) localStorage.setItem(LS_KEY, nextRefreshAt);
 
 function fmt(n) {
   return '$' + Number(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -415,6 +418,7 @@ function render(data) {
     document.getElementById('updatedTime').textContent = 'Last updated: ' + data.generated.replace('T', ' ');
     const lastRun = new Date(data.generated.replace('T', ' ')).getTime();
     nextRefreshAt = lastRun + REFRESH_MS;
+    localStorage.setItem(LS_KEY, nextRefreshAt);
   }
 
   const trades = data.trades.filter(t => isThisBot(t.bot));
