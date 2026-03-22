@@ -596,6 +596,7 @@ function render(data) {
         { label: 'Aggressive', data: portfolio.map(p => p.agg), borderColor: '#f59e0b', backgroundColor: 'rgba(245,158,11,0.08)', tension: 0.3, pointRadius: 2, borderWidth: 2 },
         { label: 'Middle Road', data: portfolio.map(p => p.mid), borderColor: '#3b82f6', backgroundColor: 'rgba(59,130,246,0.08)', tension: 0.3, pointRadius: 2, borderWidth: 2 },
         { label: 'Random Bot', data: portfolio.map(p => p.rand), borderColor: '#a855f7', backgroundColor: 'rgba(168,85,247,0.08)', tension: 0.3, pointRadius: 2, borderWidth: 2 },
+        { label: 'SPY (if invested $1M)', data: portfolio.map(p => p.spy_bal || 1000000), borderColor: '#22c55e', backgroundColor: 'rgba(34,197,94,0.05)', tension: 0.3, pointRadius: 2, borderWidth: 2, borderDash: [6, 3] },
       ]
     },
     options: {
