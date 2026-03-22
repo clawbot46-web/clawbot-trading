@@ -100,6 +100,30 @@
 
   footer { border-top: 1px solid var(--border); padding: 24px 32px; text-align: center; color: var(--muted); font-size: 12px; }
 
+  /* FLOWCHART */
+  .flow-section { max-width: 860px; margin: 0 auto; padding: 0 32px 48px; }
+  .flow-section-title { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin-bottom: 24px; display: flex; align-items: center; gap: 10px; }
+  .flow-section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+  .flow-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; padding: 32px; }
+  .flow-wrap { display: flex; flex-direction: column; align-items: center; gap: 0; }
+  .flow-node { border-radius: 10px; padding: 13px 28px; font-size: 14px; font-weight: 600; text-align: center; }
+  .flow-node.data { background: rgba(34,197,94,0.12); border: 2px solid rgba(34,197,94,0.4); color: #4ade80; max-width: 380px; width: 100%; }
+  .flow-node.ai { background: rgba(168,85,247,0.12); border: 2px solid rgba(168,85,247,0.4); color: #c084fc; max-width: 480px; width: 100%; }
+  .flow-node.alpaca { background: rgba(59,130,246,0.12); border: 2px solid rgba(59,130,246,0.4); color: #60a5fa; max-width: 560px; width: 100%; }
+  .flow-node.logs { background: rgba(107,107,128,0.12); border: 2px solid rgba(107,107,128,0.3); color: var(--muted); max-width: 480px; width: 100%; }
+  .flow-arrow-down { font-size: 18px; color: var(--muted); margin: 6px 0; line-height: 1; }
+  .flow-bots { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; width: 100%; max-width: 560px; margin: 6px 0; }
+  .flow-bot { border-radius: 9px; padding: 12px 8px; font-size: 13px; font-weight: 700; text-align: center; }
+  .flow-bot.agg { background: rgba(245,158,11,0.12); border: 2px solid rgba(245,158,11,0.4); color: var(--agg); }
+  .flow-bot.mid { background: rgba(59,130,246,0.12); border: 2px solid rgba(59,130,246,0.4); color: var(--mid); }
+  .flow-bot.rand { background: rgba(168,85,247,0.12); border: 2px solid rgba(168,85,247,0.4); color: var(--rand); }
+  .flow-bots-arrows { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; width: 100%; max-width: 560px; text-align: center; color: var(--muted); font-size: 16px; }
+  @media(max-width:600px) {
+    .flow-section { padding: 0 16px 40px; }
+    .flow-bots { grid-template-columns: 1fr; max-width: 220px; }
+    .flow-bots-arrows { grid-template-columns: 1fr; max-width: 220px; }
+  }
+
   @media (max-width: 600px) {
     nav { padding: 0 16px; }
     .hero { padding: 40px 16px 40px; }
@@ -123,6 +147,7 @@
     <li><a href="aggressive.html">⚡ Aggressive</a></li>
     <li><a href="middle.html">⚖️ Middle Road</a></li>
     <li><a href="random.html">🎲 Random</a></li>
+    <li><a href="howworks.html">⚙️ How It Works</a></li>
     <li><a href="story.html" class="active">📖 Our Story</a></li>
   </ul>
   <div class="live-badge">
@@ -153,6 +178,62 @@
     <div class="stat-item">
       <div class="stat-num">30</div>
       <div class="stat-lbl">Day Challenge</div>
+    </div>
+  </div>
+</div>
+
+<!-- SYSTEM FLOWCHART -->
+<div class="flow-section">
+  <div class="flow-section-title">⚙️ How the system works</div>
+  <div class="flow-card">
+    <div class="flow-wrap">
+
+      <div class="flow-node data">
+        📡 &nbsp; Market Data — Alpaca + News APIs
+      </div>
+      <div class="flow-arrow-down">↓</div>
+
+      <div class="flow-node ai">
+        🧠 &nbsp; AI Research Engine — Sentiment + Technical Analysis
+      </div>
+      <div class="flow-arrow-down">↓</div>
+
+      <div class="flow-bots">
+        <div class="flow-bot agg">🔥 Aggressive</div>
+        <div class="flow-bot mid">⚖️ Middle Road</div>
+        <div class="flow-bot rand">🎲 Random</div>
+      </div>
+      <div class="flow-bots-arrows">
+        <div>↓</div><div>↓</div><div>↓</div>
+      </div>
+
+      <div class="flow-node alpaca">
+        💰 &nbsp; Alpaca Paper Trading — 3 accounts × $1,000,000 each
+      </div>
+      <div class="flow-arrow-down">↓</div>
+
+      <div class="flow-node logs">
+        📋 &nbsp; CSV Logs → data.json → This Dashboard
+      </div>
+
+    </div>
+    <div style="margin-top:20px; padding-top:18px; border-top:1px solid var(--border); display:flex; gap:28px; flex-wrap:wrap; justify-content:center;">
+      <div style="text-align:center;">
+        <div style="font-size:20px; font-weight:800; color:var(--gold);">Every Hour</div>
+        <div style="font-size:11px; color:var(--muted); margin-top:2px; text-transform:uppercase; letter-spacing:.8px;">Trade Cycle</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-size:20px; font-weight:800; color:var(--mid);">3 Bots</div>
+        <div style="font-size:11px; color:var(--muted); margin-top:2px; text-transform:uppercase; letter-spacing:.8px;">Independent Decisions</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-size:20px; font-weight:800; color:var(--rand);">$3M</div>
+        <div style="font-size:11px; color:var(--muted); margin-top:2px; text-transform:uppercase; letter-spacing:.8px;">Total Paper Capital</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-size:20px; font-weight:800; color:var(--green);">30 Days</div>
+        <div style="font-size:11px; color:var(--muted); margin-top:2px; text-transform:uppercase; letter-spacing:.8px;">The Challenge</div>
+      </div>
     </div>
   </div>
 </div>

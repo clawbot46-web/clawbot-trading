@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How It Works — Clawbot Trading System</title>
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --bg2: #111118;
+    --bg3: #1a1a24;
+    --border: #2a2a3a;
+    --text: #e8e8f0;
+    --muted: #6b6b80;
+    --agg: #f59e0b;
+    --mid: #3b82f6;
+    --rand: #a855f7;
+    --green: #22c55e;
+    --red: #ef4444;
+    --accent: #f59e0b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* NAV */
+  nav {
+    background: var(--bg2);
+    border-bottom: 1px solid var(--border);
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.5px;
+  }
+  .nav-brand .robot { font-size: 22px; }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+  .nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--text); }
+  .nav-links a.active { color: var(--accent); font-weight: 600; }
+
+  /* PAGE LAYOUT */
+  .page-wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 32px 80px;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 56px 0 40px;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 800;
+    background: linear-gradient(135deg, #f59e0b, #3b82f6, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 14px;
+  }
+  .hero p {
+    color: var(--muted);
+    font-size: 17px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* SECTION TITLES */
+  .section {
+    margin-top: 56px;
+  }
+  .section-header {
+    margin-bottom: 24px;
+  }
+  .section-header h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .section-header p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .section-divider {
+    width: 48px;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--accent);
+    margin-bottom: 12px;
+  }
+
+  /* CARD */
+  .card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 32px;
+  }
+
+  /* TWO-COL GRID */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  @media(max-width: 700px) {
+    .two-col { grid-template-columns: 1fr; }
+  }
+
+  /* WHAT IS / OBJECTIVES CARDS */
+  .info-card {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .info-card-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .info-card-title.yellow { color: var(--agg); }
+  .info-card-title.orange { color: #fb923c; }
+  .info-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .info-card ul li {
+    font-size: 14px;
+    color: var(--text);
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .info-card ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--muted);
+    font-size: 11px;
+    top: 2px;
+  }
+  .info-card.left-border-yellow { border-left: 3px solid var(--agg); }
+  .info-card.left-border-orange { border-left: 3px solid #fb923c; }
+
+  /* TECH STACK */
+  .tech-stack {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin-top: 20px;
+  }
+  .tech-stack h3 {
+    color: var(--green);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  .tech-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .pill {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 13px;
+    color: var(--text);
+  }
+
+  /* FLOWCHART */
+  .flow-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 8px 0;
+  }
+  .flow-box {
+    border-radius: 12px;
+    padding: 16px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    max-width: 420px;
+  }
+  .flow-box.green {
+    background: rgba(34, 197, 94, 0.15);
+    border: 2px solid rgba(34, 197, 94, 0.5);
+    color: #4ade80;
+  }
+  .flow-box.purple {
+    background: rgba(168, 85, 247, 0.15);
+    border: 2px solid rgba(168, 85, 247, 0.5);
+    color: #c084fc;
+  }
+  .flow-box.slate {
+    background: rgba(100, 116, 139, 0.15);
+    border: 2px solid rgba(100, 116, 139, 0.4);
+    color: #94a3b8;
+  }
+  .flow-arrow {
+    font-size: 20px;
+    color: var(--muted);
+    margin: 6px 0;
+    line-height: 1;
+  }
+  .flow-bots-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+    max-width: 620px;
+    margin: 6px 0;
+  }
+  .flow-bot {
+    border-radius: 10px;
+    padding: 14px 8px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+  }
+  .flow-bot.agg {
+    background: rgba(245,159,11,0.15);
+    border: 2px solid rgba(245,159,11,0.5);
+    color: var(--agg);
+  }
+  .flow-bot.mid {
+    background: rgba(59,130,246,0.15);
+    border: 2px solid rgba(59,130,246,0.5);
+    color: var(--mid);
+  }
+  .flow-bot.rand {
+    background: rgba(168,85,247,0.15);
+    border: 2px solid rgba(168,85,247,0.5);
+    color: var(--rand);
+  }
+  .flow-bot-arrows {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+    max-width: 620px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 18px;
+  }
+  .flow-wide {
+    width: 100%;
+    max-width: 620px;
+  }
+  .flow-box.blue {
+    background: rgba(59,130,246,0.12);
+    border: 2px solid rgba(59,130,246,0.4);
+    color: #60a5fa;
+    max-width: 620px;
+    width: 100%;
+  }
+
+  /* EXPLAIN BOX */
+  .explain-box {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--mid);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-top: 20px;
+  }
+  .explain-box h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--mid);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 8px;
+  }
+  .explain-box p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  /* WORD CLOUD */
+  .word-cloud-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    padding: 8px 0;
+  }
+  @media(max-width: 600px) {
+    .word-cloud-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .wc-word {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 16px 12px;
+    border-radius: 10px;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    font-weight: 600;
+    line-height: 1.4;
+    transition: transform 0.15s;
+  }
+  .wc-word:hover { transform: scale(1.04); }
+  .wc-xl  { font-size: 19px; color: var(--agg); }
+  .wc-lg  { font-size: 16px; color: var(--rand); }
+  .wc-md  { font-size: 14px; color: var(--text); }
+  .wc-sm  { font-size: 13px; color: var(--muted); }
+
+  /* THREE BOT EXPLAIN */
+  .bot-compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-top: 20px;
+  }
+  @media(max-width: 650px) {
+    .bot-compare { grid-template-columns: 1fr; }
+  }
+  .bot-card {
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .bot-card.agg { background: rgba(245,159,11,0.07); border: 1px solid rgba(245,159,11,0.3); }
+  .bot-card.mid { background: rgba(59,130,246,0.07); border: 1px solid rgba(59,130,246,0.3); }
+  .bot-card.rand { background: rgba(168,85,247,0.07); border: 1px solid rgba(168,85,247,0.3); }
+  .bot-card-title {
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .bot-card.agg .bot-card-title { color: var(--agg); }
+  .bot-card.mid .bot-card-title { color: var(--mid); }
+  .bot-card.rand .bot-card-title { color: var(--rand); }
+  .bot-card p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .bot-tag {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    padding: 3px 8px;
+    border-radius: 6px;
+    display: inline-block;
+    width: fit-content;
+  }
+  .bot-card.agg .bot-tag { background: rgba(245,159,11,0.15); color: var(--agg); }
+  .bot-card.mid .bot-tag { background: rgba(59,130,246,0.15); color: var(--mid); }
+  .bot-card.rand .bot-tag { background: rgba(168,85,247,0.15); color: var(--rand); }
+
+  /* STEP NUMBERS */
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 4px;
+  }
+  .step {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .step-num {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--bg3);
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .step-body h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .step-body p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  @media(max-width: 600px) {
+    .page-wrap { padding: 0 16px 60px; }
+    nav { padding: 0 16px; }
+    .nav-links { display: none; }
+    .flow-bots-row { grid-template-columns: 1fr; max-width: 280px; }
+    .flow-bot-arrows { grid-template-columns: 1fr; max-width: 280px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <span class="robot">🤖</span>
+    <span>CLAWBOT</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Dashboard</a></li>
+    <li><a href="aggressive.html">⚡ Aggressive</a></li>
+    <li><a href="middle.html">⚖️ Middle Road</a></li>
+    <li><a href="random.html">🎲 Random</a></li>
+    <li><a href="howworks.html" class="active">⚙️ How It Works</a></li>
+    <li><a href="story.html">📖 Our Story</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>How It Works</h1>
+    <p>A complete breakdown of the Clawbot system — from the data it reads, to the decisions it makes, to the trades it fires every hour.</p>
+  </div>
+
+  <!-- SECTION 1: WHAT IS CLAWBOT -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-divider"></div>
+      <h2>Project Overview</h2>
+      <p>The big picture — what Clawbot is, why it was built, and what questions it's trying to answer.</p>
+    </div>
+    <div class="card">
+      <div class="two-col">
+        <div class="info-card left-border-yellow">
+          <div class="info-card-title yellow">🤖 What Is Clawbot?</div>
+          <ul>
+            <li>An automated stock &amp; crypto trading system built in Python</li>
+            <li>3 bots with completely different personalities, all trading the same markets</li>
+            <li>Each bot starts with $1,000,000 in Alpaca paper money (no real cash at risk)</li>
+            <li>Bots run 24/7, making decisions and placing trades while you sleep</li>
+          </ul>
+        </div>
+        <div class="info-card left-border-orange">
+          <div class="info-card-title orange">🎯 Project Objectives</div>
+          <ul>
+            <li>Can AI-driven strategies actually beat the S&amp;P 500?</li>
+            <li>Does more risk = more reward? (spoiler: maybe not)</li>
+            <li>Can a completely random bot beat a carefully designed algorithm?</li>
+            <li>Learn Python, trading APIs, and how real financial markets behave</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tech-stack">
+        <h3>⚡ Tech Stack</h3>
+        <div class="tech-pills">
+          <span class="pill">Python 3</span>
+          <span class="pill">Alpaca Trading API</span>
+          <span class="pill">AI Sentiment Analysis</span>
+          <span class="pill">RSI / MACD / Moving Averages</span>
+          <span class="pill">Google Sheets Logging</span>
+          <span class="pill">HTML + JavaScript Dashboard</span>
+          <span class="pill">GitHub Pages</span>
+          <span class="pill">Linux Server</span>
+        </div>
+      </div>
+    </div>
+    <div class="explain-box">
+      <h4>What This Means</h4>
+      <p>Clawbot is an experiment in automated trading. Each bot has its own rules — one chases momentum and takes big risks, one plays it safe and waits for perfect setups, and one just trades randomly with no logic at all. The goal is to run them all for 30 days and see which strategy wins. The answer might surprise you.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 2: SYSTEM ARCHITECTURE -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-divider" style="background: var(--mid);"></div>
+      <h2>System Architecture</h2>
+      <p>Every hour, this exact process runs automatically — data in, trades out.</p>
+    </div>
+    <div class="card">
+      <div class="flow-wrap">
+
+        <div class="flow-box green">
+          📡 &nbsp; Market Data (Alpaca + News APIs)
+        </div>
+        <div class="flow-arrow">↓</div>
+
+        <div class="flow-box purple">
+          🧠 &nbsp; AI Research Engine (Sentiment + Technicals)
+        </div>
+        <div class="flow-arrow">↓</div>
+
+        <div class="flow-bots-row">
+          <div class="flow-bot agg">🔥 Aggressive</div>
+          <div class="flow-bot mid">📊 Middle Road</div>
+          <div class="flow-bot rand">🎲 Random</div>
+        </div>
+        <div class="flow-bot-arrows">
+          <div>↓</div>
+          <div>↓</div>
+          <div>↓</div>
+        </div>
+
+        <div class="flow-box blue">
+          💰 &nbsp; Alpaca Paper Trading (3 accounts × $1M each)
+        </div>
+        <div class="flow-arrow">↓</div>
+
+        <div class="flow-box slate">
+          📋 &nbsp; CSV Logs → data.json → This Website
+        </div>
+
+      </div>
+    </div>
+
+    <div class="steps" style="margin-top: 24px;">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h4>Market Data is pulled every hour</h4>
+          <p>The system queries the Alpaca API for the latest prices, volume, and market conditions. A news API also pulls recent headlines, which get scored for positive or negative sentiment.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h4>The AI Research Engine processes everything</h4>
+          <p>Technical indicators are calculated — RSI to measure momentum, MACD to spot trend shifts, and moving averages to identify direction. Sentiment scores from the news are layered on top to give each asset an overall signal.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h4>Each bot makes its own independent decision</h4>
+          <p>The same signals go to all three bots, but they interpret them completely differently. Aggressive might see a bullish signal and go all in. Middle might take a small position and wait. Random flips a coin.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h4>Trades fire through Alpaca's paper trading system</h4>
+          <p>Each bot has its own $1M paper account — no real money involved. Alpaca simulates real market fills, so the results are as close to real trading as possible without any financial risk.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <h4>Results are logged and pushed to this website</h4>
+          <p>Every trade gets written to a CSV log. A Python script processes those logs into a JSON file, commits it to GitHub, and this website automatically shows the updated balances, trades, and charts within the hour.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: THE THREE BOTS -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-divider" style="background: var(--rand);"></div>
+      <h2>Meet the Three Bots</h2>
+      <p>Same market data. Completely different decision making. That's the whole experiment.</p>
+    </div>
+    <div class="bot-compare">
+      <div class="bot-card agg">
+        <span class="bot-tag">High Risk</span>
+        <div class="bot-card-title">🔥 Aggressive</div>
+        <p>Takes big positions (up to 10% of portfolio in one trade), chases momentum signals hard, trades crypto and high-volatility stocks. Never hesitates. Maximum risk, maximum potential reward.</p>
+        <p style="font-size:12px; color: var(--agg); opacity:0.8; margin-top: 4px;">Typical reason: "RSI signals strong momentum — going in 10%"</p>
+      </div>
+      <div class="bot-card mid">
+        <span class="bot-tag">Balanced</span>
+        <div class="bot-card-title">⚖️ Middle Road</div>
+        <p>Patient and disciplined. Waits for multiple indicators to line up before entering a trade. Small position sizes, strict stop-losses. Won't chase a trade — if the setup isn't perfect, it passes.</p>
+        <p style="font-size:12px; color: var(--mid); opacity:0.8; margin-top: 4px;">Typical reason: "RSI + MACD convergence confirmed — entering small"</p>
+      </div>
+      <div class="bot-card rand">
+        <span class="bot-tag">Chaos Mode</span>
+        <div class="bot-card-title">🎲 Random</div>
+        <p>Completely ignores all signals. Picks stocks randomly, decides position size randomly, and gives every trade a ridiculous excuse. It exists to answer one question: can a monkey beat the algorithm?</p>
+        <p style="font-size:12px; color: var(--rand); opacity:0.8; margin-top: 4px;">Typical reason: "Mercury is in retrograde — seemed like a vibe"</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: WHY THEY TRADE (WORD CLOUD) -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-divider" style="background: var(--rand);"></div>
+      <h2>Why They Trade — Random Bot's Reasons</h2>
+      <p>Every trade the Random Bot makes gets a reason. These are the actual reasons it logs. Bigger text = used more often.</p>
+    </div>
+    <div class="card">
+      <div class="word-cloud-grid">
+        <div class="wc-word wc-xl">Totally random,<br>no regrets...</div>
+        <div class="wc-word wc-lg">Diversification<br>by entropy...</div>
+        <div class="wc-word wc-md">Vibe check:<br>passed <span style="color:var(--muted); font-size:12px;">(2×)</span></div>
+        <div class="wc-word wc-lg">Mercury is in<br>retrograde <span style="color:var(--muted); font-size:12px;">(2×)</span></div>
+        <div class="wc-word wc-md">Coin flip<br>said yes <span style="color:var(--muted); font-size:12px;">(2×)</span></div>
+        <div class="wc-word wc-sm">Why not?</div>
+        <div class="wc-word wc-md">I heard someone<br>mention it...</div>
+        <div class="wc-word wc-sm">The algorithm<br>whispered...</div>
+        <div class="wc-word wc-sm">Felt lucky</div>
+        <div class="wc-word wc-md">Chaos theory<br>in action</div>
+        <div class="wc-word wc-sm">My pet hamster<br>picked this one</div>
+        <div class="wc-word wc-sm" style="color: var(--muted);">...and counting</div>
+      </div>
+    </div>
+    <div class="explain-box" style="border-left-color: var(--rand);">
+      <h4 style="color: var(--rand);">Why This Matters</h4>
+      <p>The Random Bot isn't just a joke — it's a genuine scientific control. In finance, the "random walk" theory argues that markets are so unpredictable that random selection can match expert picks. By running a truly random bot for 30 days against two carefully engineered strategies, we get a real answer to that question. If Random wins, that tells you something important about how much skill actually matters in short-term trading.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 5: THE EXPERIMENT -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-divider" style="background: var(--green);"></div>
+      <h2>The 30-Day Experiment</h2>
+      <p>Three bots, three strategies, one million dollars each. Who comes out ahead?</p>
+    </div>
+    <div class="card" style="text-align: center; padding: 40px 32px;">
+      <div style="font-size: 48px; margin-bottom: 16px;">⏱️</div>
+      <div style="font-size: 20px; font-weight: 700; margin-bottom: 10px; color: var(--text);">30 Days. $3,000,000 Total. No Mercy.</div>
+      <div style="font-size: 15px; color: var(--muted); max-width: 600px; margin: 0 auto 32px; line-height: 1.7;">
+        Starting March 20, 2026 — each bot was given exactly $1,000,000 and told to make as much money as possible. They can trade every hour. The clock runs out April 19, 2026. Winner takes the bragging rights.
+      </div>
+      <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+        <div>
+          <div style="font-size: 28px; font-weight: 800; color: var(--agg);">🔥</div>
+          <div style="font-size: 13px; color: var(--muted); margin-top: 4px;">Aggressive</div>
+          <div style="font-size: 12px; color: var(--muted);">High risk / High reward</div>
+        </div>
+        <div style="font-size: 28px; color: var(--muted); align-self: center;">VS</div>
+        <div>
+          <div style="font-size: 28px; font-weight: 800; color: var(--mid);">⚖️</div>
+          <div style="font-size: 13px; color: var(--muted); margin-top: 4px;">Middle Road</div>
+          <div style="font-size: 12px; color: var(--muted);">Patient / Disciplined</div>
+        </div>
+        <div style="font-size: 28px; color: var(--muted); align-self: center;">VS</div>
+        <div>
+          <div style="font-size: 28px; font-weight: 800; color: var(--rand);">🎲</div>
+          <div style="font-size: 13px; color: var(--muted); margin-top: 4px;">Random</div>
+          <div style="font-size: 12px; color: var(--muted);">Pure chaos</div>
+        </div>
+      </div>
+      <div style="margin-top: 32px;">
+        <a href="index.html" style="display: inline-block; background: var(--accent); color: #0a0a0f; font-weight: 700; font-size: 14px; padding: 12px 28px; border-radius: 8px; text-decoration: none;">Watch the Live Standings →</a>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /page-wrap -->
+
+</body>
+</html>
