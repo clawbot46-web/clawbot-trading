@@ -336,6 +336,11 @@
   .bot-agg { color: var(--agg); }
   .bot-mid { color: var(--mid); }
   .bot-rand { color: var(--rand); }
+  .reason-cell { font-style: italic; max-width: 240px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 11px; }
+  .reason-agg { color: var(--agg); opacity: 0.85; }
+  .reason-mid { color: var(--mid); opacity: 0.85; }
+  .reason-rand { color: var(--rand); opacity: 0.85; }
+  .reason-default { color: var(--muted); }
 
   /* FOOTER */
   footer {
@@ -455,10 +460,11 @@
               <th>Price</th>
               <th>Value</th>
               <th>Balance After</th>
+              <th>Reason</th>
             </tr>
           </thead>
           <tbody id="tradeRows">
-            <tr><td colspan="8" class="loading">Loading trades...</td></tr>
+            <tr><td colspan="9" class="loading">Loading trades...</td></tr>
           </tbody>
         </table>
       </div>
@@ -489,6 +495,12 @@ function botClass(name) {
   if (name.toLowerCase().includes('aggressive')) return 'bot-agg';
   if (name.toLowerCase().includes('middle')) return 'bot-mid';
   return 'bot-rand';
+}
+function reasonClass(name) {
+  if ((name || '').toLowerCase().includes('aggressive')) return 'reason-agg';
+  if ((name || '').toLowerCase().includes('middle')) return 'reason-mid';
+  if ((name || '').toLowerCase().includes('random')) return 'reason-rand';
+  return 'reason-default';
 }
 function shortBot(name) {
   if (name.toLowerCase().includes('aggressive')) return 'Aggressive';
@@ -614,9 +626,10 @@ function render(data) {
         <td>${fmt(t.price)}</td>
         <td>${fmt(t.value)}</td>
         <td>${fmt(t.balance)}</td>
+        <td class="reason-cell ${reasonClass(t.bot)}" title="${t.reason || ''}">${t.reason || '—'}</td>
       </tr>
     `).join('')
-    : '<tr><td colspan="8" style="text-align:center;color:var(--muted);padding:30px">No trades yet</td></tr>';
+    : '<tr><td colspan="9" style="text-align:center;color:var(--muted);padding:30px">No trades yet</td></tr>';
 
   // Updated time
   if (data.generated) {
