@@ -574,7 +574,7 @@ async function loadData() {
 
 loadData();
 startCountdown();
-setInterval(loadData, REFRESH_MS);
+setInterval(loadData, 5 * 60 * 1000); // poll every 5 min so countdown resets quickly after each bot run
 
 // Drawer
 function toggleDrawer() {

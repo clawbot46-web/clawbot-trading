@@ -816,7 +816,7 @@ let nextRefresh = (_stored > Date.now()) ? _stored : Date.now() + REFRESH_MS;
 if (!(_stored > Date.now())) localStorage.setItem(LS_KEY, nextRefresh);
 
 loadData();
-setInterval(loadData, REFRESH_MS);
+setInterval(loadData, 5 * 60 * 1000); // poll every 5 min so countdown resets quickly after each bot run
 
 setInterval(() => {
   const remaining = Math.max(0, nextRefresh - Date.now());
