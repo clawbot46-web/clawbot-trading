@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-22T18:35:18",
+  "generated": "2026-03-22T22:02:50",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -477,9 +477,89 @@
       "rand": 952850.65,
       "spy": 0.0,
       "spy_bal": 982980.0
+    },
+    {
+      "ts": "6:54PM",
+      "_raw_ts": "2026-03-22 18:54:02",
+      "agg": 977696.18,
+      "mid": 1000000.0,
+      "rand": 960214.8,
+      "spy": 0.0,
+      "spy_bal": 982980.0
+    },
+    {
+      "ts": "7:54PM",
+      "_raw_ts": "2026-03-22 19:54:12",
+      "agg": 975302.1,
+      "mid": 1000000.0,
+      "rand": 957841.79,
+      "spy": 0.0,
+      "spy_bal": 982980.0
+    },
+    {
+      "ts": "8:54PM",
+      "_raw_ts": "2026-03-22 20:54:24",
+      "agg": 973912.6,
+      "mid": 1000000.0,
+      "rand": 954070.69,
+      "spy": 0.0,
+      "spy_bal": 982980.0
+    },
+    {
+      "ts": "9:54PM",
+      "_raw_ts": "2026-03-22 21:54:39",
+      "agg": 976233.88,
+      "mid": 1000000.0,
+      "rand": 958799.81,
+      "spy": 0.0,
+      "spy_bal": 982980.0
     }
   ],
   "trades": [
+    {
+      "ts": "2026-03-22 20:54:22",
+      "bot": "Random Bot",
+      "symbol": "BTC/USD",
+      "action": "BUY",
+      "qty": 0.000344,
+      "price": 67749.4844,
+      "value": 23.28,
+      "reason": "My pet hamster picked this one (crypto edition)",
+      "balance": 954070.69
+    },
+    {
+      "ts": "2026-03-22 20:54:20",
+      "bot": "Random Bot",
+      "symbol": "SOL/USD",
+      "action": "BUY",
+      "qty": 1.246219,
+      "price": 86.033,
+      "value": 107.22,
+      "reason": "The stars aligned (crypto edition)",
+      "balance": 954070.73
+    },
+    {
+      "ts": "2026-03-22 19:54:11",
+      "bot": "Random Bot",
+      "symbol": "SOL/USD",
+      "action": "BUY",
+      "qty": 6.041391,
+      "price": 86.396,
+      "value": 521.95,
+      "reason": "Throwing darts at a ticker board (crypto edition)",
+      "balance": 957841.79
+    },
+    {
+      "ts": "2026-03-22 19:54:10",
+      "bot": "Random Bot",
+      "symbol": "BTC/USD",
+      "action": "BUY",
+      "qty": 0.035634,
+      "price": 67980.1562,
+      "value": 2422.39,
+      "reason": "Chaos theory in action (crypto edition)",
+      "balance": 957846.7
+    },
     {
       "ts": "2026-03-22 17:53:52",
       "bot": "Random Bot",
@@ -1176,7 +1256,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 973633.78,
+      "balance": 975579.94,
       "trades": 7,
       "buys": 7,
       "sells": 0,
@@ -1185,23 +1265,23 @@
         {
           "symbol": "BTC/USD",
           "qty": 4.151615,
-          "last_price": 68208.1,
-          "value": 283173.76
+          "last_price": 67869.586,
+          "value": 281768.38
         },
         {
           "symbol": "ETH/USD",
           "qty": 97.574399,
-          "last_price": 2058.3,
-          "value": 200837.39
+          "last_price": 2054.086,
+          "value": 200426.21
         },
         {
           "symbol": "SOL/USD",
           "qty": 850.769361,
-          "last_price": 86.37,
-          "value": 73480.95
+          "last_price": 86.56,
+          "value": 73642.6
         }
       ],
-      "held_value": 557492.09
+      "held_value": 555837.18
     },
     "mid": {
       "balance": 1000000.0,
@@ -1213,32 +1293,32 @@
       "held_value": 0.0
     },
     "rand": {
-      "balance": 952850.65,
-      "trades": 56,
-      "buys": 52,
+      "balance": 958004.06,
+      "trades": 60,
+      "buys": 56,
       "sells": 4,
       "assets": "BTC, ETH, SOL",
       "holdings": [
         {
           "symbol": "BTC/USD",
-          "qty": 5.016656,
-          "last_price": 68293.2,
-          "value": 342603.49
+          "qty": 5.051923,
+          "last_price": 67869.586,
+          "value": 342871.95
         },
         {
           "symbol": "SOL/USD",
-          "qty": 3595.000991,
-          "last_price": 86.37,
-          "value": 310500.24
+          "qty": 3602.143186,
+          "last_price": 86.56,
+          "value": 311801.51
         },
         {
           "symbol": "ETH/USD",
           "qty": 147.668759,
-          "last_price": 2058.3,
-          "value": 303946.61
+          "last_price": 2054.086,
+          "value": 303324.33
         }
       ],
-      "held_value": 957050.33
+      "held_value": 957997.79
     },
     "spy_balance": 982980.0
   }
