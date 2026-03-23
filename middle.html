@@ -572,9 +572,70 @@ async function loadData() {
   }
 }
 
+// ── Live Alpaca refresh ───────────────────────────────────────────────────────
+const ALPACA_PAPER = 'https://paper-api.alpaca.markets';
+const BOT_API_KEY    = 'PKRPO62OODF2OAX7ZPBSK57SIN';
+const BOT_SECRET_KEY = 'HSmZGrmqewBpRPr52pcwyeZQv3Tp9HhmLfTvmW4wLZ1u';
+
+async function liveRefresh() {
+  try {
+    const h = { 'APCA-API-KEY-ID': BOT_API_KEY, 'APCA-API-SECRET-KEY': BOT_SECRET_KEY };
+    const [acctR, posR] = await Promise.all([
+      fetch(`${ALPACA_PAPER}/v2/account`,   { headers: h }),
+      fetch(`${ALPACA_PAPER}/v2/positions`, { headers: h }),
+    ]);
+    if (!acctR.ok || !posR.ok) return;
+    const acct = await acctR.json();
+    const positions = await posR.json();
+
+    const balance = parseFloat(acct.equity || 0);
+    let heldTotal = 0;
+    const holdings = (Array.isArray(positions) ? positions : []).map(p => {
+      let sym = p.symbol || '';
+      if (sym.endsWith('USD') && !sym.includes('/')) {
+        const base = sym.slice(0, -3);
+        if (['BTC','ETH','SOL','AVAX','LINK','DOGE','LTC'].includes(base)) sym = base + '/USD';
+      }
+      const val = parseFloat(p.market_value || 0);
+      heldTotal += val;
+      return { symbol: sym, qty: parseFloat(p.qty || 0), last_price: parseFloat(p.current_price || 0), value: val };
+    }).sort((a, b) => b.value - a.value);
+
+    // Update balance card
+    const balEl = document.getElementById('balanceAmt');
+    if (balEl) balEl.textContent = fmt(balance);
+
+    const pct = (balance - START) / START * 100;
+    const chgEl = document.getElementById('balanceChange');
+    if (chgEl) {
+      chgEl.textContent = (pct >= 0 ? '+' : '') + pct.toFixed(2) + '% from $1,000,000 starting balance';
+      chgEl.style.color = pct >= 0 ? 'var(--green)' : 'var(--red)';
+    }
+
+    // Update holdings section
+    const heldEl = document.getElementById('heldValue');
+    if (heldEl) heldEl.textContent = fmt(heldTotal) + ' in assets';
+
+    const rowsEl = document.getElementById('holdingsRows');
+    if (rowsEl) {
+      rowsEl.innerHTML = holdings.length
+        ? holdings.map(h => `
+          <tr>
+            <td style="font-weight:700;color:var(--bot)">${h.symbol}</td>
+            <td>${Number(h.qty).toLocaleString(undefined,{maximumFractionDigits:6})}</td>
+            <td>${fmt(h.last_price)}</td>
+            <td style="font-weight:600;color:var(--green)">${fmt(h.value)}</td>
+          </tr>`).join('')
+        : '<tr><td colspan="4" class="no-holdings">No positions currently held.</td></tr>';
+    }
+  } catch (e) { /* network/CORS — keep data.json values */ }
+}
+
 loadData();
 startCountdown();
 setInterval(loadData, 5 * 60 * 1000); // poll every 5 min so countdown resets quickly after each bot run
+liveRefresh();
+setInterval(liveRefresh, 5 * 60 * 1000);
 
 // Drawer
 function toggleDrawer() {
