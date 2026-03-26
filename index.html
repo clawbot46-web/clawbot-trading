@@ -640,15 +640,15 @@ function render(data) {
   const bestBal = Math.max(s.agg.balance, s.mid.balance, s.rand.balance);
   document.getElementById('heroStats').innerHTML = `
     <div class="hero-stat">
-      <div class="val">${fmt(s.agg.balance)}</div>
+      <div class="val" id="hero-bal-agg">${fmt(s.agg.balance)}</div>
       <div class="lbl">Aggressive Balance</div>
     </div>
     <div class="hero-stat">
-      <div class="val">${fmt(s.mid.balance)}</div>
+      <div class="val" id="hero-bal-mid">${fmt(s.mid.balance)}</div>
       <div class="lbl">Middle Road Balance</div>
     </div>
     <div class="hero-stat">
-      <div class="val">${fmt(s.rand.balance)}</div>
+      <div class="val" id="hero-bal-rand">${fmt(s.rand.balance)}</div>
       <div class="lbl">Random Bot Balance</div>
     </div>
     <div class="hero-stat">
@@ -672,8 +672,8 @@ function render(data) {
       <div class="accent-bar" style="background:${b.color}"></div>
       <div class="bot-name" style="color:${b.color}">${b.name}</div>
       <div class="bot-strategy">${b.strategy}</div>
-      <div class="balance">${fmt(b.data.balance)}</div>
-      <div class="change" style="color:${clr(b.data.balance)}">${fmtPct(b.data.balance)} from $1,000,000</div>
+      <div class="balance" id="live-bal-${b.key}">${fmt(b.data.balance)}</div>
+      <div class="change" id="live-chg-${b.key}" style="color:${clr(b.data.balance)}">${fmtPct(b.data.balance)} from $1,000,000</div>
       <div class="bot-stats">
         <div class="stat-item">
           <div class="stat-lbl">Total Trades</div>
@@ -689,7 +689,7 @@ function render(data) {
         </div>
         <div class="stat-item" style="grid-column:1/-1">
           <div class="stat-lbl">Assets Held</div>
-          <div class="stat-val" style="font-size:12px;color:var(--muted)">
+          <div class="stat-val" id="live-held-${b.key}" style="font-size:12px;color:var(--muted)">
             ${(b.data.holdings && b.data.holdings.length)
               ? b.data.holdings.map(h => `<span style="color:${b.color};font-weight:600">${h.symbol}</span> ${fmt(h.value)}`).join(' &nbsp;·&nbsp; ')
               : '(none currently held)'}
@@ -697,7 +697,7 @@ function render(data) {
         </div>
         <div class="stat-item" style="grid-column:1/-1">
           <div class="stat-lbl">Value in Assets</div>
-          <div class="stat-val" style="color:var(--green);font-weight:600">${fmt(b.data.held_value || 0)}</div>
+          <div class="stat-val" id="live-val-${b.key}" style="color:var(--green);font-weight:600">${fmt(b.data.held_value || 0)}</div>
         </div>
       </div>
       <a href="${b.page}" style="display:block;margin-top:14px;text-align:center;font-size:12px;color:${b.color};opacity:0.8;text-decoration:none;border-top:1px solid var(--border);padding-top:12px;">View Full Profile →</a>
@@ -825,6 +825,59 @@ setInterval(() => {
   const el = document.getElementById('tradesCountdown');
   if (el) el.textContent = mins + ':' + String(secs).padStart(2, '0');
 }, 1000);
+
+// ── Live Alpaca refresh (every 5 min) ────────────────────────────────────────
+const ALPACA_PAPER = 'https://paper-api.alpaca.markets';
+const BOT_CREDS = {
+  agg:  { apiKey: 'PKW2ST42PJRAQCIX5G55U2AYIB',  secretKey: '3EH289kyRsKpzz5DS4vsP3GTTNi8miLfNPgmaJfAFD9V',  color: 'var(--agg)'  },
+  mid:  { apiKey: 'PKRPO62OODF2OAX7ZPBSK57SIN',  secretKey: 'HSmZGrmqewBpRPr52pcwyeZQv3Tp9HhmLfTvmW4wLZ1u',  color: 'var(--mid)'  },
+  rand: { apiKey: 'PKYT5B4JGG7F356XUDRUVDTWG7', secretKey: 'AzBMAANrvCKjsyJZF2cf7ozYCNqofGi43AhnQzgemtwi', color: 'var(--rand)' },
+};
+
+async function liveRefresh() {
+  for (const [key, cred] of Object.entries(BOT_CREDS)) {
+    try {
+      const h = { 'APCA-API-KEY-ID': cred.apiKey, 'APCA-API-SECRET-KEY': cred.secretKey };
+      const [acctR, posR] = await Promise.all([
+        fetch(`${ALPACA_PAPER}/v2/account`,   { headers: h }),
+        fetch(`${ALPACA_PAPER}/v2/positions`, { headers: h }),
+      ]);
+      if (!acctR.ok || !posR.ok) continue;
+      const acct      = await acctR.json();
+      const positions = await posR.json();
+
+      const balance = parseFloat(acct.equity || 0);
+      let heldValue = 0;
+      const holdings = (Array.isArray(positions) ? positions : []).map(p => {
+        const val = parseFloat(p.market_value || 0);
+        heldValue += val;
+        let sym = p.symbol || '';
+        if (sym.endsWith('USD') && !sym.includes('/')) {
+          const base = sym.slice(0, -3);
+          if (['BTC','ETH','SOL','AVAX','LINK','DOGE','LTC'].includes(base)) sym = base + '/USD';
+        }
+        return { symbol: sym, value: val };
+      }).sort((a, b) => b.value - a.value);
+
+      const set = (id, fn) => { const el = document.getElementById(id); if (el) fn(el); };
+
+      set(`hero-bal-${key}`, el => el.textContent = fmt(balance));
+      set(`live-bal-${key}`, el => el.textContent = fmt(balance));
+      set(`live-chg-${key}`, el => {
+        el.textContent = fmtPct(balance) + ' from $1,000,000';
+        el.style.color = clr(balance);
+      });
+      set(`live-held-${key}`, el => {
+        el.innerHTML = holdings.length
+          ? holdings.map(h => `<span style="color:${cred.color};font-weight:600">${h.symbol}</span> ${fmt(h.value)}`).join(' &nbsp;·&nbsp; ')
+          : '(none currently held)';
+      });
+      set(`live-val-${key}`, el => el.textContent = fmt(heldValue));
+    } catch (e) { /* CORS or network error — data.json values stay shown */ }
+  }
+}
+liveRefresh();
+setInterval(liveRefresh, 5 * 60 * 1000);
 
 // Drawer
 function toggleDrawer() {
