@@ -723,8 +723,17 @@ function render(data) {
     </div>
   `;
 
-  // Chart
-  const labels = portfolio.map(p => p.ts);
+  // Chart — end-of-day only (one point per calendar day)
+  const eodMap = new Map();
+  portfolio.forEach(p => {
+    const dateKey = (p._raw_ts || p.ts).substring(0, 10);
+    eodMap.set(dateKey, p);
+  });
+  const eod = Array.from(eodMap.values());
+  const labels = eod.map(p => {
+    const dt = new Date((p._raw_ts || p.ts).replace(' ', 'T'));
+    return dt.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  });
   const ctx = document.getElementById('chart').getContext('2d');
   if (chart) chart.destroy();
   chart = new Chart(ctx, {
@@ -732,10 +741,10 @@ function render(data) {
     data: {
       labels,
       datasets: [
-        { label: 'Aggressive', data: portfolio.map(p => p.agg), borderColor: '#f59e0b', backgroundColor: 'rgba(245,158,11,0.08)', tension: 0.3, pointRadius: 2, borderWidth: 2 },
-        { label: 'Middle Road', data: portfolio.map(p => p.mid), borderColor: '#3b82f6', backgroundColor: 'rgba(59,130,246,0.08)', tension: 0.3, pointRadius: 2, borderWidth: 2 },
-        { label: 'Random Bot', data: portfolio.map(p => p.rand), borderColor: '#a855f7', backgroundColor: 'rgba(168,85,247,0.08)', tension: 0.3, pointRadius: 2, borderWidth: 2 },
-        { label: 'SPY (if invested $1M)', data: portfolio.map(p => p.spy_bal || 1000000), borderColor: '#22c55e', backgroundColor: 'rgba(34,197,94,0.05)', tension: 0.3, pointRadius: 2, borderWidth: 2, borderDash: [6, 3] },
+        { label: 'Aggressive',           data: eod.map(p => p.agg),             borderColor: '#f59e0b', backgroundColor: 'rgba(245,158,11,0.08)', tension: 0.3, pointRadius: 5, pointHoverRadius: 7, borderWidth: 2.5 },
+        { label: 'Middle Road',           data: eod.map(p => p.mid),             borderColor: '#3b82f6', backgroundColor: 'rgba(59,130,246,0.08)', tension: 0.3, pointRadius: 5, pointHoverRadius: 7, borderWidth: 2.5 },
+        { label: 'Random Bot',            data: eod.map(p => p.rand),            borderColor: '#a855f7', backgroundColor: 'rgba(168,85,247,0.08)', tension: 0.3, pointRadius: 5, pointHoverRadius: 7, borderWidth: 2.5 },
+        { label: 'SPY (if invested $1M)', data: eod.map(p => p.spy_bal || 1000000), borderColor: '#22c55e', backgroundColor: 'rgba(34,197,94,0.05)', tension: 0.3, pointRadius: 4, pointHoverRadius: 6, borderWidth: 2, borderDash: [6, 3] },
       ]
     },
     options: {
