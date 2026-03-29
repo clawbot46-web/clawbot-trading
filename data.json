@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-29T00:23:13",
+  "generated": "2026-03-29T00:33:18",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -3996,19 +3996,19 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 66765.0,
+          "last_price": 66753.13,
           "value": 0.0
         },
         {
           "symbol": "ETH/USD",
           "qty": 0.0,
-          "last_price": 2011.597,
+          "last_price": 2005.7,
           "value": 0.0
         },
         {
           "symbol": "SOL/USD",
           "qty": 0.0,
-          "last_price": 82.545,
+          "last_price": 82.511,
           "value": 0.0
         }
       ],
@@ -4067,7 +4067,7 @@
       "held_value": 484054.06
     },
     "rand": {
-      "balance": 928362.75,
+      "balance": 927969.17,
       "trades": 152,
       "buys": 121,
       "sells": 31,
@@ -4076,14 +4076,14 @@
         {
           "symbol": "SOL/USD",
           "qty": 2224.617707,
-          "last_price": 82.545,
-          "value": 183631.07
+          "last_price": 82.511,
+          "value": 183555.43
         },
         {
           "symbol": "ETH/USD",
           "qty": 53.915957,
-          "last_price": 2011.597,
-          "value": 108457.18
+          "last_price": 2005.7,
+          "value": 108139.23
         },
         {
           "symbol": "DDOG",
@@ -4146,7 +4146,7 @@
           "value": 72.98
         }
       ],
-      "held_value": 618491.88
+      "held_value": 618098.3
     },
     "spy_balance": 943579.44
   }
