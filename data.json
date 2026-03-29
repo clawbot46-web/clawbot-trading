@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-29T00:21:12",
+  "generated": "2026-03-29T00:22:05",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -4008,7 +4008,7 @@
         {
           "symbol": "SOL/USD",
           "qty": 0.0,
-          "last_price": 83.082,
+          "last_price": 82.545,
           "value": 0.0
         }
       ],
@@ -4067,7 +4067,7 @@
       "held_value": 484054.06
     },
     "rand": {
-      "balance": 929557.36,
+      "balance": 928362.75,
       "trades": 152,
       "buys": 121,
       "sells": 31,
@@ -4076,8 +4076,8 @@
         {
           "symbol": "SOL/USD",
           "qty": 2224.617707,
-          "last_price": 83.082,
-          "value": 184825.69
+          "last_price": 82.545,
+          "value": 183631.07
         },
         {
           "symbol": "ETH/USD",
@@ -4146,7 +4146,7 @@
           "value": 72.98
         }
       ],
-      "held_value": 619686.49
+      "held_value": 618491.88
     },
     "spy_balance": 943579.44
   }
