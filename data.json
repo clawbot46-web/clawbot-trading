@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-30T23:13:07",
+  "generated": "2026-03-30T23:13:32",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -5401,7 +5401,7 @@
         {
           "symbol": "ETH/USD",
           "qty": 0.0,
-          "last_price": 2071.37,
+          "last_price": 2072.9,
           "value": 0.0
         },
         {
@@ -5472,7 +5472,7 @@
       "held_value": 556827.43
     },
     "rand": {
-      "balance": 930999.66,
+      "balance": 931110.6,
       "trades": 238,
       "buys": 181,
       "sells": 57,
@@ -5487,8 +5487,8 @@
         {
           "symbol": "ETH/USD",
           "qty": 72.506759,
-          "last_price": 2071.37,
-          "value": 150188.33
+          "last_price": 2072.9,
+          "value": 150299.26
         },
         {
           "symbol": "DDOG",
@@ -5593,7 +5593,7 @@
           "value": 352.8
         }
       ],
-      "held_value": 930946.71
+      "held_value": 931057.65
     },
     "spy_balance": 927489.52
   }
