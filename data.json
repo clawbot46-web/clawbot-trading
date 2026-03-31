@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-30T21:32:59",
+  "generated": "2026-03-30T21:33:16",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -5315,7 +5315,7 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 67742.0,
+          "last_price": 67899.973,
           "value": 0.0
         },
         {
@@ -5392,7 +5392,7 @@
       "held_value": 556583.29
     },
     "rand": {
-      "balance": 930100.96,
+      "balance": 930533.82,
       "trades": 234,
       "buys": 177,
       "sells": 57,
@@ -5407,8 +5407,8 @@
         {
           "symbol": "BTC/USD",
           "qty": 2.15636,
-          "last_price": 67742.0,
-          "value": 146076.14
+          "last_price": 67899.973,
+          "value": 146416.79
         },
         {
           "symbol": "DDOG",
@@ -5437,8 +5437,8 @@
         {
           "symbol": "AMD",
           "qty": 318.0,
-          "last_price": 199.51,
-          "value": 63444.18
+          "last_price": 199.8,
+          "value": 63536.4
         },
         {
           "symbol": "COST",
@@ -5513,7 +5513,7 @@
           "value": 0.0
         }
       ],
-      "held_value": 905898.57
+      "held_value": 906331.43
     },
     "spy_balance": 927489.52
   }
