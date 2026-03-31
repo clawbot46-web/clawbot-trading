@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-30T23:13:32",
+  "generated": "2026-03-30T23:55:30",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -2250,9 +2250,38 @@
       "rand": 930969.48,
       "spy": -0.3343,
       "spy_bal": 927489.52
+    },
+    {
+      "ts": "11:34PM",
+      "_raw_ts": "2026-03-30 23:34:26",
+      "agg": 921589.57,
+      "mid": 997719.89,
+      "rand": 930077.32,
+      "spy": -0.3343,
+      "spy_bal": 927489.52
+    },
+    {
+      "ts": "11:55PM",
+      "_raw_ts": "2026-03-30 23:55:26",
+      "agg": 921589.57,
+      "mid": 997671.11,
+      "rand": 929706.0,
+      "spy": -0.3343,
+      "spy_bal": 927489.52
     }
   ],
   "trades": [
+    {
+      "ts": "2026-03-30 23:55:25",
+      "bot": "Random Bot",
+      "symbol": "ETH/USD",
+      "action": "BUY",
+      "qty": 0.020506,
+      "price": 2065.7432,
+      "value": 42.36,
+      "reason": "Totally random, no regrets (crypto edition)",
+      "balance": 929706.0
+    },
     {
       "ts": "2026-03-30 22:55:06",
       "bot": "Random Bot",
@@ -5395,26 +5424,26 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 67935.36,
+          "last_price": 67710.0,
           "value": 0.0
         },
         {
           "symbol": "ETH/USD",
           "qty": 0.0,
-          "last_price": 2072.9,
+          "last_price": 2067.427,
           "value": 0.0
         },
         {
           "symbol": "SOL/USD",
           "qty": 0.0,
-          "last_price": 83.93,
+          "last_price": 83.16,
           "value": 0.0
         }
       ],
       "held_value": 483.23
     },
     "mid": {
-      "balance": 997736.15,
+      "balance": 997671.11,
       "trades": 20,
       "buys": 14,
       "sells": 6,
@@ -5423,8 +5452,8 @@
         {
           "symbol": "TLT",
           "qty": 813.0,
-          "last_price": 86.93,
-          "value": 70674.09
+          "last_price": 86.85,
+          "value": 70609.05
         },
         {
           "symbol": "MRK",
@@ -5469,26 +5498,26 @@
           "value": 68201.61
         }
       ],
-      "held_value": 556827.43
+      "held_value": 556762.39
     },
     "rand": {
-      "balance": 931110.6,
-      "trades": 238,
-      "buys": 181,
+      "balance": 929706.0,
+      "trades": 239,
+      "buys": 182,
       "sells": 57,
       "assets": "AFRM, AMD, BTC, COST, CRWD, DDOG, ETH, GM, GRAB, IEF, JPM, MRK, PYPL, RIVN, SBUX, SOL, TLT, VZ, XLF, XLV",
       "holdings": [
         {
           "symbol": "BTC/USD",
           "qty": 2.446901,
-          "last_price": 67935.36,
-          "value": 166231.09
+          "last_price": 67710.0,
+          "value": 165679.66
         },
         {
           "symbol": "ETH/USD",
-          "qty": 72.506759,
-          "last_price": 2072.9,
-          "value": 150299.26
+          "qty": 72.526816,
+          "last_price": 2067.427,
+          "value": 149943.9
         },
         {
           "symbol": "DDOG",
@@ -5517,8 +5546,8 @@
         {
           "symbol": "AMD",
           "qty": 318.0,
-          "last_price": 199.15,
-          "value": 63329.7
+          "last_price": 198.0,
+          "value": 62964.0
         },
         {
           "symbol": "COST",
@@ -5535,8 +5564,8 @@
         {
           "symbol": "TLT",
           "qty": 411.0,
-          "last_price": 86.93,
-          "value": 35728.23
+          "last_price": 86.85,
+          "value": 35695.35
         },
         {
           "symbol": "IEF",
@@ -5553,8 +5582,8 @@
         {
           "symbol": "XLF",
           "qty": 374.0,
-          "last_price": 48.85,
-          "value": 18269.9
+          "last_price": 48.8,
+          "value": 18251.2
         },
         {
           "symbol": "JPM",
@@ -5577,8 +5606,8 @@
         {
           "symbol": "SOL/USD",
           "qty": 50.632611,
-          "last_price": 83.93,
-          "value": 4249.6
+          "last_price": 83.16,
+          "value": 4210.61
         },
         {
           "symbol": "CRWD",
@@ -5593,7 +5622,7 @@
           "value": 352.8
         }
       ],
-      "held_value": 931057.65
+      "held_value": 929694.58
     },
     "spy_balance": 927489.52
   }
