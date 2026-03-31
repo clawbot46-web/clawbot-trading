@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-30T23:08:50",
+  "generated": "2026-03-30T23:10:59",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -5395,19 +5395,19 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 67857.8,
+          "last_price": 67863.967,
           "value": 0.0
         },
         {
           "symbol": "ETH/USD",
           "qty": 0.0,
-          "last_price": 2073.26,
+          "last_price": 2073.39,
           "value": 0.0
         },
         {
           "symbol": "SOL/USD",
           "qty": 0.0,
-          "last_price": 84.03,
+          "last_price": 83.93,
           "value": 0.0
         }
       ],
@@ -5472,7 +5472,7 @@
       "held_value": 556819.3
     },
     "rand": {
-      "balance": 930798.01,
+      "balance": 930817.86,
       "trades": 238,
       "buys": 181,
       "sells": 57,
@@ -5481,14 +5481,14 @@
         {
           "symbol": "BTC/USD",
           "qty": 2.446901,
-          "last_price": 67857.8,
-          "value": 166041.31
+          "last_price": 67863.967,
+          "value": 166056.4
         },
         {
           "symbol": "ETH/USD",
           "qty": 72.506759,
-          "last_price": 2073.26,
-          "value": 150325.36
+          "last_price": 2073.39,
+          "value": 150334.79
         },
         {
           "symbol": "DDOG",
@@ -5577,14 +5577,14 @@
         {
           "symbol": "SOL/USD",
           "qty": 50.632611,
-          "last_price": 84.03,
-          "value": 4254.66
+          "last_price": 83.93,
+          "value": 4249.6
         },
         {
           "symbol": "CRWD",
           "qty": 1.0,
-          "last_price": 384.6,
-          "value": 384.6
+          "last_price": 385.0,
+          "value": 385.0
         },
         {
           "symbol": "RIVN",
@@ -5593,7 +5593,7 @@
           "value": 352.8
         }
       ],
-      "held_value": 930745.06
+      "held_value": 930764.91
     },
     "spy_balance": 927489.52
   }
