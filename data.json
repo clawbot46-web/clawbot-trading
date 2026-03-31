@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-30T23:07:35",
+  "generated": "2026-03-30T23:08:49",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -5414,7 +5414,7 @@
       "held_value": 483.23
     },
     "mid": {
-      "balance": 997719.89,
+      "balance": 997728.02,
       "trades": 20,
       "buys": 14,
       "sells": 6,
@@ -5423,8 +5423,8 @@
         {
           "symbol": "TLT",
           "qty": 813.0,
-          "last_price": 86.91,
-          "value": 70657.83
+          "last_price": 86.92,
+          "value": 70665.96
         },
         {
           "symbol": "MRK",
@@ -5469,10 +5469,10 @@
           "value": 68201.61
         }
       ],
-      "held_value": 556811.17
+      "held_value": 556819.3
     },
     "rand": {
-      "balance": 930793.43,
+      "balance": 930798.01,
       "trades": 238,
       "buys": 181,
       "sells": 57,
@@ -5535,8 +5535,8 @@
         {
           "symbol": "TLT",
           "qty": 411.0,
-          "last_price": 86.91,
-          "value": 35720.01
+          "last_price": 86.92,
+          "value": 35724.12
         },
         {
           "symbol": "IEF",
@@ -5559,8 +5559,8 @@
         {
           "symbol": "JPM",
           "qty": 47.0,
-          "last_price": 287.43,
-          "value": 13509.21
+          "last_price": 287.44,
+          "value": 13509.68
         },
         {
           "symbol": "GRAB",
@@ -5593,7 +5593,7 @@
           "value": 352.8
         }
       ],
-      "held_value": 930740.48
+      "held_value": 930745.06
     },
     "spy_balance": 927489.52
   }
