@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-01T12:22:33",
+  "generated": "2026-04-01T13:24:47",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -2699,7 +2699,7 @@
       "mid": 994698.89,
       "rand": 935008.52,
       "spy": 2.9068,
-      "spy_bal": 1013815.01
+      "spy_bal": 1015102.46
     },
     {
       "ts": "12:51AM*",
@@ -2708,7 +2708,7 @@
       "mid": 994752.95,
       "rand": 935106.14,
       "spy": 2.9068,
-      "spy_bal": 1013815.01
+      "spy_bal": 1015102.46
     },
     {
       "ts": "1:13AM",
@@ -2717,7 +2717,7 @@
       "mid": 994845.93,
       "rand": 935533.71,
       "spy": 2.9068,
-      "spy_bal": 1013815.01
+      "spy_bal": 1015102.46
     },
     {
       "ts": "1:51AM*",
@@ -2726,7 +2726,7 @@
       "mid": 994991.87,
       "rand": 936354.54,
       "spy": 2.9068,
-      "spy_bal": 1013815.01
+      "spy_bal": 1015102.46
     },
     {
       "ts": "2:13AM",
@@ -2735,7 +2735,7 @@
       "mid": 995130.98,
       "rand": 936451.93,
       "spy": 2.9068,
-      "spy_bal": 1013815.01
+      "spy_bal": 1015102.46
     },
     {
       "ts": "2:51AM*",
@@ -2744,7 +2744,7 @@
       "mid": 996238.61,
       "rand": 937836.62,
       "spy": 2.9068,
-      "spy_bal": 1013815.01
+      "spy_bal": 1015102.46
     },
     {
       "ts": "3:14AM",
@@ -2753,7 +2753,7 @@
       "mid": 996298.87,
       "rand": 938023.31,
       "spy": 2.9068,
-      "spy_bal": 1013815.01
+      "spy_bal": 1015102.46
     },
     {
       "ts": "3:51AM*",
@@ -2762,7 +2762,7 @@
       "mid": 996142.33,
       "rand": 936645.43,
       "spy": 2.9068,
-      "spy_bal": 1013815.01
+      "spy_bal": 1015102.46
     },
     {
       "ts": "4:14AM",
@@ -2771,7 +2771,7 @@
       "mid": 997587.64,
       "rand": 935600.77,
       "spy": 2.9068,
-      "spy_bal": 1013815.01
+      "spy_bal": 1015102.46
     },
     {
       "ts": "4:52AM*",
@@ -2780,7 +2780,7 @@
       "mid": 998085.02,
       "rand": 937610.66,
       "spy": 2.9068,
-      "spy_bal": 1013815.01
+      "spy_bal": 1015102.46
     },
     {
       "ts": "5:14AM",
@@ -2789,7 +2789,7 @@
       "mid": 997607.97,
       "rand": 935944.23,
       "spy": 2.9068,
-      "spy_bal": 1013815.01
+      "spy_bal": 1015102.46
     },
     {
       "ts": "5:52AM*",
@@ -2798,7 +2798,7 @@
       "mid": 997800.85,
       "rand": 936059.21,
       "spy": 2.9068,
-      "spy_bal": 1013815.01
+      "spy_bal": 1015102.46
     },
     {
       "ts": "6:15AM",
@@ -2807,7 +2807,7 @@
       "mid": 997739.29,
       "rand": 934981.47,
       "spy": 2.9068,
-      "spy_bal": 1013815.01
+      "spy_bal": 1015102.46
     },
     {
       "ts": "6:52AM*",
@@ -2816,7 +2816,7 @@
       "mid": 998141.78,
       "rand": 935245.99,
       "spy": 2.9068,
-      "spy_bal": 1013815.01
+      "spy_bal": 1015102.46
     },
     {
       "ts": "7:15AM",
@@ -2825,7 +2825,7 @@
       "mid": 998327.49,
       "rand": 935080.04,
       "spy": 2.9068,
-      "spy_bal": 1013815.01
+      "spy_bal": 1015102.46
     },
     {
       "ts": "7:52AM*",
@@ -2834,7 +2834,7 @@
       "mid": 1000497.18,
       "rand": 935827.01,
       "spy": 2.9068,
-      "spy_bal": 1013815.01
+      "spy_bal": 1015102.46
     },
     {
       "ts": "8:15AM",
@@ -2843,7 +2843,7 @@
       "mid": 1000249.22,
       "rand": 935075.09,
       "spy": 2.9068,
-      "spy_bal": 1013815.01
+      "spy_bal": 1015102.46
     },
     {
       "ts": "8:52AM*",
@@ -2852,7 +2852,7 @@
       "mid": 998365.7,
       "rand": 933372.1,
       "spy": 2.9068,
-      "spy_bal": 1013815.01
+      "spy_bal": 1015102.46
     },
     {
       "ts": "9:16AM",
@@ -2861,7 +2861,7 @@
       "mid": 998041.48,
       "rand": 932771.78,
       "spy": 2.9068,
-      "spy_bal": 1013815.01
+      "spy_bal": 1015102.46
     },
     {
       "ts": "9:54AM",
@@ -2870,7 +2870,7 @@
       "mid": 999758.8,
       "rand": 933269.34,
       "spy": 0.5705,
-      "spy_bal": 1013815.01
+      "spy_bal": 1015102.46
     },
     {
       "ts": "10:18AM",
@@ -2879,7 +2879,7 @@
       "mid": 997577.41,
       "rand": 932951.42,
       "spy": 0.6443,
-      "spy_bal": 1013815.01
+      "spy_bal": 1015102.46
     },
     {
       "ts": "10:56AM",
@@ -2888,7 +2888,7 @@
       "mid": 998954.18,
       "rand": 935029.05,
       "spy": 0.9564,
-      "spy_bal": 1013815.01
+      "spy_bal": 1015102.46
     },
     {
       "ts": "11:20AM",
@@ -2897,7 +2897,7 @@
       "mid": 998410.03,
       "rand": 935288.78,
       "spy": 1.0102,
-      "spy_bal": 1013815.01
+      "spy_bal": 1015102.46
     },
     {
       "ts": "11:58AM",
@@ -2906,7 +2906,7 @@
       "mid": 997795.53,
       "rand": 937392.73,
       "spy": 1.1855,
-      "spy_bal": 1013815.01
+      "spy_bal": 1015102.46
     },
     {
       "ts": "12:22PM",
@@ -2915,10 +2915,116 @@
       "mid": 997830.4,
       "rand": 936511.52,
       "spy": 1.1186,
-      "spy_bal": 1013815.01
+      "spy_bal": 1015102.46
+    },
+    {
+      "ts": "1:00PM",
+      "_raw_ts": "2026-04-01 13:00:55",
+      "agg": 921958.77,
+      "mid": 998339.72,
+      "rand": 937624.66,
+      "spy": 1.144,
+      "spy_bal": 1015102.46
+    },
+    {
+      "ts": "1:24PM",
+      "_raw_ts": "2026-04-01 13:24:42",
+      "agg": 922112.36,
+      "mid": 999066.05,
+      "rand": 936872.85,
+      "spy": 1.2509,
+      "spy_bal": 1015102.46
     }
   ],
   "trades": [
+    {
+      "ts": "2026-04-01 13:24:41",
+      "bot": "Random Bot",
+      "symbol": "GRAB",
+      "action": "SELL",
+      "qty": 163.0,
+      "price": 3.675,
+      "value": 599.02,
+      "reason": "Chart looked like a rocket",
+      "balance": 936874.0
+    },
+    {
+      "ts": "2026-04-01 13:24:40",
+      "bot": "Random Bot",
+      "symbol": "TLT",
+      "action": "SELL",
+      "qty": 35.0,
+      "price": 86.6,
+      "value": 3031.0,
+      "reason": "Mercury is in retrograde",
+      "balance": 936871.22
+    },
+    {
+      "ts": "2026-04-01 13:24:39",
+      "bot": "Random Bot",
+      "symbol": "JPM",
+      "action": "SELL",
+      "qty": 1.0,
+      "price": 295.95,
+      "value": 295.95,
+      "reason": "Coin flip said yes",
+      "balance": 936869.33
+    },
+    {
+      "ts": "2026-04-01 13:24:39",
+      "bot": "Random Bot",
+      "symbol": "TLT",
+      "action": "SELL",
+      "qty": 376.0,
+      "price": 86.6,
+      "value": 32561.6,
+      "reason": "Chart looked like a rocket",
+      "balance": 936871.68
+    },
+    {
+      "ts": "2026-04-01 13:00:54",
+      "bot": "Random Bot",
+      "symbol": "PYPL",
+      "action": "SELL",
+      "qty": 32.0,
+      "price": 44.95,
+      "value": 1438.4,
+      "reason": "Diversification by entropy",
+      "balance": 937623.01
+    },
+    {
+      "ts": "2026-04-01 13:00:53",
+      "bot": "Random Bot",
+      "symbol": "AMD",
+      "action": "SELL",
+      "qty": 254.0,
+      "price": 213.04,
+      "value": 54112.16,
+      "reason": "Mercury is in retrograde",
+      "balance": 937623.51
+    },
+    {
+      "ts": "2026-04-01 13:00:52",
+      "bot": "Random Bot",
+      "symbol": "XLV",
+      "action": "SELL",
+      "qty": 106.0,
+      "price": 148.22,
+      "value": 15711.32,
+      "reason": "Chart looked like a rocket",
+      "balance": 937638.94
+    },
+    {
+      "ts": "2026-04-01 13:00:52",
+      "bot": "Random Bot",
+      "symbol": "XPEV",
+      "action": "SELL",
+      "qty": 1830.0,
+      "price": 17.645,
+      "value": 32290.35,
+      "reason": "I heard someone mention it at the gym",
+      "balance": 937633.13
+    },
     {
       "ts": "2026-04-01 12:22:26",
       "bot": "Random Bot",
@@ -7278,7 +7384,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 921962.16,
+      "balance": 922112.72,
       "trades": 29,
       "buys": 17,
       "sells": 12,
@@ -7287,38 +7393,38 @@
         {
           "symbol": "AAPL",
           "qty": 181.0,
-          "last_price": 254.57,
-          "value": 46077.17
+          "last_price": 255.325,
+          "value": 46213.82
         },
         {
           "symbol": "AFRM",
           "qty": 11.0,
-          "last_price": 45.97,
-          "value": 505.67
+          "last_price": 46.0,
+          "value": 506.0
         },
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 68752.0,
+          "last_price": 68517.6405,
           "value": 0.0
         },
         {
           "symbol": "ETH/USD",
           "qty": 0.0,
-          "last_price": 2130.16,
+          "last_price": 2141.39,
           "value": 0.0
         },
         {
           "symbol": "SOL/USD",
           "qty": 0.0,
-          "last_price": 83.367,
+          "last_price": 85.0779,
           "value": 0.0
         }
       ],
-      "held_value": 46582.84
+      "held_value": 46719.83
     },
     "mid": {
-      "balance": 997835.91,
+      "balance": 999056.45,
       "trades": 27,
       "buys": 20,
       "sells": 7,
@@ -7327,220 +7433,214 @@
         {
           "symbol": "MRK",
           "qty": 590.0,
-          "last_price": 120.51,
-          "value": 71100.9
+          "last_price": 121.5,
+          "value": 71685.0
         },
         {
           "symbol": "XLI",
           "qty": 427.0,
-          "last_price": 165.05,
-          "value": 70476.35
+          "last_price": 165.7,
+          "value": 70753.9
         },
         {
           "symbol": "JNJ",
           "qty": 288.0,
-          "last_price": 244.6906,
-          "value": 70470.89
+          "last_price": 245.1708,
+          "value": 70609.19
         },
         {
           "symbol": "TLT",
           "qty": 813.0,
-          "last_price": 86.6401,
-          "value": 70438.4
-        },
-        {
-          "symbol": "IEF",
-          "qty": 736.0,
-          "last_price": 95.21,
-          "value": 70074.56
+          "last_price": 86.6,
+          "value": 70405.8
         },
         {
           "symbol": "TMO",
           "qty": 141.0,
-          "last_price": 496.645,
-          "value": 70026.95
+          "last_price": 498.17,
+          "value": 70241.97
         },
         {
-          "symbol": "XOM",
-          "qty": 433.0,
-          "last_price": 161.18,
-          "value": 69790.94
+          "symbol": "IEF",
+          "qty": 736.0,
+          "last_price": 95.1899,
+          "value": 70059.77
         },
         {
           "symbol": "AAPL",
           "qty": 274.0,
-          "last_price": 254.57,
-          "value": 69752.18
+          "last_price": 255.3029,
+          "value": 69952.99
         },
         {
           "symbol": "NFLX",
           "qty": 730.0,
-          "last_price": 95.365,
-          "value": 69616.45
+          "last_price": 95.6753,
+          "value": 69842.97
         },
         {
           "symbol": "NEE",
           "qty": 745.0,
-          "last_price": 93.185,
-          "value": 69422.82
+          "last_price": 93.16,
+          "value": 69404.2
+        },
+        {
+          "symbol": "XOM",
+          "qty": 433.0,
+          "last_price": 160.235,
+          "value": 69381.76
         },
         {
           "symbol": "ABBV",
           "qty": 319.0,
-          "last_price": 215.335,
-          "value": 68691.87
+          "last_price": 215.02,
+          "value": 68591.38
         },
         {
           "symbol": "COST",
           "qty": 69.0,
-          "last_price": 993.042,
-          "value": 68519.9
+          "last_price": 992.915,
+          "value": 68511.13
         },
         {
           "symbol": "LLY",
           "qty": 10.0,
-          "last_price": 959.12,
-          "value": 9591.2
+          "last_price": 976.29,
+          "value": 9762.9
         }
       ],
-      "held_value": 847973.41
+      "held_value": 849202.96
     },
     "rand": {
-      "balance": 936525.63,
-      "trades": 340,
+      "balance": 936866.8,
+      "trades": 348,
       "buys": 243,
-      "sells": 97,
+      "sells": 105,
       "assets": "AFRM, AMD, BABA, BTC, COST, CRWD, DDOG, ETH, GM, GRAB, IEF, JPM, MRK, PYPL, RIVN, SBUX, SOL, TLT, VZ, XLF, XLV, XPEV",
       "holdings": [
         {
           "symbol": "ETH/USD",
           "qty": 83.905378,
-          "last_price": 2130.16,
-          "value": 178731.88
+          "last_price": 2141.39,
+          "value": 179674.14
         },
         {
           "symbol": "BTC/USD",
           "qty": 2.567162,
-          "last_price": 68752.0,
-          "value": 176497.53
+          "last_price": 68517.6405,
+          "value": 175895.89
         },
         {
           "symbol": "VZ",
           "qty": 1548.0,
-          "last_price": 49.4261,
-          "value": 76511.6
-        },
-        {
-          "symbol": "AMD",
-          "qty": 318.0,
-          "last_price": 213.5497,
-          "value": 67908.8
-        },
-        {
-          "symbol": "XPEV",
-          "qty": 2506.0,
-          "last_price": 17.598,
-          "value": 44100.59
-        },
-        {
-          "symbol": "TLT",
-          "qty": 411.0,
-          "last_price": 86.6401,
-          "value": 35609.08
-        },
-        {
-          "symbol": "XLV",
-          "qty": 157.0,
-          "last_price": 147.99,
-          "value": 23234.43
+          "last_price": 49.295,
+          "value": 76308.66
         },
         {
           "symbol": "MRK",
           "qty": 186.0,
-          "last_price": 120.51,
-          "value": 22414.86
+          "last_price": 121.5,
+          "value": 22599.0
+        },
+        {
+          "symbol": "AMD",
+          "qty": 64.0,
+          "last_price": 212.735,
+          "value": 13615.04
+        },
+        {
+          "symbol": "XPEV",
+          "qty": 676.0,
+          "last_price": 17.675,
+          "value": 11948.3
+        },
+        {
+          "symbol": "XLV",
+          "qty": 51.0,
+          "last_price": 148.76,
+          "value": 7586.76
         },
         {
           "symbol": "XLF",
           "qty": 130.0,
-          "last_price": 49.64,
-          "value": 6453.2
+          "last_price": 49.685,
+          "value": 6459.05
         },
         {
           "symbol": "AFRM",
           "qty": 101.0,
-          "last_price": 45.97,
-          "value": 4642.97
+          "last_price": 46.0495,
+          "value": 4651.0
         },
         {
           "symbol": "COST",
           "qty": 4.0,
-          "last_price": 993.042,
-          "value": 3972.17
-        },
-        {
-          "symbol": "PYPL",
-          "qty": 40.0,
-          "last_price": 44.6057,
-          "value": 1784.23
+          "last_price": 992.915,
+          "value": 3971.66
         },
         {
           "symbol": "IEF",
           "qty": 14.0,
-          "last_price": 95.21,
-          "value": 1332.94
-        },
-        {
-          "symbol": "GRAB",
-          "qty": 324.0,
-          "last_price": 3.66,
-          "value": 1185.84
+          "last_price": 95.19,
+          "value": 1332.66
         },
         {
           "symbol": "BABA",
           "qty": 6.0,
-          "last_price": 124.12,
-          "value": 744.72
+          "last_price": 124.38,
+          "value": 746.28
         },
         {
-          "symbol": "JPM",
-          "qty": 2.0,
-          "last_price": 296.6999,
-          "value": 593.4
+          "symbol": "GRAB",
+          "qty": 161.0,
+          "last_price": 3.67,
+          "value": 590.87
         },
         {
           "symbol": "RIVN",
           "qty": 24.0,
-          "last_price": 15.215,
-          "value": 365.16
+          "last_price": 15.115,
+          "value": 362.76
+        },
+        {
+          "symbol": "PYPL",
+          "qty": 8.0,
+          "last_price": 44.88,
+          "value": 359.04
+        },
+        {
+          "symbol": "JPM",
+          "qty": 1.0,
+          "last_price": 295.95,
+          "value": 295.95
         },
         {
           "symbol": "DDOG",
           "qty": 2.0,
-          "last_price": 120.94,
-          "value": 241.88
+          "last_price": 119.685,
+          "value": 239.37
         },
         {
           "symbol": "GM",
           "qty": 3.0,
-          "last_price": 75.23,
-          "value": 225.69
+          "last_price": 75.66,
+          "value": 226.98
         },
         {
           "symbol": "SBUX",
           "qty": 1.0,
-          "last_price": 90.6,
-          "value": 90.6
+          "last_price": 90.87,
+          "value": 90.87
         },
         {
           "symbol": "SOL/USD",
           "qty": 0.0,
-          "last_price": 83.367,
+          "last_price": 85.0779,
           "value": 0.0
         }
       ],
-      "held_value": 646641.57
+      "held_value": 506954.28
     },
-    "spy_balance": 1013815.01
+    "spy_balance": 1015102.46
   }
 }
