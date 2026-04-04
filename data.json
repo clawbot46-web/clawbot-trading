@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-03T23:07:13",
+  "generated": "2026-04-03T23:08:20",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -10786,7 +10786,7 @@
         {
           "symbol": "SOL/USD",
           "qty": 0.0,
-          "last_price": 80.036,
+          "last_price": 80.349,
           "value": 0.0
         }
       ],
@@ -10893,7 +10893,7 @@
       "held_value": 848643.95
     },
     "rand": {
-      "balance": 919322.12,
+      "balance": 919512.24,
       "trades": 544,
       "buys": 372,
       "sells": 172,
@@ -10908,8 +10908,8 @@
         {
           "symbol": "SOL/USD",
           "qty": 607.402726,
-          "last_price": 80.036,
-          "value": 48614.08
+          "last_price": 80.349,
+          "value": 48804.2
         },
         {
           "symbol": "VTI",
@@ -11008,7 +11008,7 @@
           "value": 0.0
         }
       ],
-      "held_value": 246672.89
+      "held_value": 246863.01
     },
     "spy_balance": 1011085.93
   }
