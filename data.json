@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-03T21:04:30",
+  "generated": "2026-04-03T22:00:01",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -3967,6 +3967,24 @@
       "agg": 926531.97,
       "mid": 998185.56,
       "rand": 921688.2,
+      "spy": 0.09,
+      "spy_bal": 1011085.93
+    },
+    {
+      "ts": "9:22PM",
+      "_raw_ts": "2026-04-03 21:22:52",
+      "agg": 926531.97,
+      "mid": 998185.56,
+      "rand": 921548.35,
+      "spy": 0.09,
+      "spy_bal": 1011085.93
+    },
+    {
+      "ts": "9:59PM",
+      "_raw_ts": "2026-04-03 21:59:56",
+      "agg": 926531.97,
+      "mid": 998185.56,
+      "rand": 921499.46,
       "spy": 0.09,
       "spy_bal": 1011085.93
     }
@@ -10632,19 +10650,19 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 66842.2,
+          "last_price": 66809.509,
           "value": 0.0
         },
         {
           "symbol": "ETH/USD",
           "qty": 0.0,
-          "last_price": 2053.0,
+          "last_price": 2051.63,
           "value": 0.0
         },
         {
           "symbol": "SOL/USD",
           "qty": 0.0,
-          "last_price": 80.389,
+          "last_price": 80.25,
           "value": 0.0
         }
       ],
@@ -10751,7 +10769,7 @@
       "held_value": 848643.95
     },
     "rand": {
-      "balance": 921688.2,
+      "balance": 921499.46,
       "trades": 536,
       "buys": 366,
       "sells": 170,
@@ -10760,14 +10778,14 @@
         {
           "symbol": "ETH/USD",
           "qty": 76.737926,
-          "last_price": 2053.0,
-          "value": 157542.96
+          "last_price": 2051.63,
+          "value": 157437.83
         },
         {
           "symbol": "SOL/USD",
           "qty": 526.799959,
-          "last_price": 80.389,
-          "value": 42348.92
+          "last_price": 80.25,
+          "value": 42275.7
         },
         {
           "symbol": "VTI",
@@ -10790,8 +10808,8 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.317675,
-          "last_price": 66842.2,
-          "value": 21234.09
+          "last_price": 66809.509,
+          "value": 21223.71
         },
         {
           "symbol": "VZ",
@@ -10866,7 +10884,7 @@
           "value": 72.54
         }
       ],
-      "held_value": 326800.63
+      "held_value": 326611.89
     },
     "spy_balance": 1011085.93
   }
