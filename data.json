@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-03T20:59:45",
+  "generated": "2026-04-03T21:04:30",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -3960,9 +3960,40 @@
       "rand": 921744.23,
       "spy": 0.09,
       "spy_bal": 1011085.93
+    },
+    {
+      "ts": "9:04PM",
+      "_raw_ts": "2026-04-03 21:04:25",
+      "agg": 926531.97,
+      "mid": 998185.56,
+      "rand": 921688.2,
+      "spy": 0.09,
+      "spy_bal": 1011085.93
     }
   ],
   "trades": [
+    {
+      "ts": "2026-04-03 21:04:24",
+      "bot": "Random Bot",
+      "symbol": "ETH/USD",
+      "action": "BUY",
+      "qty": 5.493725,
+      "price": 2051.7981,
+      "value": 11272.01,
+      "reason": "My pet hamster picked this one (crypto edition)",
+      "balance": 921688.2
+    },
+    {
+      "ts": "2026-04-03 21:04:23",
+      "bot": "Random Bot",
+      "symbol": "ETH/USD",
+      "action": "BUY",
+      "qty": 21.582616,
+      "price": 2051.7981,
+      "value": 44283.17,
+      "reason": "Chaos theory in action (crypto edition)",
+      "balance": 921705.69
+    },
     {
       "ts": "2026-04-03 20:59:37",
       "bot": "Random Bot",
@@ -10601,19 +10632,19 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 66911.0,
+          "last_price": 66842.2,
           "value": 0.0
         },
         {
           "symbol": "ETH/USD",
           "qty": 0.0,
-          "last_price": 2054.43,
+          "last_price": 2053.0,
           "value": 0.0
         },
         {
           "symbol": "SOL/USD",
           "qty": 0.0,
-          "last_price": 80.12,
+          "last_price": 80.389,
           "value": 0.0
         }
       ],
@@ -10720,23 +10751,23 @@
       "held_value": 848643.95
     },
     "rand": {
-      "balance": 921744.23,
-      "trades": 534,
-      "buys": 364,
+      "balance": 921688.2,
+      "trades": 536,
+      "buys": 366,
       "sells": 170,
       "assets": "AFRM, AMD, BABA, BTC, COST, CRWD, DDOG, ETH, GM, GOOGL, GRAB, IEF, JPM, MRK, NFLX, PYPL, RIVN, SBUX, SOL, TLT, VTI, VZ, XLF, XLV, XPEV",
       "holdings": [
         {
           "symbol": "ETH/USD",
-          "qty": 50.254797,
-          "last_price": 2054.43,
-          "value": 103244.96
+          "qty": 76.737926,
+          "last_price": 2053.0,
+          "value": 157542.96
         },
         {
           "symbol": "SOL/USD",
           "qty": 526.799959,
-          "last_price": 80.12,
-          "value": 42207.21
+          "last_price": 80.389,
+          "value": 42348.92
         },
         {
           "symbol": "VTI",
@@ -10759,8 +10790,8 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.317675,
-          "last_price": 66911.0,
-          "value": 21255.95
+          "last_price": 66842.2,
+          "value": 21234.09
         },
         {
           "symbol": "VZ",
@@ -10835,7 +10866,7 @@
           "value": 72.54
         }
       ],
-      "held_value": 272382.77
+      "held_value": 326800.63
     },
     "spy_balance": 1011085.93
   }
