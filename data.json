@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-04T06:02:25",
+  "generated": "2026-04-04T06:07:07",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -4203,9 +4203,40 @@
       "rand": 915183.86,
       "spy": 0.09,
       "spy_bal": 1011085.93
+    },
+    {
+      "ts": "6:07AM*",
+      "_raw_ts": "2026-04-04 06:07:03",
+      "agg": 926189.06,
+      "mid": 998185.56,
+      "rand": 915047.06,
+      "spy": 0.09,
+      "spy_bal": 1011085.93
     }
   ],
   "trades": [
+    {
+      "ts": "2026-04-04 06:07:01",
+      "bot": "Random Bot",
+      "symbol": "ETH/USD",
+      "action": "BUY",
+      "qty": 12.478929,
+      "price": 2050.6421,
+      "value": 25589.82,
+      "reason": "Why not? (crypto edition)",
+      "balance": 915047.06
+    },
+    {
+      "ts": "2026-04-04 06:07:00",
+      "bot": "Random Bot",
+      "symbol": "BTC/USD",
+      "action": "SELL",
+      "qty": 0.368905,
+      "price": 67016.153,
+      "value": 24722.62,
+      "reason": "Diversification by entropy (crypto edition)",
+      "balance": 915183.86
+    },
     {
       "ts": "2026-04-04 05:06:45",
       "bot": "Random Bot",
@@ -11491,17 +11522,17 @@
       "held_value": 848643.95
     },
     "rand": {
-      "balance": 915183.86,
-      "trades": 581,
-      "buys": 400,
-      "sells": 181,
+      "balance": 915047.06,
+      "trades": 583,
+      "buys": 401,
+      "sells": 182,
       "assets": "AFRM, AMD, BABA, BTC, COST, CRWD, DDOG, ETH, GM, GOOGL, GRAB, IEF, JPM, MRK, NFLX, PYPL, RIVN, SBUX, SOL, TLT, VTI, VZ, XLF, XLV, XPEV",
       "holdings": [
         {
           "symbol": "ETH/USD",
-          "qty": 74.203607,
+          "qty": 86.413209,
           "last_price": 2049.0,
-          "value": 152043.19
+          "value": 177060.66
         },
         {
           "symbol": "SOL/USD",
@@ -11514,12 +11545,6 @@
           "qty": 103.0,
           "last_price": 323.76,
           "value": 33347.28
-        },
-        {
-          "symbol": "BTC/USD",
-          "qty": 0.368905,
-          "last_price": 67016.153,
-          "value": 24722.62
         },
         {
           "symbol": "JPM",
@@ -11604,9 +11629,15 @@
           "qty": 1.0,
           "last_price": 72.54,
           "value": 72.54
+        },
+        {
+          "symbol": "BTC/USD",
+          "qty": 0.0,
+          "last_price": 67016.153,
+          "value": 0.0
         }
       ],
-      "held_value": 347716.45
+      "held_value": 348011.31
     },
     "spy_balance": 1011085.93
   }
