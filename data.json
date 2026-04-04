@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-04T05:06:50",
+  "generated": "2026-04-04T06:02:25",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -4183,6 +4183,24 @@
       "agg": 926281.9,
       "mid": 998185.56,
       "rand": 915825.44,
+      "spy": 0.09,
+      "spy_bal": 1011085.93
+    },
+    {
+      "ts": "5:24AM",
+      "_raw_ts": "2026-04-04 05:24:14",
+      "agg": 926235.83,
+      "mid": 998185.56,
+      "rand": 915221.31,
+      "spy": 0.09,
+      "spy_bal": 1011085.93
+    },
+    {
+      "ts": "6:02AM",
+      "_raw_ts": "2026-04-04 06:02:21",
+      "agg": 926189.06,
+      "mid": 998185.56,
+      "rand": 915183.86,
       "spy": 0.09,
       "spy_bal": 1011085.93
     }
@@ -11297,7 +11315,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 926281.9,
+      "balance": 926189.06,
       "trades": 36,
       "buys": 24,
       "sells": 12,
@@ -11324,8 +11342,8 @@
         {
           "symbol": "ETH/USD",
           "qty": 44.210809,
-          "last_price": 2051.1,
-          "value": 90680.79
+          "last_price": 2049.0,
+          "value": 90587.95
         },
         {
           "symbol": "AMD",
@@ -11360,17 +11378,17 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 66958.8,
+          "last_price": 67016.153,
           "value": 0.0
         },
         {
           "symbol": "SOL/USD",
           "qty": 0.0,
-          "last_price": 80.46,
+          "last_price": 79.84,
           "value": 0.0
         }
       ],
-      "held_value": 695283.52
+      "held_value": 695190.68
     },
     "mid": {
       "balance": 998185.56,
@@ -11473,7 +11491,7 @@
       "held_value": 848643.95
     },
     "rand": {
-      "balance": 915825.44,
+      "balance": 915183.86,
       "trades": 581,
       "buys": 400,
       "sells": 181,
@@ -11482,14 +11500,14 @@
         {
           "symbol": "ETH/USD",
           "qty": 74.203607,
-          "last_price": 2051.1,
-          "value": 152199.02
+          "last_price": 2049.0,
+          "value": 152043.19
         },
         {
           "symbol": "SOL/USD",
           "qty": 817.585134,
-          "last_price": 80.46,
-          "value": 65782.9
+          "last_price": 79.84,
+          "value": 65276.0
         },
         {
           "symbol": "VTI",
@@ -11500,8 +11518,8 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.368905,
-          "last_price": 66958.8,
-          "value": 24701.46
+          "last_price": 67016.153,
+          "value": 24722.62
         },
         {
           "symbol": "JPM",
@@ -11588,7 +11606,7 @@
           "value": 72.54
         }
       ],
-      "held_value": 348358.03
+      "held_value": 347716.45
     },
     "spy_balance": 1011085.93
   }
