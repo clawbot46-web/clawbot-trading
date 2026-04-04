@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-03T23:08:20",
+  "generated": "2026-04-03T23:09:20",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -10774,7 +10774,7 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 66883.68,
+          "last_price": 66854.2,
           "value": 0.0
         },
         {
@@ -10786,7 +10786,7 @@
         {
           "symbol": "SOL/USD",
           "qty": 0.0,
-          "last_price": 80.349,
+          "last_price": 80.0422,
           "value": 0.0
         }
       ],
@@ -10893,7 +10893,7 @@
       "held_value": 848643.95
     },
     "rand": {
-      "balance": 919512.24,
+      "balance": 919285.17,
       "trades": 544,
       "buys": 372,
       "sells": 172,
@@ -10902,14 +10902,14 @@
         {
           "symbol": "BTC/USD",
           "qty": 1.381266,
-          "last_price": 66883.68,
-          "value": 92384.16
+          "last_price": 66854.2,
+          "value": 92343.44
         },
         {
           "symbol": "SOL/USD",
           "qty": 607.402726,
-          "last_price": 80.349,
-          "value": 48804.2
+          "last_price": 80.0422,
+          "value": 48617.85
         },
         {
           "symbol": "VTI",
@@ -11008,7 +11008,7 @@
           "value": 0.0
         }
       ],
-      "held_value": 246863.01
+      "held_value": 246635.94
     },
     "spy_balance": 1011085.93
   }
