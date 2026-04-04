@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-04T02:01:20",
+  "generated": "2026-04-04T02:05:59",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -4095,9 +4095,29 @@
       "rand": 917134.2,
       "spy": 0.09,
       "spy_bal": 1011085.93
+    },
+    {
+      "ts": "2:05AM",
+      "_raw_ts": "2026-04-04 02:05:55",
+      "agg": 926531.97,
+      "mid": 998185.56,
+      "rand": 917040.69,
+      "spy": 0.09,
+      "spy_bal": 1011085.93
     }
   ],
   "trades": [
+    {
+      "ts": "2026-04-04 02:05:54",
+      "bot": "Random Bot",
+      "symbol": "SOL/USD",
+      "action": "SELL",
+      "qty": 1246.108453,
+      "price": 79.9831,
+      "value": 99667.62,
+      "reason": "Throwing darts at a ticker board (crypto edition)",
+      "balance": 917125.6
+    },
     {
       "ts": "2026-04-04 02:01:14",
       "bot": "Random Bot",
@@ -11144,7 +11164,7 @@
         {
           "symbol": "SOL/USD",
           "qty": 0.0,
-          "last_price": 79.99,
+          "last_price": 79.9831,
           "value": 0.0
         }
       ],
@@ -11251,10 +11271,10 @@
       "held_value": 848643.95
     },
     "rand": {
-      "balance": 917134.2,
-      "trades": 570,
+      "balance": 917040.69,
+      "trades": 571,
       "buys": 393,
-      "sells": 177,
+      "sells": 178,
       "assets": "AFRM, AMD, BABA, BTC, COST, CRWD, DDOG, ETH, GM, GOOGL, GRAB, IEF, JPM, MRK, NFLX, PYPL, RIVN, SBUX, SOL, TLT, VTI, VZ, XLF, XLV, XPEV",
       "holdings": [
         {
@@ -11265,9 +11285,9 @@
         },
         {
           "symbol": "SOL/USD",
-          "qty": 1246.108453,
-          "last_price": 79.99,
-          "value": 99676.22
+          "qty": 1091.047214,
+          "last_price": 79.9831,
+          "value": 87265.34
         },
         {
           "symbol": "ETH/USD",
@@ -11366,7 +11386,7 @@
           "value": 72.54
         }
       ],
-      "held_value": 523120.51
+      "held_value": 510709.64
     },
     "spy_balance": 1011085.93
   }
