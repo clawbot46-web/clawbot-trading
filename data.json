@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-04T03:06:15",
+  "generated": "2026-04-04T04:01:54",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -4131,9 +4131,60 @@
       "rand": 916683.26,
       "spy": 0.09,
       "spy_bal": 1011085.93
+    },
+    {
+      "ts": "3:23AM",
+      "_raw_ts": "2026-04-04 03:23:57",
+      "agg": 926531.97,
+      "mid": 998185.56,
+      "rand": 916325.89,
+      "spy": 0.09,
+      "spy_bal": 1011085.93
+    },
+    {
+      "ts": "4:01AM",
+      "_raw_ts": "2026-04-04 04:01:49",
+      "agg": 926531.97,
+      "mid": 998185.56,
+      "rand": 916129.8,
+      "spy": 0.09,
+      "spy_bal": 1011085.93
     }
   ],
   "trades": [
+    {
+      "ts": "2026-04-04 04:01:48",
+      "bot": "Random Bot",
+      "symbol": "ETH/USD",
+      "action": "BUY",
+      "qty": 13.679538,
+      "price": 2053.325,
+      "value": 28088.54,
+      "reason": "Felt lucky (crypto edition)",
+      "balance": 916129.8
+    },
+    {
+      "ts": "2026-04-04 03:23:55",
+      "bot": "Random Bot",
+      "symbol": "BTC/USD",
+      "action": "BUY",
+      "qty": 0.376811,
+      "price": 66976.3828,
+      "value": 25237.41,
+      "reason": "I heard someone mention it at the gym (crypto edition)",
+      "balance": 916325.89
+    },
+    {
+      "ts": "2026-04-04 03:23:54",
+      "bot": "Random Bot",
+      "symbol": "ETH/USD",
+      "action": "BUY",
+      "qty": 7.340665,
+      "price": 2053.1799,
+      "value": 15071.71,
+      "reason": "The algorithm whispered this ticker in my ear (crypto edition)",
+      "balance": 916350.51
+    },
     {
       "ts": "2026-04-04 03:06:09",
       "bot": "Random Bot",
@@ -11201,19 +11252,19 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 66977.98,
+          "last_price": 66974.97,
           "value": 0.0
         },
         {
           "symbol": "ETH/USD",
           "qty": 0.0,
-          "last_price": 2057.1,
+          "last_price": 2050.754,
           "value": 0.0
         },
         {
           "symbol": "SOL/USD",
           "qty": 0.0,
-          "last_price": 80.63,
+          "last_price": 80.479,
           "value": 0.0
         }
       ],
@@ -11320,29 +11371,35 @@
       "held_value": 848643.95
     },
     "rand": {
-      "balance": 916683.26,
-      "trades": 573,
-      "buys": 393,
+      "balance": 916129.8,
+      "trades": 576,
+      "buys": 396,
       "sells": 180,
       "assets": "AFRM, AMD, BABA, BTC, COST, CRWD, DDOG, ETH, GM, GOOGL, GRAB, IEF, JPM, MRK, NFLX, PYPL, RIVN, SBUX, SOL, TLT, VTI, VZ, XLF, XLV, XPEV",
       "holdings": [
         {
           "symbol": "ETH/USD",
-          "qty": 37.576201,
-          "last_price": 2057.1,
-          "value": 77298.0
+          "qty": 58.148241,
+          "last_price": 2050.754,
+          "value": 119247.74
         },
         {
           "symbol": "SOL/USD",
           "qty": 932.136311,
-          "last_price": 80.63,
-          "value": 75158.15
+          "last_price": 80.479,
+          "value": 75017.4
         },
         {
           "symbol": "VTI",
           "qty": 103.0,
           "last_price": 323.76,
           "value": 33347.28
+        },
+        {
+          "symbol": "BTC/USD",
+          "qty": 0.368905,
+          "last_price": 66974.97,
+          "value": 24707.42
         },
         {
           "symbol": "JPM",
@@ -11427,15 +11484,9 @@
           "qty": 1.0,
           "last_price": 72.54,
           "value": 72.54
-        },
-        {
-          "symbol": "BTC/USD",
-          "qty": 0.0,
-          "last_price": 66977.98,
-          "value": 0.0
         }
       ],
-      "held_value": 258130.8
+      "held_value": 324647.21
     },
     "spy_balance": 1011085.93
   }
