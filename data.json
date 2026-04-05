@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-04T22:07:07",
+  "generated": "2026-04-04T22:16:22",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -4633,6 +4633,15 @@
       "agg": 924595.38,
       "mid": 998185.56,
       "rand": 906586.94,
+      "spy": 0.09,
+      "spy_bal": 1011085.93
+    },
+    {
+      "ts": "10:16PM",
+      "_raw_ts": "2026-04-04 22:16:18",
+      "agg": 924643.76,
+      "mid": 998185.56,
+      "rand": 906516.99,
       "spy": 0.09,
       "spy_bal": 1011085.93
     }
@@ -12671,7 +12680,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 924595.38,
+      "balance": 924643.76,
       "trades": 41,
       "buys": 27,
       "sells": 14,
@@ -12704,8 +12713,8 @@
         {
           "symbol": "BTC/USD",
           "qty": 1.343946,
-          "last_price": 67012.4,
-          "value": 90061.03
+          "last_price": 67048.4,
+          "value": 90109.41
         },
         {
           "symbol": "AMD",
@@ -12740,11 +12749,11 @@
         {
           "symbol": "SOL/USD",
           "qty": 0.0,
-          "last_price": 80.29,
+          "last_price": 80.1947,
           "value": 0.0
         }
       ],
-      "held_value": 785177.45
+      "held_value": 785225.83
     },
     "mid": {
       "balance": 998185.56,
@@ -12847,7 +12856,7 @@
       "held_value": 848643.95
     },
     "rand": {
-      "balance": 906586.94,
+      "balance": 906516.99,
       "trades": 660,
       "buys": 454,
       "sells": 206,
@@ -12862,8 +12871,8 @@
         {
           "symbol": "SOL/USD",
           "qty": 733.916966,
-          "last_price": 80.29,
-          "value": 58926.19
+          "last_price": 80.1947,
+          "value": 58856.25
         },
         {
           "symbol": "VTI",
@@ -12958,11 +12967,11 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 67012.4,
+          "last_price": 67048.4,
           "value": 0.0
         }
       ],
-      "held_value": 235323.82
+      "held_value": 235253.87
     },
     "spy_balance": 1011085.93
   }
