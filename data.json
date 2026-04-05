@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-05T17:13:32",
+  "generated": "2026-04-05T17:22:25",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -5148,9 +5148,29 @@
       "rand": 890977.2,
       "spy": 0.09,
       "spy_bal": 1011085.93
+    },
+    {
+      "ts": "5:22PM*",
+      "_raw_ts": "2026-04-05 17:22:21",
+      "agg": 922321.55,
+      "mid": 998185.56,
+      "rand": 890920.2,
+      "spy": 0.09,
+      "spy_bal": 1011085.93
     }
   ],
   "trades": [
+    {
+      "ts": "2026-04-05 17:22:19",
+      "bot": "Random Bot",
+      "symbol": "ETH/USD",
+      "action": "SELL",
+      "qty": 4.241453,
+      "price": 2069.08,
+      "value": 8775.91,
+      "reason": "The algorithm whispered this ticker in my ear (crypto edition)",
+      "balance": 890920.2
+    },
     {
       "ts": "2026-04-05 16:30:31",
       "bot": "Random Bot",
@@ -14587,10 +14607,10 @@
       "held_value": 848643.95
     },
     "rand": {
-      "balance": 890977.2,
-      "trades": 765,
+      "balance": 890920.2,
+      "trades": 766,
       "buys": 528,
-      "sells": 237,
+      "sells": 238,
       "assets": "AFRM, AMD, BABA, BTC, COST, CRWD, DDOG, ETH, GM, GOOGL, GRAB, IEF, JPM, MRK, NFLX, PYPL, RIVN, SBUX, SOL, TLT, VTI, VZ, XLF, XLV, XPEV",
       "holdings": [
         {
@@ -14622,12 +14642,6 @@
           "qty": 219.0,
           "last_price": 98.66,
           "value": 21606.54
-        },
-        {
-          "symbol": "ETH/USD",
-          "qty": 4.241453,
-          "last_price": 2069.08,
-          "value": 8775.91
         },
         {
           "symbol": "VZ",
@@ -14700,9 +14714,15 @@
           "qty": 1.0,
           "last_price": 72.54,
           "value": 72.54
+        },
+        {
+          "symbol": "ETH/USD",
+          "qty": 0.0,
+          "last_price": 2069.08,
+          "value": 0.0
         }
       ],
-      "held_value": 409213.55
+      "held_value": 400437.64
     },
     "spy_balance": 1011085.93
   }
