@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-05T10:20:05",
+  "generated": "2026-04-05T11:11:20",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -4968,9 +4968,82 @@
       "rand": 895806.99,
       "spy": 0.09,
       "spy_bal": 1011085.93
+    },
+    {
+      "ts": "10:29AM",
+      "_raw_ts": "2026-04-05 10:29:23",
+      "agg": 922321.55,
+      "mid": 998185.56,
+      "rand": 895796.43,
+      "spy": 0.09,
+      "spy_bal": 1011085.93
+    },
+    {
+      "ts": "11:11AM",
+      "_raw_ts": "2026-04-05 11:11:15",
+      "agg": 922321.55,
+      "mid": 998185.56,
+      "rand": 894579.07,
+      "spy": 0.09,
+      "spy_bal": 1011085.93
     }
   ],
   "trades": [
+    {
+      "ts": "2026-04-05 11:11:14",
+      "bot": "Random Bot",
+      "symbol": "SOL/USD",
+      "action": "BUY",
+      "qty": 468.80294,
+      "price": 79.1614,
+      "value": 37111.08,
+      "reason": "The algorithm whispered this ticker in my ear (crypto edition)",
+      "balance": 894861.14
+    },
+    {
+      "ts": "2026-04-05 11:11:14",
+      "bot": "Random Bot",
+      "symbol": "ETH/USD",
+      "action": "SELL",
+      "qty": 54.604584,
+      "price": 2038.19,
+      "value": 111294.52,
+      "reason": "I heard someone mention it at the gym (crypto edition)",
+      "balance": 894861.14
+    },
+    {
+      "ts": "2026-04-05 11:11:12",
+      "bot": "Random Bot",
+      "symbol": "SOL/USD",
+      "action": "SELL",
+      "qty": 2003.147737,
+      "price": 79.399,
+      "value": 159047.93,
+      "reason": "YOLO (crypto edition)",
+      "balance": 894912.6
+    },
+    {
+      "ts": "2026-04-05 10:29:22",
+      "bot": "Random Bot",
+      "symbol": "ETH/USD",
+      "action": "BUY",
+      "qty": 17.828978,
+      "price": 2038.4919,
+      "value": 36344.23,
+      "reason": "Throwing darts at a ticker board (crypto edition)",
+      "balance": 895796.43
+    },
+    {
+      "ts": "2026-04-05 10:29:21",
+      "bot": "Random Bot",
+      "symbol": "ETH/USD",
+      "action": "BUY",
+      "qty": 17.966085,
+      "price": 2038.4919,
+      "value": 36623.72,
+      "reason": "Chaos theory in action (crypto edition)",
+      "balance": 895878.92
+    },
     {
       "ts": "2026-04-05 10:19:59",
       "bot": "Random Bot",
@@ -13837,19 +13910,19 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 66854.0,
+          "last_price": 66969.42,
           "value": 0.0
         },
         {
           "symbol": "ETH/USD",
           "qty": 0.0,
-          "last_price": 2037.545,
+          "last_price": 2038.19,
           "value": 0.0
         },
         {
           "symbol": "SOL/USD",
           "qty": 0.0,
-          "last_price": 79.3278,
+          "last_price": 79.399,
           "value": 0.0
         }
       ],
@@ -13956,23 +14029,17 @@
       "held_value": 848643.95
     },
     "rand": {
-      "balance": 895806.99,
-      "trades": 724,
-      "buys": 497,
-      "sells": 227,
+      "balance": 894579.07,
+      "trades": 729,
+      "buys": 500,
+      "sells": 229,
       "assets": "AFRM, AMD, BABA, BTC, COST, CRWD, DDOG, ETH, GM, GOOGL, GRAB, IEF, JPM, MRK, NFLX, PYPL, RIVN, SBUX, SOL, TLT, VTI, VZ, XLF, XLV, XPEV",
       "holdings": [
         {
           "symbol": "SOL/USD",
-          "qty": 2003.147737,
-          "last_price": 79.3278,
-          "value": 158905.3
-        },
-        {
-          "symbol": "ETH/USD",
-          "qty": 19.612055,
-          "last_price": 2037.545,
-          "value": 39960.44
+          "qty": 1319.055519,
+          "last_price": 79.399,
+          "value": 104731.69
         },
         {
           "symbol": "VTI",
@@ -14067,11 +14134,17 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 66854.0,
+          "last_price": 66969.42,
+          "value": 0.0
+        },
+        {
+          "symbol": "ETH/USD",
+          "qty": 0.0,
+          "last_price": 2038.19,
           "value": 0.0
         }
       ],
-      "held_value": 304540.4
+      "held_value": 210406.34
     },
     "spy_balance": 1011085.93
   }
