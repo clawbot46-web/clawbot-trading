@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-05T00:16:59",
+  "generated": "2026-04-05T01:08:02",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -4698,9 +4698,82 @@
       "rand": 905494.86,
       "spy": 0.09,
       "spy_bal": 1011085.93
+    },
+    {
+      "ts": "12:27AM",
+      "_raw_ts": "2026-04-05 00:27:30",
+      "agg": 923757.76,
+      "mid": 998185.56,
+      "rand": 904897.86,
+      "spy": 0.09,
+      "spy_bal": 1011085.93
+    },
+    {
+      "ts": "1:07AM*",
+      "_raw_ts": "2026-04-05 01:07:58",
+      "agg": 923742.7,
+      "mid": 998185.56,
+      "rand": 905251.94,
+      "spy": 0.09,
+      "spy_bal": 1011085.93
     }
   ],
   "trades": [
+    {
+      "ts": "2026-04-05 01:07:57",
+      "bot": "Random Bot",
+      "symbol": "ETH/USD",
+      "action": "BUY",
+      "qty": 7.903512,
+      "price": 2055.4329,
+      "value": 16245.14,
+      "reason": "My pet hamster picked this one (crypto edition)",
+      "balance": 905251.94
+    },
+    {
+      "ts": "2026-04-05 00:27:28",
+      "bot": "Clawbot Aggressive",
+      "symbol": "AVAX/USD",
+      "action": "BUY",
+      "qty": 10337.31529,
+      "price": 8.9459,
+      "value": 92476.27,
+      "reason": "Crypto momentum buy",
+      "balance": 923757.76
+    },
+    {
+      "ts": "2026-04-05 00:27:26",
+      "bot": "Clawbot Aggressive",
+      "symbol": "ETH/USD",
+      "action": "BUY",
+      "qty": 44.988631,
+      "price": 2055.5476,
+      "value": 92476.27,
+      "reason": "Crypto momentum buy",
+      "balance": 923998.95
+    },
+    {
+      "ts": "2026-04-05 00:27:23",
+      "bot": "Clawbot Aggressive",
+      "symbol": "ETH/USD",
+      "action": "SELL",
+      "qty": 44.046299,
+      "price": 2056.85,
+      "value": 90596.63,
+      "reason": "Crypto signal negative (score=-0.093)",
+      "balance": 924290.36
+    },
+    {
+      "ts": "2026-04-05 00:27:22",
+      "bot": "Clawbot Aggressive",
+      "symbol": "BTC/USD",
+      "action": "SELL",
+      "qty": 1.343946,
+      "price": 67075.21,
+      "value": 90145.44,
+      "reason": "Crypto signal negative (score=-0.073)",
+      "balance": 924590.29
+    },
     {
       "ts": "2026-04-05 00:16:54",
       "bot": "Random Bot",
@@ -12910,11 +12983,11 @@
   ],
   "summary": {
     "agg": {
-      "balance": 924808.01,
-      "trades": 41,
-      "buys": 27,
-      "sells": 14,
-      "assets": "AAPL, AFRM, AMD, AMZN, APP, BTC, ETH, HOOD, IONQ, LCID, LIDR, MSFT, RBLX, SOFI, SOL, SOXL, UPST",
+      "balance": 923742.7,
+      "trades": 45,
+      "buys": 29,
+      "sells": 16,
+      "assets": "AAPL, AFRM, AMD, AMZN, APP, AVAX, BTC, ETH, HOOD, IONQ, LCID, LIDR, MSFT, RBLX, SOFI, SOL, SOXL, UPST",
       "holdings": [
         {
           "symbol": "RBLX",
@@ -12936,15 +13009,9 @@
         },
         {
           "symbol": "ETH/USD",
-          "qty": 44.046299,
-          "last_price": 2056.85,
-          "value": 90596.63
-        },
-        {
-          "symbol": "BTC/USD",
-          "qty": 1.343946,
-          "last_price": 67108.9,
-          "value": 90190.72
+          "qty": 43.998161,
+          "last_price": 2055.61,
+          "value": 90443.06
         },
         {
           "symbol": "AMD",
@@ -12971,19 +13038,31 @@
           "value": 45520.09
         },
         {
+          "symbol": "AVAX/USD",
+          "qty": 1851.573446,
+          "last_price": 8.959,
+          "value": 16588.25
+        },
+        {
           "symbol": "AFRM",
           "qty": 11.0,
           "last_price": 46.31,
           "value": 509.41
         },
         {
+          "symbol": "BTC/USD",
+          "qty": 0.0,
+          "last_price": 67075.3,
+          "value": 0.0
+        },
+        {
           "symbol": "SOL/USD",
           "qty": 0.0,
-          "last_price": 80.693,
+          "last_price": 80.567,
           "value": 0.0
         }
       ],
-      "held_value": 785390.08
+      "held_value": 711634.04
     },
     "mid": {
       "balance": 998185.56,
@@ -13086,29 +13165,29 @@
       "held_value": 848643.95
     },
     "rand": {
-      "balance": 905494.86,
-      "trades": 676,
-      "buys": 464,
+      "balance": 905251.94,
+      "trades": 677,
+      "buys": 465,
       "sells": 212,
       "assets": "AFRM, AMD, BABA, BTC, COST, CRWD, DDOG, ETH, GM, GOOGL, GRAB, IEF, JPM, MRK, NFLX, PYPL, RIVN, SBUX, SOL, TLT, VTI, VZ, XLF, XLV, XPEV",
       "holdings": [
         {
           "symbol": "SOL/USD",
           "qty": 1579.359617,
-          "last_price": 80.693,
-          "value": 127443.27
+          "last_price": 80.567,
+          "value": 127244.27
+        },
+        {
+          "symbol": "ETH/USD",
+          "qty": 20.332183,
+          "last_price": 2055.61,
+          "value": 41795.04
         },
         {
           "symbol": "VTI",
           "qty": 103.0,
           "last_price": 323.76,
           "value": 33347.28
-        },
-        {
-          "symbol": "ETH/USD",
-          "qty": 12.597022,
-          "last_price": 2056.85,
-          "value": 25910.19
         },
         {
           "symbol": "JPM",
@@ -13197,11 +13276,11 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 67108.9,
+          "last_price": 67075.3,
           "value": 0.0
         }
       ],
-      "held_value": 259028.1
+      "held_value": 274713.96
     },
     "spy_balance": 1011085.93
   }
