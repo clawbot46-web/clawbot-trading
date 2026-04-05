@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-04T21:06:49",
+  "generated": "2026-04-04T21:16:07",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -4604,6 +4604,15 @@
       "ts": "9:06PM**",
       "_raw_ts": "2026-04-04 21:06:45",
       "agg": 925190.98,
+      "mid": 998185.56,
+      "rand": 906935.54,
+      "spy": 0.09,
+      "spy_bal": 1011085.93
+    },
+    {
+      "ts": "9:16PM",
+      "_raw_ts": "2026-04-04 21:16:03",
+      "agg": 924843.58,
       "mid": 998185.56,
       "rand": 906935.54,
       "spy": 0.09,
@@ -12622,7 +12631,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 925190.98,
+      "balance": 924843.58,
       "trades": 41,
       "buys": 27,
       "sells": 14,
@@ -12649,14 +12658,14 @@
         {
           "symbol": "ETH/USD",
           "qty": 44.046299,
-          "last_price": 2063.0,
-          "value": 90867.51
+          "last_price": 2057.305,
+          "value": 90616.67
         },
         {
           "symbol": "BTC/USD",
           "qty": 1.343946,
-          "last_price": 67192.3,
-          "value": 90302.8
+          "last_price": 67120.46,
+          "value": 90206.25
         },
         {
           "symbol": "AMD",
@@ -12695,7 +12704,7 @@
           "value": 0.0
         }
       ],
-      "held_value": 785773.05
+      "held_value": 785425.65
     },
     "mid": {
       "balance": 998185.56,
@@ -12903,13 +12912,13 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 67192.3,
+          "last_price": 67120.46,
           "value": 0.0
         },
         {
           "symbol": "ETH/USD",
           "qty": 0.0,
-          "last_price": 2063.0,
+          "last_price": 2057.305,
           "value": 0.0
         }
       ],
