@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-05T16:13:15",
+  "generated": "2026-04-05T16:22:05",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -5121,9 +5121,40 @@
       "rand": 890807.91,
       "spy": 0.09,
       "spy_bal": 1011085.93
+    },
+    {
+      "ts": "4:22PM*",
+      "_raw_ts": "2026-04-05 16:22:01",
+      "agg": 922321.55,
+      "mid": 998185.56,
+      "rand": 890780.0,
+      "spy": 0.09,
+      "spy_bal": 1011085.93
     }
   ],
   "trades": [
+    {
+      "ts": "2026-04-05 16:22:00",
+      "bot": "Random Bot",
+      "symbol": "SOL/USD",
+      "action": "BUY",
+      "qty": 146.266618,
+      "price": 79.8609,
+      "value": 11680.98,
+      "reason": "YOLO (crypto edition)",
+      "balance": 890780.0
+    },
+    {
+      "ts": "2026-04-05 16:21:58",
+      "bot": "Random Bot",
+      "symbol": "BTC/USD",
+      "action": "BUY",
+      "qty": 0.649344,
+      "price": 67360.125,
+      "value": 43739.92,
+      "reason": "Felt lucky (crypto edition)",
+      "balance": 890851.99
+    },
     {
       "ts": "2026-04-05 16:13:09",
       "bot": "Random Bot",
@@ -14386,7 +14417,7 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 67350.901,
+          "last_price": 67417.241,
           "value": 0.0
         },
         {
@@ -14505,23 +14536,23 @@
       "held_value": 848643.95
     },
     "rand": {
-      "balance": 890807.91,
-      "trades": 760,
-      "buys": 524,
+      "balance": 890780.0,
+      "trades": 762,
+      "buys": 526,
       "sells": 236,
       "assets": "AFRM, AMD, BABA, BTC, COST, CRWD, DDOG, ETH, GM, GOOGL, GRAB, IEF, JPM, MRK, NFLX, PYPL, RIVN, SBUX, SOL, TLT, VTI, VZ, XLF, XLV, XPEV",
       "holdings": [
         {
           "symbol": "BTC/USD",
-          "qty": 1.832026,
-          "last_price": 67350.901,
-          "value": 123388.6
+          "qty": 2.466847,
+          "last_price": 67417.241,
+          "value": 166308.04
         },
         {
           "symbol": "SOL/USD",
-          "qty": 1512.682918,
+          "qty": 1655.563878,
           "last_price": 79.6937,
-          "value": 120551.3
+          "value": 131938.01
         },
         {
           "symbol": "VTI",
@@ -14620,7 +14651,7 @@
           "value": 0.0
         }
       ],
-      "held_value": 349614.55
+      "held_value": 403920.7
     },
     "spy_balance": 1011085.93
   }
