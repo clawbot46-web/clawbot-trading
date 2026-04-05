@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-05T13:12:06",
+  "generated": "2026-04-05T13:21:05",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -5040,9 +5040,29 @@
       "rand": 894339.87,
       "spy": 0.09,
       "spy_bal": 1011085.93
+    },
+    {
+      "ts": "1:21PM*",
+      "_raw_ts": "2026-04-05 13:21:00",
+      "agg": 922321.55,
+      "mid": 998185.56,
+      "rand": 894488.71,
+      "spy": 0.09,
+      "spy_bal": 1011085.93
     }
   ],
   "trades": [
+    {
+      "ts": "2026-04-05 13:21:00",
+      "bot": "Random Bot",
+      "symbol": "ETH/USD",
+      "action": "BUY",
+      "qty": 7.919807,
+      "price": 2055.0881,
+      "value": 16275.9,
+      "reason": "Chaos theory in action (crypto edition)",
+      "balance": 894488.71
+    },
     {
       "ts": "2026-04-05 13:12:00",
       "bot": "Random Bot",
@@ -14074,13 +14094,13 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 67315.862,
+          "last_price": 67273.5,
           "value": 0.0
         },
         {
           "symbol": "ETH/USD",
           "qty": 0.0,
-          "last_price": 2050.336,
+          "last_price": 2056.676,
           "value": 0.0
         },
         {
@@ -14193,9 +14213,9 @@
       "held_value": 848643.95
     },
     "rand": {
-      "balance": 894339.87,
-      "trades": 739,
-      "buys": 509,
+      "balance": 894488.71,
+      "trades": 740,
+      "buys": 510,
       "sells": 230,
       "assets": "AFRM, AMD, BABA, BTC, COST, CRWD, DDOG, ETH, GM, GOOGL, GRAB, IEF, JPM, MRK, NFLX, PYPL, RIVN, SBUX, SOL, TLT, VTI, VZ, XLF, XLV, XPEV",
       "holdings": [
@@ -14207,9 +14227,9 @@
         },
         {
           "symbol": "ETH/USD",
-          "qty": 25.482347,
-          "last_price": 2050.336,
-          "value": 52247.37
+          "qty": 33.240608,
+          "last_price": 2056.676,
+          "value": 68365.16
         },
         {
           "symbol": "VTI",
@@ -14232,8 +14252,8 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.308993,
-          "last_price": 67315.862,
-          "value": 20800.16
+          "last_price": 67273.5,
+          "value": 20787.07
         },
         {
           "symbol": "VZ",
@@ -14308,7 +14328,7 @@
           "value": 72.54
         }
       ],
-      "held_value": 343133.95
+      "held_value": 359238.65
     },
     "spy_balance": 1011085.93
   }
