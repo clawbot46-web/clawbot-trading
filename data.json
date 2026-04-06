@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-06T00:10:46",
+  "generated": "2026-04-06T00:12:03",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -15124,7 +15124,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 923233.38,
+      "balance": 923092.3,
       "trades": 47,
       "buys": 29,
       "sells": 18,
@@ -15139,14 +15139,14 @@
         {
           "symbol": "SOXL",
           "qty": 2642.0,
-          "last_price": 52.98,
-          "value": 139973.16
+          "last_price": 52.96,
+          "value": 139920.32
         },
         {
           "symbol": "SOFI",
           "qty": 8824.0,
-          "last_price": 15.86,
-          "value": 139948.64
+          "last_price": 15.85,
+          "value": 139860.4
         },
         {
           "symbol": "AMD",
@@ -15203,10 +15203,10 @@
           "value": 0.0
         }
       ],
-      "held_value": 605514.56
+      "held_value": 605373.48
     },
     "mid": {
-      "balance": 998407.2,
+      "balance": 998429.1,
       "trades": 29,
       "buys": 22,
       "sells": 7,
@@ -15215,8 +15215,8 @@
         {
           "symbol": "NFLX",
           "qty": 730.0,
-          "last_price": 99.4,
-          "value": 72562.0
+          "last_price": 99.43,
+          "value": 72583.9
         },
         {
           "symbol": "MRK",
@@ -15303,10 +15303,10 @@
           "value": 153.64
         }
       ],
-      "held_value": 848865.59
+      "held_value": 848887.49
     },
     "rand": {
-      "balance": 892568.31,
+      "balance": 892574.88,
       "trades": 814,
       "buys": 562,
       "sells": 252,
@@ -15333,8 +15333,8 @@
         {
           "symbol": "NFLX",
           "qty": 219.0,
-          "last_price": 99.4,
-          "value": 21768.6
+          "last_price": 99.43,
+          "value": 21775.17
         },
         {
           "symbol": "JPM",
@@ -15421,7 +15421,7 @@
           "value": 0.0
         }
       ],
-      "held_value": 290436.86
+      "held_value": 290443.43
     },
     "spy_balance": 1011085.93
   }
