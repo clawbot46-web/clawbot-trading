@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-06T00:09:51",
+  "generated": "2026-04-06T00:10:46",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -15124,7 +15124,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 923444.74,
+      "balance": 923233.38,
       "trades": 47,
       "buys": 29,
       "sells": 18,
@@ -15139,8 +15139,8 @@
         {
           "symbol": "SOXL",
           "qty": 2642.0,
-          "last_price": 53.06,
-          "value": 140184.52
+          "last_price": 52.98,
+          "value": 139973.16
         },
         {
           "symbol": "SOFI",
@@ -15203,7 +15203,7 @@
           "value": 0.0
         }
       ],
-      "held_value": 605725.92
+      "held_value": 605514.56
     },
     "mid": {
       "balance": 998407.2,
@@ -15306,7 +15306,7 @@
       "held_value": 848865.59
     },
     "rand": {
-      "balance": 892585.82,
+      "balance": 892568.31,
       "trades": 814,
       "buys": 562,
       "sells": 252,
@@ -15327,8 +15327,8 @@
         {
           "symbol": "VTI",
           "qty": 103.0,
-          "last_price": 323.5,
-          "value": 33320.5
+          "last_price": 323.33,
+          "value": 33302.99
         },
         {
           "symbol": "NFLX",
@@ -15421,7 +15421,7 @@
           "value": 0.0
         }
       ],
-      "held_value": 290454.37
+      "held_value": 290436.86
     },
     "spy_balance": 1011085.93
   }
