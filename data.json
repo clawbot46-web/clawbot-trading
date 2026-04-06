@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-06T00:15:54",
+  "generated": "2026-04-06T00:16:42",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -15202,7 +15202,7 @@
         {
           "symbol": "ETH/USD",
           "qty": 0.0,
-          "last_price": 2127.121,
+          "last_price": 2125.8,
           "value": 0.0
         },
         {
@@ -15215,7 +15215,7 @@
       "held_value": 605653.85
     },
     "mid": {
-      "balance": 998563.8,
+      "balance": 998600.3,
       "trades": 29,
       "buys": 22,
       "sells": 7,
@@ -15224,8 +15224,8 @@
         {
           "symbol": "NFLX",
           "qty": 730.0,
-          "last_price": 99.55,
-          "value": 72671.5
+          "last_price": 99.6,
+          "value": 72708.0
         },
         {
           "symbol": "MRK",
@@ -15312,10 +15312,10 @@
           "value": 153.64
         }
       ],
-      "held_value": 849022.19
+      "held_value": 849058.69
     },
     "rand": {
-      "balance": 892544.7,
+      "balance": 892517.96,
       "trades": 814,
       "buys": 562,
       "sells": 252,
@@ -15330,8 +15330,8 @@
         {
           "symbol": "ETH/USD",
           "qty": 28.528795,
-          "last_price": 2127.121,
-          "value": 60684.2
+          "last_price": 2125.8,
+          "value": 60646.51
         },
         {
           "symbol": "VTI",
@@ -15342,8 +15342,8 @@
         {
           "symbol": "NFLX",
           "qty": 219.0,
-          "last_price": 99.55,
-          "value": 21801.45
+          "last_price": 99.6,
+          "value": 21812.4
         },
         {
           "symbol": "JPM",
@@ -15430,7 +15430,7 @@
           "value": 0.0
         }
       ],
-      "held_value": 290413.25
+      "held_value": 290386.51
     },
     "spy_balance": 1011085.93
   }
