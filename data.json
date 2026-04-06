@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-06T00:13:10",
+  "generated": "2026-04-06T00:14:20",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -15124,7 +15124,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 923451.93,
+      "balance": 923346.25,
       "trades": 47,
       "buys": 29,
       "sells": 18,
@@ -15137,16 +15137,16 @@
           "value": 140349.51
         },
         {
-          "symbol": "SOXL",
-          "qty": 2642.0,
-          "last_price": 53.04,
-          "value": 140131.68
-        },
-        {
           "symbol": "SOFI",
           "qty": 8824.0,
           "last_price": 15.87,
           "value": 140036.88
+        },
+        {
+          "symbol": "SOXL",
+          "qty": 2642.0,
+          "last_price": 53.0,
+          "value": 140026.0
         },
         {
           "symbol": "AMD",
@@ -15203,10 +15203,10 @@
           "value": 0.0
         }
       ],
-      "held_value": 605733.11
+      "held_value": 605627.43
     },
     "mid": {
-      "balance": 998437.23,
+      "balance": 998527.3,
       "trades": 29,
       "buys": 22,
       "sells": 7,
@@ -15215,8 +15215,8 @@
         {
           "symbol": "NFLX",
           "qty": 730.0,
-          "last_price": 99.43,
-          "value": 72583.9
+          "last_price": 99.5,
+          "value": 72635.0
         },
         {
           "symbol": "MRK",
@@ -15263,8 +15263,8 @@
         {
           "symbol": "XOM",
           "qty": 433.0,
-          "last_price": 160.76,
-          "value": 69609.08
+          "last_price": 160.85,
+          "value": 69648.05
         },
         {
           "symbol": "XLI",
@@ -15303,10 +15303,10 @@
           "value": 153.64
         }
       ],
-      "held_value": 848895.62
+      "held_value": 848985.69
     },
     "rand": {
-      "balance": 892518.42,
+      "balance": 892533.39,
       "trades": 814,
       "buys": 562,
       "sells": 252,
@@ -15333,8 +15333,8 @@
         {
           "symbol": "NFLX",
           "qty": 219.0,
-          "last_price": 99.43,
-          "value": 21775.17
+          "last_price": 99.5,
+          "value": 21790.5
         },
         {
           "symbol": "JPM",
@@ -15387,8 +15387,8 @@
         {
           "symbol": "XPEV",
           "qty": 36.0,
-          "last_price": 17.7,
-          "value": 637.2
+          "last_price": 17.69,
+          "value": 636.84
         },
         {
           "symbol": "IEF",
@@ -15421,7 +15421,7 @@
           "value": 0.0
         }
       ],
-      "held_value": 290386.97
+      "held_value": 290401.94
     },
     "spy_balance": 1011085.93
   }
