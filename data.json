@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-06T00:14:20",
+  "generated": "2026-04-06T00:15:32",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -15124,7 +15124,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 923346.25,
+      "balance": 923372.67,
       "trades": 47,
       "buys": 29,
       "sells": 18,
@@ -15137,16 +15137,16 @@
           "value": 140349.51
         },
         {
+          "symbol": "SOXL",
+          "qty": 2642.0,
+          "last_price": 53.01,
+          "value": 140052.42
+        },
+        {
           "symbol": "SOFI",
           "qty": 8824.0,
           "last_price": 15.87,
           "value": 140036.88
-        },
-        {
-          "symbol": "SOXL",
-          "qty": 2642.0,
-          "last_price": 53.0,
-          "value": 140026.0
         },
         {
           "symbol": "AMD",
@@ -15187,7 +15187,7 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 68998.137,
+          "last_price": 69052.744,
           "value": 0.0
         },
         {
@@ -15203,10 +15203,10 @@
           "value": 0.0
         }
       ],
-      "held_value": 605627.43
+      "held_value": 605653.85
     },
     "mid": {
-      "balance": 998527.3,
+      "balance": 998563.8,
       "trades": 29,
       "buys": 22,
       "sells": 7,
@@ -15215,8 +15215,8 @@
         {
           "symbol": "NFLX",
           "qty": 730.0,
-          "last_price": 99.5,
-          "value": 72635.0
+          "last_price": 99.55,
+          "value": 72671.5
         },
         {
           "symbol": "MRK",
@@ -15303,10 +15303,10 @@
           "value": 153.64
         }
       ],
-      "held_value": 848985.69
+      "held_value": 849022.19
     },
     "rand": {
-      "balance": 892533.39,
+      "balance": 892544.7,
       "trades": 814,
       "buys": 562,
       "sells": 252,
@@ -15333,8 +15333,8 @@
         {
           "symbol": "NFLX",
           "qty": 219.0,
-          "last_price": 99.5,
-          "value": 21790.5
+          "last_price": 99.55,
+          "value": 21801.45
         },
         {
           "symbol": "JPM",
@@ -15387,8 +15387,8 @@
         {
           "symbol": "XPEV",
           "qty": 36.0,
-          "last_price": 17.69,
-          "value": 636.84
+          "last_price": 17.7,
+          "value": 637.2
         },
         {
           "symbol": "IEF",
@@ -15417,11 +15417,11 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 68998.137,
+          "last_price": 69051.817,
           "value": 0.0
         }
       ],
-      "held_value": 290401.94
+      "held_value": 290413.25
     },
     "spy_balance": 1011085.93
   }
