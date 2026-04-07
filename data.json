@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-07T00:16:59",
+  "generated": "2026-04-07T00:17:15",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -17147,7 +17147,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 922141.67,
+      "balance": 922115.25,
       "trades": 47,
       "buys": 29,
       "sells": 18,
@@ -17162,8 +17162,8 @@
         {
           "symbol": "SOXL",
           "qty": 2642.0,
-          "last_price": 53.4,
-          "value": 141082.8
+          "last_price": 53.39,
+          "value": 141056.38
         },
         {
           "symbol": "RBLX",
@@ -17226,10 +17226,10 @@
           "value": 0.0
         }
       ],
-      "held_value": 604422.85
+      "held_value": 604396.43
     },
     "mid": {
-      "balance": 998811.92,
+      "balance": 998870.32,
       "trades": 29,
       "buys": 22,
       "sells": 7,
@@ -17238,8 +17238,8 @@
         {
           "symbol": "NFLX",
           "qty": 730.0,
-          "last_price": 98.39,
-          "value": 71824.7
+          "last_price": 98.47,
+          "value": 71883.1
         },
         {
           "symbol": "XOM",
@@ -17326,10 +17326,10 @@
           "value": 154.2
         }
       ],
-      "held_value": 849270.31
+      "held_value": 849328.71
     },
     "rand": {
-      "balance": 873311.83,
+      "balance": 873329.35,
       "trades": 939,
       "buys": 632,
       "sells": 307,
@@ -17356,8 +17356,8 @@
         {
           "symbol": "NFLX",
           "qty": 219.0,
-          "last_price": 98.39,
-          "value": 21547.41
+          "last_price": 98.47,
+          "value": 21564.93
         },
         {
           "symbol": "MRK",
@@ -17396,7 +17396,7 @@
           "value": 0.0
         }
       ],
-      "held_value": 131559.36
+      "held_value": 131576.88
     },
     "spy_balance": 1015904.22
   }
