@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-07T00:08:50",
+  "generated": "2026-04-07T00:10:03",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -17147,7 +17147,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 922137.87,
+      "balance": 922190.71,
       "trades": 47,
       "buys": 29,
       "sells": 18,
@@ -17162,8 +17162,8 @@
         {
           "symbol": "SOXL",
           "qty": 2642.0,
-          "last_price": 53.38,
-          "value": 141029.96
+          "last_price": 53.4,
+          "value": 141082.8
         },
         {
           "symbol": "RBLX",
@@ -17210,7 +17210,7 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 68633.2,
+          "last_price": 68693.69,
           "value": 0.0
         },
         {
@@ -17226,7 +17226,7 @@
           "value": 0.0
         }
       ],
-      "held_value": 604419.05
+      "held_value": 604471.89
     },
     "mid": {
       "balance": 998853.63,
@@ -17329,7 +17329,7 @@
       "held_value": 849312.02
     },
     "rand": {
-      "balance": 873489.47,
+      "balance": 873516.09,
       "trades": 939,
       "buys": 632,
       "sells": 307,
@@ -17350,8 +17350,8 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.440042,
-          "last_price": 68633.2,
-          "value": 30201.48
+          "last_price": 68693.69,
+          "value": 30228.1
         },
         {
           "symbol": "NFLX",
@@ -17392,11 +17392,11 @@
         {
           "symbol": "ETH/USD",
           "qty": 0.0,
-          "last_price": 2104.5,
+          "last_price": 2105.991,
           "value": 0.0
         }
       ],
-      "held_value": 131737.0
+      "held_value": 131763.62
     },
     "spy_balance": 1015904.22
   }
