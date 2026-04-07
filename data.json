@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-07T00:10:03",
+  "generated": "2026-04-07T00:10:53",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -17147,7 +17147,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 922190.71,
+      "balance": 922243.55,
       "trades": 47,
       "buys": 29,
       "sells": 18,
@@ -17162,8 +17162,8 @@
         {
           "symbol": "SOXL",
           "qty": 2642.0,
-          "last_price": 53.4,
-          "value": 141082.8
+          "last_price": 53.42,
+          "value": 141135.64
         },
         {
           "symbol": "RBLX",
@@ -17216,7 +17216,7 @@
         {
           "symbol": "ETH/USD",
           "qty": 0.0,
-          "last_price": 2104.5,
+          "last_price": 2105.991,
           "value": 0.0
         },
         {
@@ -17226,7 +17226,7 @@
           "value": 0.0
         }
       ],
-      "held_value": 604471.89
+      "held_value": 604524.73
     },
     "mid": {
       "balance": 998853.63,
