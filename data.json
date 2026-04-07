@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-07T00:14:12",
+  "generated": "2026-04-07T00:15:12",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -17229,7 +17229,7 @@
       "held_value": 604287.13
     },
     "mid": {
-      "balance": 998845.41,
+      "balance": 998806.44,
       "trades": 29,
       "buys": 22,
       "sells": 7,
@@ -17244,8 +17244,8 @@
         {
           "symbol": "XOM",
           "qty": 433.0,
-          "last_price": 164.1,
-          "value": 71055.3
+          "last_price": 164.01,
+          "value": 71016.33
         },
         {
           "symbol": "MRK",
@@ -17326,7 +17326,7 @@
           "value": 154.2
         }
       ],
-      "held_value": 849303.8
+      "held_value": 849264.83
     },
     "rand": {
       "balance": 873311.83,
