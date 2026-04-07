@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-07T00:15:12",
+  "generated": "2026-04-07T00:16:59",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -17147,7 +17147,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 922005.95,
+      "balance": 922141.67,
       "trades": 47,
       "buys": 29,
       "sells": 18,
@@ -17162,8 +17162,8 @@
         {
           "symbol": "SOXL",
           "qty": 2642.0,
-          "last_price": 53.35,
-          "value": 140950.7
+          "last_price": 53.4,
+          "value": 141082.8
         },
         {
           "symbol": "RBLX",
@@ -17180,8 +17180,8 @@
         {
           "symbol": "AAPL",
           "qty": 181.0,
-          "last_price": 257.07,
-          "value": 46529.67
+          "last_price": 257.09,
+          "value": 46533.29
         },
         {
           "symbol": "AMD",
@@ -17226,10 +17226,10 @@
           "value": 0.0
         }
       ],
-      "held_value": 604287.13
+      "held_value": 604422.85
     },
     "mid": {
-      "balance": 998806.44,
+      "balance": 998811.92,
       "trades": 29,
       "buys": 22,
       "sells": 7,
@@ -17262,8 +17262,8 @@
         {
           "symbol": "AAPL",
           "qty": 274.0,
-          "last_price": 257.07,
-          "value": 70437.18
+          "last_price": 257.09,
+          "value": 70442.66
         },
         {
           "symbol": "TLT",
@@ -17326,7 +17326,7 @@
           "value": 154.2
         }
       ],
-      "held_value": 849264.83
+      "held_value": 849270.31
     },
     "rand": {
       "balance": 873311.83,
