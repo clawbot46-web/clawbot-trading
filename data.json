@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-07T00:13:03",
+  "generated": "2026-04-07T00:14:12",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -17147,7 +17147,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 922075.07,
+      "balance": 922005.95,
       "trades": 47,
       "buys": 29,
       "sells": 18,
@@ -17162,8 +17162,8 @@
         {
           "symbol": "SOXL",
           "qty": 2642.0,
-          "last_price": 53.37,
-          "value": 141003.54
+          "last_price": 53.35,
+          "value": 140950.7
         },
         {
           "symbol": "RBLX",
@@ -17180,8 +17180,8 @@
         {
           "symbol": "AAPL",
           "qty": 181.0,
-          "last_price": 257.1,
-          "value": 46535.1
+          "last_price": 257.07,
+          "value": 46529.67
         },
         {
           "symbol": "AMD",
@@ -17192,8 +17192,8 @@
         {
           "symbol": "AMZN",
           "qty": 217.0,
-          "last_price": 211.69,
-          "value": 45936.73
+          "last_price": 211.64,
+          "value": 45925.88
         },
         {
           "symbol": "AFRM",
@@ -17222,14 +17222,14 @@
         {
           "symbol": "SOL/USD",
           "qty": 0.0,
-          "last_price": 79.63,
+          "last_price": 79.6072,
           "value": 0.0
         }
       ],
-      "held_value": 604356.25
+      "held_value": 604287.13
     },
     "mid": {
-      "balance": 998853.63,
+      "balance": 998845.41,
       "trades": 29,
       "buys": 22,
       "sells": 7,
@@ -17262,8 +17262,8 @@
         {
           "symbol": "AAPL",
           "qty": 274.0,
-          "last_price": 257.1,
-          "value": 70445.4
+          "last_price": 257.07,
+          "value": 70437.18
         },
         {
           "symbol": "TLT",
@@ -17326,10 +17326,10 @@
           "value": 154.2
         }
       ],
-      "held_value": 849312.02
+      "held_value": 849303.8
     },
     "rand": {
-      "balance": 873341.73,
+      "balance": 873311.83,
       "trades": 939,
       "buys": 632,
       "sells": 307,
@@ -17338,14 +17338,14 @@
         {
           "symbol": "SOL/USD",
           "qty": 498.17354,
-          "last_price": 79.63,
-          "value": 39669.56
+          "last_price": 79.6072,
+          "value": 39658.2
         },
         {
           "symbol": "VTI",
           "qty": 103.0,
-          "last_price": 323.79,
-          "value": 33350.37
+          "last_price": 323.61,
+          "value": 33331.83
         },
         {
           "symbol": "BTC/USD",
@@ -17396,7 +17396,7 @@
           "value": 0.0
         }
       ],
-      "held_value": 131589.26
+      "held_value": 131559.36
     },
     "spy_balance": 1015904.22
   }
