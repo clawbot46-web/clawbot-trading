@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-07T10:39:34",
+  "generated": "2026-04-07T11:31:28",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -5984,7 +5984,7 @@
       "mid": 998944.15,
       "rand": 873133.66,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "12:35AM*",
@@ -5993,7 +5993,7 @@
       "mid": 998995.61,
       "rand": 872989.69,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "12:40AM",
@@ -6002,7 +6002,7 @@
       "mid": 998995.61,
       "rand": 873324.78,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "1:27AM*",
@@ -6011,7 +6011,7 @@
       "mid": 999048.46,
       "rand": 873318.25,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "1:35AM*",
@@ -6020,7 +6020,7 @@
       "mid": 998835.07,
       "rand": 872668.68,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "1:40AM",
@@ -6029,7 +6029,7 @@
       "mid": 998525.23,
       "rand": 872697.07,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "2:27AM*",
@@ -6038,7 +6038,7 @@
       "mid": 998880.19,
       "rand": 872228.47,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "2:36AM",
@@ -6047,7 +6047,7 @@
       "mid": 998915.08,
       "rand": 871823.53,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "2:40AM",
@@ -6056,7 +6056,7 @@
       "mid": 998917.82,
       "rand": 871274.2,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "3:27AM",
@@ -6065,7 +6065,7 @@
       "mid": 998273.46,
       "rand": 871577.11,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "3:36AM*",
@@ -6074,7 +6074,7 @@
       "mid": 998422.29,
       "rand": 872075.03,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "3:41AM",
@@ -6083,7 +6083,7 @@
       "mid": 998398.21,
       "rand": 871123.8,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "4:28AM*",
@@ -6092,7 +6092,7 @@
       "mid": 997326.78,
       "rand": 871515.34,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "4:36AM*",
@@ -6101,7 +6101,7 @@
       "mid": 997516.81,
       "rand": 871938.67,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "4:41AM",
@@ -6110,7 +6110,7 @@
       "mid": 997398.83,
       "rand": 871716.89,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "5:28AM*",
@@ -6119,7 +6119,7 @@
       "mid": 997199.16,
       "rand": 872853.79,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "5:36AM*",
@@ -6128,7 +6128,7 @@
       "mid": 997360.83,
       "rand": 873180.79,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "5:41AM",
@@ -6137,7 +6137,7 @@
       "mid": 997326.88,
       "rand": 873557.65,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "6:28AM*",
@@ -6146,7 +6146,7 @@
       "mid": 996990.83,
       "rand": 871515.1,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "6:37AM",
@@ -6155,7 +6155,7 @@
       "mid": 996914.97,
       "rand": 870720.25,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "6:41AM",
@@ -6164,7 +6164,7 @@
       "mid": 997077.89,
       "rand": 868387.48,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "7:29AM",
@@ -6173,7 +6173,7 @@
       "mid": 996777.05,
       "rand": 868168.66,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "7:37AM",
@@ -6182,7 +6182,7 @@
       "mid": 995635.6,
       "rand": 868010.69,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "7:41AM",
@@ -6191,7 +6191,7 @@
       "mid": 995931.85,
       "rand": 867714.19,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "8:29AM",
@@ -6200,7 +6200,7 @@
       "mid": 996293.41,
       "rand": 867747.31,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "8:37AM",
@@ -6209,7 +6209,7 @@
       "mid": 996204.96,
       "rand": 867751.65,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "8:42AM",
@@ -6218,7 +6218,7 @@
       "mid": 996626.04,
       "rand": 867621.91,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "9:29AM*",
@@ -6227,7 +6227,7 @@
       "mid": 996710.93,
       "rand": 866566.52,
       "spy": 0.4727,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "9:38AM**",
@@ -6236,7 +6236,7 @@
       "mid": 990825.84,
       "rand": 866545.87,
       "spy": 0.0,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "9:42AM",
@@ -6245,7 +6245,7 @@
       "mid": 989898.12,
       "rand": 866538.66,
       "spy": -0.5645,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "10:30AM",
@@ -6254,7 +6254,7 @@
       "mid": 990341.76,
       "rand": 866080.4,
       "spy": -0.6738,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
     },
     {
       "ts": "10:39AM",
@@ -6263,10 +6263,72 @@
       "mid": 991025.4,
       "rand": 865994.96,
       "spy": -0.7155,
-      "spy_bal": 1009513.24
+      "spy_bal": 1006969.18
+    },
+    {
+      "ts": "10:43AM",
+      "_raw_ts": "2026-04-07 10:43:34",
+      "agg": 917058.93,
+      "mid": 991289.44,
+      "rand": 865891.64,
+      "spy": -0.7694,
+      "spy_bal": 1006969.18
+    },
+    {
+      "ts": "11:31AM",
+      "_raw_ts": "2026-04-07 11:31:23",
+      "agg": 918348.59,
+      "mid": 989050.34,
+      "rand": 866087.92,
+      "spy": -0.9182,
+      "spy_bal": 1006969.18
     }
   ],
   "trades": [
+    {
+      "ts": "2026-04-07 11:31:22",
+      "bot": "Random Bot",
+      "symbol": "MRK",
+      "action": "SELL",
+      "qty": 1.0,
+      "price": 117.385,
+      "value": 117.39,
+      "reason": "Why not?",
+      "balance": 866088.26
+    },
+    {
+      "ts": "2026-04-07 10:43:33",
+      "bot": "Random Bot",
+      "symbol": "ETH/USD",
+      "action": "BUY",
+      "qty": 9.076521,
+      "price": 2071.6094,
+      "value": 18803.01,
+      "reason": "Chaos theory in action (crypto edition)",
+      "balance": 865787.83
+    },
+    {
+      "ts": "2026-04-07 10:43:32",
+      "bot": "Random Bot",
+      "symbol": "MRK",
+      "action": "SELL",
+      "qty": 1.0,
+      "price": 118.43,
+      "value": 118.43,
+      "reason": "I heard someone mention it at the gym",
+      "balance": 865911.65
+    },
+    {
+      "ts": "2026-04-07 10:43:30",
+      "bot": "Random Bot",
+      "symbol": "VTI",
+      "action": "SELL",
+      "qty": 1.0,
+      "price": 322.9719,
+      "value": 322.97,
+      "reason": "Vibe check: passed",
+      "balance": 865912.22
+    },
     {
       "ts": "2026-04-07 10:30:31",
       "bot": "Random Bot",
@@ -17985,7 +18047,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 918603.9,
+      "balance": 918526.95,
       "trades": 47,
       "buys": 29,
       "sells": 18,
@@ -17994,80 +18056,80 @@
         {
           "symbol": "SOFI",
           "qty": 8824.0,
-          "last_price": 16.07,
-          "value": 141801.68
+          "last_price": 16.095,
+          "value": 142022.28
         },
         {
           "symbol": "SOXL",
           "qty": 2642.0,
-          "last_price": 53.343,
-          "value": 140932.21
+          "last_price": 53.5607,
+          "value": 141507.37
         },
         {
           "symbol": "RBLX",
           "qty": 2331.0,
-          "last_price": 56.675,
-          "value": 132109.42
+          "last_price": 56.295,
+          "value": 131223.64
         },
         {
           "symbol": "APP",
           "qty": 120.0,
-          "last_price": 403.2601,
-          "value": 48391.21
+          "last_price": 403.995,
+          "value": 48479.4
         },
         {
           "symbol": "AMD",
           "qty": 214.0,
-          "last_price": 217.92,
-          "value": 46634.88
+          "last_price": 217.87,
+          "value": 46624.18
         },
         {
           "symbol": "AMZN",
           "qty": 217.0,
-          "last_price": 210.4,
-          "value": 45656.8
+          "last_price": 210.19,
+          "value": 45611.23
         },
         {
           "symbol": "AAPL",
           "qty": 181.0,
-          "last_price": 247.71,
-          "value": 44835.51
+          "last_price": 247.625,
+          "value": 44820.12
         },
         {
           "symbol": "AFRM",
           "qty": 11.0,
-          "last_price": 47.07,
-          "value": 517.77
+          "last_price": 47.53,
+          "value": 522.83
         },
         {
           "symbol": "AVAX/USD",
           "qty": 0.0,
-          "last_price": 8.607,
+          "last_price": 8.6248,
           "value": 0.0
         },
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 68060.184,
+          "last_price": 68135.96,
           "value": 0.0
         },
         {
           "symbol": "ETH/USD",
           "qty": 0.0,
-          "last_price": 2061.204,
+          "last_price": 2077.884,
           "value": 0.0
         },
         {
           "symbol": "SOL/USD",
           "qty": 0.0,
-          "last_price": 78.94,
+          "last_price": 78.6602,
           "value": 0.0
         }
       ],
-      "held_value": 600879.48
+      "held_value": 600811.06
     },
     "mid": {
-      "balance": 991062.54,
+      "balance": 989070.56,
       "trades": 29,
       "buys": 22,
       "sells": 7,
@@ -18076,154 +18138,142 @@
         {
           "symbol": "NFLX",
           "qty": 730.0,
-          "last_price": 98.8938,
-          "value": 72192.47
+          "last_price": 98.795,
+          "value": 72120.35
         },
         {
           "symbol": "XOM",
           "qty": 433.0,
-          "last_price": 165.06,
-          "value": 71470.98
-        },
-        {
-          "symbol": "XLI",
-          "qty": 427.0,
-          "last_price": 164.08,
-          "value": 70062.16
+          "last_price": 164.33,
+          "value": 71154.89
         },
         {
           "symbol": "TLT",
           "qty": 813.0,
-          "last_price": 86.165,
-          "value": 70052.15
+          "last_price": 86.11,
+          "value": 70007.43
         },
         {
           "symbol": "COST",
           "qty": 69.0,
-          "last_price": 1014.27,
-          "value": 69984.63
+          "last_price": 1012.17,
+          "value": 69839.73
         },
         {
           "symbol": "IEF",
           "qty": 736.0,
-          "last_price": 94.915,
-          "value": 69857.44
+          "last_price": 94.8699,
+          "value": 69824.25
         },
         {
-          "symbol": "MRK",
-          "qty": 590.0,
-          "last_price": 118.37,
-          "value": 69838.3
+          "symbol": "XLI",
+          "qty": 427.0,
+          "last_price": 163.26,
+          "value": 69712.02
         },
         {
           "symbol": "NEE",
           "qty": 745.0,
-          "last_price": 93.38,
-          "value": 69568.1
+          "last_price": 93.125,
+          "value": 69378.12
+        },
+        {
+          "symbol": "MRK",
+          "qty": 590.0,
+          "last_price": 117.385,
+          "value": 69257.15
         },
         {
           "symbol": "JNJ",
           "qty": 288.0,
-          "last_price": 239.18,
-          "value": 68883.84
-        },
-        {
-          "symbol": "AAPL",
-          "qty": 274.0,
-          "last_price": 247.75,
-          "value": 67883.5
+          "last_price": 237.74,
+          "value": 68469.12
         },
         {
           "symbol": "TMO",
           "qty": 141.0,
-          "last_price": 481.09,
-          "value": 67833.69
+          "last_price": 481.585,
+          "value": 67903.49
+        },
+        {
+          "symbol": "AAPL",
+          "qty": 274.0,
+          "last_price": 247.6,
+          "value": 67842.4
         },
         {
           "symbol": "ABBV",
           "qty": 319.0,
-          "last_price": 202.11,
-          "value": 64473.09
+          "last_price": 202.21,
+          "value": 64504.99
         },
         {
           "symbol": "LLY",
           "qty": 10.0,
-          "last_price": 912.52,
-          "value": 9125.2
+          "last_price": 920.18,
+          "value": 9201.8
         },
         {
           "symbol": "PEP",
           "qty": 1.0,
-          "last_price": 155.2501,
-          "value": 155.25
+          "last_price": 154.07,
+          "value": 154.07
         },
         {
           "symbol": "KO",
           "qty": 2.0,
-          "last_price": 77.1402,
-          "value": 154.28
+          "last_price": 76.245,
+          "value": 152.49
         }
       ],
-      "held_value": 841535.08
+      "held_value": 839522.3
     },
     "rand": {
-      "balance": 866018.06,
-      "trades": 989,
-      "buys": 662,
-      "sells": 327,
+      "balance": 866088.56,
+      "trades": 993,
+      "buys": 663,
+      "sells": 330,
       "assets": "AFRM, AMD, BABA, BTC, COST, CRWD, DDOG, ETH, GM, GOOGL, GRAB, IEF, JPM, MRK, NFLX, PYPL, RIVN, SBUX, SOL, TLT, VTI, VZ, XLF, XLV, XPEV",
       "holdings": [
         {
           "symbol": "BTC/USD",
           "qty": 1.150651,
-          "last_price": 68060.184,
-          "value": 78313.55
+          "last_price": 68135.96,
+          "value": 78400.74
+        },
+        {
+          "symbol": "ETH/USD",
+          "qty": 8.881451,
+          "last_price": 2077.884,
+          "value": 18454.62
         },
         {
           "symbol": "SOL/USD",
           "qty": 123.806249,
-          "last_price": 78.94,
-          "value": 9773.27
+          "last_price": 78.6602,
+          "value": 9738.62
         },
         {
           "symbol": "NFLX",
           "qty": 61.0,
-          "last_price": 98.9,
-          "value": 6032.9
-        },
-        {
-          "symbol": "VTI",
-          "qty": 1.0,
-          "last_price": 323.09,
-          "value": 323.09
+          "last_price": 98.8,
+          "value": 6026.8
         },
         {
           "symbol": "JPM",
           "qty": 1.0,
-          "last_price": 295.8367,
-          "value": 295.84
-        },
-        {
-          "symbol": "MRK",
-          "qty": 2.0,
-          "last_price": 118.37,
-          "value": 236.74
+          "last_price": 295.305,
+          "value": 295.31
         },
         {
           "symbol": "XPEV",
           "qty": 1.0,
-          "last_price": 17.1391,
-          "value": 17.14
-        },
-        {
-          "symbol": "ETH/USD",
-          "qty": 0.0,
-          "last_price": 2061.204,
-          "value": 0.0
+          "last_price": 16.945,
+          "value": 16.95
         }
       ],
-      "held_value": 94992.52
+      "held_value": 112933.04
     },
-    "spy_balance": 1009513.24
+    "spy_balance": 1006969.18
   }
 }
