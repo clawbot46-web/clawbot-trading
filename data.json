@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-07T00:10:53",
+  "generated": "2026-04-07T00:12:03",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -17147,7 +17147,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 922243.55,
+      "balance": 922137.87,
       "trades": 47,
       "buys": 29,
       "sells": 18,
@@ -17162,8 +17162,8 @@
         {
           "symbol": "SOXL",
           "qty": 2642.0,
-          "last_price": 53.42,
-          "value": 141135.64
+          "last_price": 53.38,
+          "value": 141029.96
         },
         {
           "symbol": "RBLX",
@@ -17204,7 +17204,7 @@
         {
           "symbol": "AVAX/USD",
           "qty": 0.0,
-          "last_price": 8.7016,
+          "last_price": 8.6573,
           "value": 0.0
         },
         {
@@ -17222,11 +17222,11 @@
         {
           "symbol": "SOL/USD",
           "qty": 0.0,
-          "last_price": 79.98,
+          "last_price": 79.63,
           "value": 0.0
         }
       ],
-      "held_value": 604524.73
+      "held_value": 604419.05
     },
     "mid": {
       "balance": 998853.63,
@@ -17329,7 +17329,7 @@
       "held_value": 849312.02
     },
     "rand": {
-      "balance": 873516.09,
+      "balance": 873341.73,
       "trades": 939,
       "buys": 632,
       "sells": 307,
@@ -17338,8 +17338,8 @@
         {
           "symbol": "SOL/USD",
           "qty": 498.17354,
-          "last_price": 79.98,
-          "value": 39843.92
+          "last_price": 79.63,
+          "value": 39669.56
         },
         {
           "symbol": "VTI",
@@ -17396,7 +17396,7 @@
           "value": 0.0
         }
       ],
-      "held_value": 131763.62
+      "held_value": 131589.26
     },
     "spy_balance": 1015904.22
   }
