@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-08T05:48:56",
+  "generated": "2026-04-08T06:39:39",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -6777,9 +6777,49 @@
       "rand": 864533.63,
       "spy": 0.044,
       "spy_bal": 1016436.16
+    },
+    {
+      "ts": "5:49AM",
+      "_raw_ts": "2026-04-08 05:49:46",
+      "agg": 989860.53,
+      "mid": 1002090.99,
+      "rand": 864016.18,
+      "spy": 0.044,
+      "spy_bal": 1016436.16
+    },
+    {
+      "ts": "6:39AM",
+      "_raw_ts": "2026-04-08 06:39:34",
+      "agg": 990454.35,
+      "mid": 1002383.36,
+      "rand": 863850.99,
+      "spy": 0.044,
+      "spy_bal": 1016436.16
     }
   ],
   "trades": [
+    {
+      "ts": "2026-04-08 05:49:45",
+      "bot": "Random Bot",
+      "symbol": "ETH/USD",
+      "action": "SELL",
+      "qty": 26.733985,
+      "price": 2248.5,
+      "value": 60111.37,
+      "reason": "Felt lucky (crypto edition)",
+      "balance": 864016.18
+    },
+    {
+      "ts": "2026-04-08 05:49:44",
+      "bot": "Random Bot",
+      "symbol": "SOL/USD",
+      "action": "BUY",
+      "qty": 494.706696,
+      "price": 84.5689,
+      "value": 41836.79,
+      "reason": "Totally random, no regrets (crypto edition)",
+      "balance": 864129.33
+    },
     {
       "ts": "2026-04-08 05:48:51",
       "bot": "Random Bot",
@@ -19466,7 +19506,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 989785.09,
+      "balance": 990449.16,
       "trades": 49,
       "buys": 30,
       "sells": 19,
@@ -19475,80 +19515,80 @@
         {
           "symbol": "SOXL",
           "qty": 2642.0,
-          "last_price": 66.185,
-          "value": 174860.77
+          "last_price": 66.18,
+          "value": 174847.56
         },
         {
           "symbol": "SOFI",
           "qty": 8824.0,
-          "last_price": 17.5,
-          "value": 154420.0
+          "last_price": 17.53,
+          "value": 154684.72
         },
         {
           "symbol": "GOOGL",
           "qty": 458.0,
-          "last_price": 317.55,
-          "value": 145437.9
+          "last_price": 317.69,
+          "value": 145502.02
         },
         {
           "symbol": "RBLX",
           "qty": 2331.0,
-          "last_price": 60.02,
-          "value": 139906.62
+          "last_price": 60.12,
+          "value": 140139.72
         },
         {
           "symbol": "APP",
           "qty": 120.0,
-          "last_price": 434.51,
-          "value": 52141.2
+          "last_price": 434.57,
+          "value": 52148.4
         },
         {
           "symbol": "AMD",
           "qty": 214.0,
-          "last_price": 232.11,
-          "value": 49671.54
+          "last_price": 232.32,
+          "value": 49716.48
         },
         {
           "symbol": "AMZN",
           "qty": 217.0,
-          "last_price": 221.79,
-          "value": 48128.43
+          "last_price": 222.1,
+          "value": 48195.7
         },
         {
           "symbol": "AFRM",
           "qty": 11.0,
-          "last_price": 51.02,
-          "value": 561.22
+          "last_price": 50.65,
+          "value": 557.15
         },
         {
           "symbol": "AVAX/USD",
           "qty": 0.0,
-          "last_price": 9.4125,
+          "last_price": 9.3904,
           "value": 0.0
         },
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 71642.3,
+          "last_price": 71506.384,
           "value": 0.0
         },
         {
           "symbol": "ETH/USD",
           "qty": 0.0,
-          "last_price": 2248.5,
+          "last_price": 2246.359,
           "value": 0.0
         },
         {
           "symbol": "SOL/USD",
           "qty": 0.0,
-          "last_price": 84.436,
+          "last_price": 84.371,
           "value": 0.0
         }
       ],
-      "held_value": 765127.68
+      "held_value": 765791.75
     },
     "mid": {
-      "balance": 1001857.13,
+      "balance": 1002382.63,
       "trades": 29,
       "buys": 22,
       "sells": 7,
@@ -19557,32 +19597,32 @@
         {
           "symbol": "NFLX",
           "qty": 730.0,
-          "last_price": 100.42,
-          "value": 73306.6
+          "last_price": 100.75,
+          "value": 73547.5
         },
         {
           "symbol": "XLI",
           "qty": 427.0,
-          "last_price": 169.16,
-          "value": 72231.32
-        },
-        {
-          "symbol": "TLT",
-          "qty": 813.0,
-          "last_price": 87.28,
-          "value": 70958.64
+          "last_price": 169.17,
+          "value": 72235.59
         },
         {
           "symbol": "AAPL",
           "qty": 274.0,
-          "last_price": 258.92,
-          "value": 70944.08
+          "last_price": 259.56,
+          "value": 71119.44
+        },
+        {
+          "symbol": "TLT",
+          "qty": 813.0,
+          "last_price": 87.33,
+          "value": 70999.29
         },
         {
           "symbol": "MRK",
           "qty": 590.0,
-          "last_price": 120.17,
-          "value": 70900.3
+          "last_price": 119.84,
+          "value": 70705.6
         },
         {
           "symbol": "NEE",
@@ -19593,8 +19633,8 @@
         {
           "symbol": "TMO",
           "qty": 141.0,
-          "last_price": 500.0,
-          "value": 70500.0
+          "last_price": 500.98,
+          "value": 70638.18
         },
         {
           "symbol": "IEF",
@@ -19611,63 +19651,63 @@
         {
           "symbol": "JNJ",
           "qty": 288.0,
-          "last_price": 240.92,
-          "value": 69384.96
+          "last_price": 240.2,
+          "value": 69177.6
         },
         {
           "symbol": "XOM",
           "qty": 433.0,
-          "last_price": 154.4,
-          "value": 66855.2
+          "last_price": 154.5,
+          "value": 66898.5
         },
         {
           "symbol": "ABBV",
           "qty": 319.0,
-          "last_price": 207.73,
-          "value": 66265.87
+          "last_price": 208.7,
+          "value": 66575.3
         },
         {
           "symbol": "LLY",
           "qty": 10.0,
-          "last_price": 947.4162,
-          "value": 9474.16
+          "last_price": 944.97,
+          "value": 9449.7
         },
         {
           "symbol": "PEP",
           "qty": 1.0,
-          "last_price": 154.32,
-          "value": 154.32
+          "last_price": 154.21,
+          "value": 154.21
         },
         {
           "symbol": "KO",
           "qty": 2.0,
-          "last_price": 76.38,
-          "value": 152.76
+          "last_price": 76.4,
+          "value": 152.8
         }
       ],
-      "held_value": 852315.52
+      "held_value": 852841.02
     },
     "rand": {
-      "balance": 864533.63,
-      "trades": 1075,
-      "buys": 720,
-      "sells": 355,
+      "balance": 863850.99,
+      "trades": 1077,
+      "buys": 721,
+      "sells": 356,
       "assets": "AFRM, AMD, BABA, BTC, COST, CRWD, DDOG, ETH, GM, GOOGL, GRAB, IEF, JPM, MRK, NFLX, PYPL, RIVN, SBUX, SOL, TLT, VTI, VZ, XLF, XLV, XPEV",
       "holdings": [
         {
           "symbol": "SOL/USD",
-          "qty": 2058.511101,
-          "last_price": 84.436,
-          "value": 173812.44
+          "qty": 2541.362006,
+          "last_price": 84.371,
+          "value": 214417.25
         },
         {
           "symbol": "ETH/USD",
-          "qty": 26.733985,
-          "last_price": 2248.5,
-          "value": 60111.37
+          "qty": 0.0,
+          "last_price": 2246.359,
+          "value": 0.0
         }
       ],
-      "held_value": 233923.81
+      "held_value": 214417.25
     },
     "spy_balance": 1016436.16
   }
