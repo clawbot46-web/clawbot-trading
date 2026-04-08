@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-08T00:09:06",
+  "generated": "2026-04-08T00:11:04",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -18917,7 +18917,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 979866.78,
+      "balance": 980016.42,
       "trades": 49,
       "buys": 30,
       "sells": 19,
@@ -18926,14 +18926,14 @@
         {
           "symbol": "SOXL",
           "qty": 2642.0,
-          "last_price": 64.05,
-          "value": 169220.1
+          "last_price": 64.07,
+          "value": 169272.94
         },
         {
           "symbol": "SOFI",
           "qty": 8824.0,
-          "last_price": 17.33,
-          "value": 152919.92
+          "last_price": 17.34,
+          "value": 153008.16
         },
         {
           "symbol": "GOOGL",
@@ -18956,8 +18956,8 @@
         {
           "symbol": "AMD",
           "qty": 214.0,
-          "last_price": 230.47,
-          "value": 49320.58
+          "last_price": 230.51,
+          "value": 49329.14
         },
         {
           "symbol": "AMZN",
@@ -18996,10 +18996,10 @@
           "value": 0.0
         }
       ],
-      "held_value": 755209.33
+      "held_value": 755358.97
     },
     "mid": {
-      "balance": 999453.76,
+      "balance": 999441.75,
       "trades": 29,
       "buys": 22,
       "sells": 7,
@@ -19008,8 +19008,8 @@
         {
           "symbol": "NFLX",
           "qty": 730.0,
-          "last_price": 100.55,
-          "value": 73401.5
+          "last_price": 100.5,
+          "value": 73365.0
         },
         {
           "symbol": "TLT",
@@ -19024,16 +19024,16 @@
           "value": 70977.0
         },
         {
+          "symbol": "AAPL",
+          "qty": 274.0,
+          "last_price": 259.0,
+          "value": 70966.0
+        },
+        {
           "symbol": "TMO",
           "qty": 141.0,
           "last_price": 502.95,
           "value": 70915.95
-        },
-        {
-          "symbol": "AAPL",
-          "qty": 274.0,
-          "last_price": 258.8,
-          "value": 70911.2
         },
         {
           "symbol": "NEE",
@@ -19068,8 +19068,8 @@
         {
           "symbol": "XOM",
           "qty": 433.0,
-          "last_price": 154.8,
-          "value": 67028.4
+          "last_price": 154.73,
+          "value": 66998.09
         },
         {
           "symbol": "ABBV",
@@ -19096,7 +19096,7 @@
           "value": 153.16
         }
       ],
-      "held_value": 849912.15
+      "held_value": 849900.14
     },
     "rand": {
       "balance": 871978.9,
