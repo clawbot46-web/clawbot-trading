@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-08T00:12:25",
+  "generated": "2026-04-08T00:12:36",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -18917,7 +18917,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 979657.24,
+      "balance": 979710.08,
       "trades": 49,
       "buys": 30,
       "sells": 19,
@@ -18926,8 +18926,8 @@
         {
           "symbol": "SOXL",
           "qty": 2642.0,
-          "last_price": 64.08,
-          "value": 169299.36
+          "last_price": 64.07,
+          "value": 169272.94
         },
         {
           "symbol": "SOFI",
@@ -18962,8 +18962,8 @@
         {
           "symbol": "AMZN",
           "qty": 217.0,
-          "last_price": 221.59,
-          "value": 48085.03
+          "last_price": 221.55,
+          "value": 48076.35
         },
         {
           "symbol": "AFRM",
@@ -18996,10 +18996,10 @@
           "value": 0.0
         }
       ],
-      "held_value": 755079.05
+      "held_value": 755043.95
     },
     "mid": {
-      "balance": 999559.51,
+      "balance": 999552.21,
       "trades": 29,
       "buys": 22,
       "sells": 7,
@@ -19008,8 +19008,8 @@
         {
           "symbol": "NFLX",
           "qty": 730.0,
-          "last_price": 100.59,
-          "value": 73430.7
+          "last_price": 100.58,
+          "value": 73423.4
         },
         {
           "symbol": "AAPL",
@@ -19096,7 +19096,7 @@
           "value": 153.16
         }
       ],
-      "held_value": 850017.9
+      "held_value": 850010.6
     },
     "rand": {
       "balance": 871920.7,
