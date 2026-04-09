@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-09T18:59:18",
+  "generated": "2026-04-09T19:09:06",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -7767,9 +7767,38 @@
       "rand": 845922.94,
       "spy": 0.5769,
       "spy_bal": 1048260.02
+    },
+    {
+      "ts": "7:04PM",
+      "_raw_ts": "2026-04-09 19:04:03",
+      "agg": 979843.95,
+      "mid": 1008013.69,
+      "rand": 845598.71,
+      "spy": 0.5769,
+      "spy_bal": 1048260.02
+    },
+    {
+      "ts": "7:09PM*",
+      "_raw_ts": "2026-04-09 19:09:02",
+      "agg": 980153.97,
+      "mid": 1007861.58,
+      "rand": 844812.9,
+      "spy": 0.5769,
+      "spy_bal": 1048260.02
     }
   ],
   "trades": [
+    {
+      "ts": "2026-04-09 19:09:00",
+      "bot": "Random Bot",
+      "symbol": "SOL/USD",
+      "action": "SELL",
+      "qty": 1422.978234,
+      "price": 83.97,
+      "value": 119487.48,
+      "reason": "The algorithm whispered this ticker in my ear (crypto edition)",
+      "balance": 844812.9
+    },
     {
       "ts": "2026-04-09 18:59:12",
       "bot": "Random Bot",
@@ -21864,7 +21893,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 980364.99,
+      "balance": 980206.81,
       "trades": 52,
       "buys": 31,
       "sells": 21,
@@ -21873,74 +21902,74 @@
         {
           "symbol": "SOXL",
           "qty": 2642.0,
-          "last_price": 71.57,
-          "value": 189087.94
+          "last_price": 71.62,
+          "value": 189220.04
         },
         {
           "symbol": "TQQQ",
           "qty": 3044.0,
-          "last_price": 48.73,
-          "value": 148334.12
+          "last_price": 48.74,
+          "value": 148364.56
         },
         {
           "symbol": "GOOGL",
           "qty": 458.0,
-          "last_price": 317.92,
-          "value": 145607.36
+          "last_price": 317.31,
+          "value": 145327.98
         },
         {
           "symbol": "SOFI",
           "qty": 8824.0,
-          "last_price": 16.2501,
-          "value": 143390.88
+          "last_price": 16.24,
+          "value": 143301.76
         },
         {
           "symbol": "AMD",
           "qty": 214.0,
-          "last_price": 235.99,
-          "value": 50501.86
+          "last_price": 235.94,
+          "value": 50491.16
         },
         {
           "symbol": "AMZN",
           "qty": 217.0,
-          "last_price": 231.85,
-          "value": 50311.45
+          "last_price": 232.12,
+          "value": 50370.04
         },
         {
           "symbol": "AFRM",
           "qty": 11.0,
-          "last_price": 49.01,
-          "value": 539.11
+          "last_price": 49.0,
+          "value": 539.0
         },
         {
           "symbol": "AVAX/USD",
           "qty": 0.0,
-          "last_price": 9.5311,
+          "last_price": 9.4641,
           "value": 0.0
         },
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 72081.9,
+          "last_price": 72035.861,
           "value": 0.0
         },
         {
           "symbol": "ETH/USD",
           "qty": 0.0,
-          "last_price": 2207.8,
+          "last_price": 2200.92,
           "value": 0.0
         },
         {
           "symbol": "SOL/USD",
           "qty": 0.0,
-          "last_price": 84.29,
+          "last_price": 83.97,
           "value": 0.0
         }
       ],
-      "held_value": 727772.72
+      "held_value": 727614.54
     },
     "mid": {
-      "balance": 1008222.58,
+      "balance": 1007861.58,
       "trades": 34,
       "buys": 25,
       "sells": 9,
@@ -21949,8 +21978,8 @@
         {
           "symbol": "NFLX",
           "qty": 730.0,
-          "last_price": 101.95,
-          "value": 74423.5
+          "last_price": 101.91,
+          "value": 74394.3
         },
         {
           "symbol": "XLI",
@@ -21979,8 +22008,8 @@
         {
           "symbol": "TLT",
           "qty": 813.0,
-          "last_price": 86.84,
-          "value": 70600.92
+          "last_price": 86.8262,
+          "value": 70589.7
         },
         {
           "symbol": "TMO",
@@ -22003,20 +22032,20 @@
         {
           "symbol": "JNJ",
           "qty": 288.0,
-          "last_price": 242.0,
-          "value": 69696.0
+          "last_price": 241.31,
+          "value": 69497.28
         },
         {
           "symbol": "GOOGL",
           "qty": 219.0,
-          "last_price": 317.92,
-          "value": 69624.48
+          "last_price": 317.31,
+          "value": 69490.89
         },
         {
           "symbol": "META",
           "qty": 104.0,
-          "last_price": 629.2,
-          "value": 65436.8
+          "last_price": 629.31,
+          "value": 65448.24
         },
         {
           "symbol": "LLY",
@@ -22033,39 +22062,39 @@
         {
           "symbol": "KO",
           "qty": 2.0,
-          "last_price": 78.0358,
-          "value": 156.07
+          "last_price": 78.18,
+          "value": 156.36
         }
       ],
-      "held_value": 858988.57
+      "held_value": 858627.57
     },
     "rand": {
-      "balance": 845922.94,
-      "trades": 1195,
+      "balance": 844812.9,
+      "trades": 1196,
       "buys": 808,
-      "sells": 387,
+      "sells": 388,
       "assets": "AFRM, AMD, BABA, BTC, COST, CRWD, DDOG, ETH, GM, GOOGL, GRAB, IEF, JPM, MRK, NFLX, PYPL, RIVN, SBUX, SOL, TLT, VTI, VZ, XLF, XLV, XPEV",
       "holdings": [
         {
           "symbol": "SOL/USD",
-          "qty": 1422.978234,
-          "last_price": 84.29,
-          "value": 119942.84
+          "qty": 580.379509,
+          "last_price": 83.97,
+          "value": 48734.47
         },
         {
           "symbol": "BTC/USD",
           "qty": 0.197977,
-          "last_price": 72081.9,
-          "value": 14270.56
+          "last_price": 72035.861,
+          "value": 14261.44
         },
         {
           "symbol": "ETH/USD",
           "qty": 0.0,
-          "last_price": 2207.8,
+          "last_price": 2200.92,
           "value": 0.0
         }
       ],
-      "held_value": 134213.39
+      "held_value": 62995.91
     },
     "spy_balance": 1048260.02
   }
