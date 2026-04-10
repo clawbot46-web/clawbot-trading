@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-10T02:11:13",
+  "generated": "2026-04-10T03:02:05",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -7974,9 +7974,40 @@
       "rand": 839156.9,
       "spy": 0.5769,
       "spy_bal": 1048260.02
+    },
+    {
+      "ts": "3:02AM",
+      "_raw_ts": "2026-04-10 03:02:00",
+      "agg": 980521.18,
+      "mid": 1002796.93,
+      "rand": 837248.26,
+      "spy": 0.5769,
+      "spy_bal": 1048260.02
     }
   ],
   "trades": [
+    {
+      "ts": "2026-04-10 03:01:59",
+      "bot": "Random Bot",
+      "symbol": "SOL/USD",
+      "action": "BUY",
+      "qty": 363.945734,
+      "price": 83.1718,
+      "value": 30270.02,
+      "reason": "Chart looked like a rocket (crypto edition)",
+      "balance": 837248.26
+    },
+    {
+      "ts": "2026-04-10 03:01:58",
+      "bot": "Random Bot",
+      "symbol": "ETH/USD",
+      "action": "BUY",
+      "qty": 15.952197,
+      "price": 2184.5625,
+      "value": 34848.57,
+      "reason": "YOLO (crypto edition)",
+      "balance": 837426.58
+    },
     {
       "ts": "2026-04-10 02:05:35",
       "bot": "Random Bot",
@@ -22621,7 +22652,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 983389.39,
+      "balance": 980521.18,
       "trades": 52,
       "buys": 31,
       "sells": 21,
@@ -22630,74 +22661,74 @@
         {
           "symbol": "SOXL",
           "qty": 2642.0,
-          "last_price": 72.14,
-          "value": 190593.88
+          "last_price": 71.59,
+          "value": 189140.78
         },
         {
           "symbol": "TQQQ",
           "qty": 3044.0,
-          "last_price": 49.03,
-          "value": 149247.32
+          "last_price": 48.88,
+          "value": 148790.72
         },
         {
           "symbol": "GOOGL",
           "qty": 458.0,
-          "last_price": 317.8,
-          "value": 145552.4
+          "last_price": 317.44,
+          "value": 145387.52
         },
         {
           "symbol": "SOFI",
           "qty": 8824.0,
-          "last_price": 16.25,
-          "value": 143390.0
+          "last_price": 16.19,
+          "value": 142860.56
         },
         {
           "symbol": "AMZN",
           "qty": 217.0,
-          "last_price": 234.1,
-          "value": 50799.7
+          "last_price": 233.54,
+          "value": 50678.18
         },
         {
           "symbol": "AMD",
           "qty": 214.0,
-          "last_price": 236.79,
-          "value": 50673.06
+          "last_price": 236.13,
+          "value": 50531.82
         },
         {
           "symbol": "AFRM",
           "qty": 11.0,
-          "last_price": 49.16,
-          "value": 540.76
+          "last_price": 49.03,
+          "value": 539.33
         },
         {
           "symbol": "AVAX/USD",
           "qty": 0.0,
-          "last_price": 9.404,
+          "last_price": 9.357,
           "value": 0.0
         },
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 72177.8,
+          "last_price": 71771.107,
           "value": 0.0
         },
         {
           "symbol": "ETH/USD",
           "qty": 0.0,
-          "last_price": 2197.91,
+          "last_price": 2187.0,
           "value": 0.0
         },
         {
           "symbol": "SOL/USD",
           "qty": 0.0,
-          "last_price": 83.42,
+          "last_price": 83.0316,
           "value": 0.0
         }
       ],
-      "held_value": 730797.12
+      "held_value": 727928.91
     },
     "mid": {
-      "balance": 1003106.41,
+      "balance": 1002753.13,
       "trades": 34,
       "buys": 25,
       "sells": 9,
@@ -22706,14 +22737,14 @@
         {
           "symbol": "NFLX",
           "qty": 730.0,
-          "last_price": 102.22,
-          "value": 74620.6
+          "last_price": 102.07,
+          "value": 74511.1
         },
         {
           "symbol": "AAPL",
           "qty": 274.0,
-          "last_price": 260.46,
-          "value": 71366.04
+          "last_price": 260.24,
+          "value": 71305.76
         },
         {
           "symbol": "MRK",
@@ -22736,8 +22767,8 @@
         {
           "symbol": "TLT",
           "qty": 813.0,
-          "last_price": 86.7,
-          "value": 70487.1
+          "last_price": 86.68,
+          "value": 70470.84
         },
         {
           "symbol": "NEE",
@@ -22760,8 +22791,8 @@
         {
           "symbol": "GOOGL",
           "qty": 219.0,
-          "last_price": 317.8,
-          "value": 69598.2
+          "last_price": 317.44,
+          "value": 69519.36
         },
         {
           "symbol": "XLI",
@@ -22772,8 +22803,8 @@
         {
           "symbol": "META",
           "qty": 104.0,
-          "last_price": 631.5,
-          "value": 65676.0
+          "last_price": 630.65,
+          "value": 65587.6
         },
         {
           "symbol": "LLY",
@@ -22794,35 +22825,35 @@
           "value": 154.91
         }
       ],
-      "held_value": 853872.4
+      "held_value": 853519.12
     },
     "rand": {
-      "balance": 839111.91,
-      "trades": 1245,
-      "buys": 845,
+      "balance": 837248.26,
+      "trades": 1247,
+      "buys": 847,
       "sells": 400,
       "assets": "AFRM, AMD, BABA, BTC, COST, CRWD, DDOG, ETH, GM, GOOGL, GRAB, IEF, JPM, MRK, NFLX, PYPL, RIVN, SBUX, SOL, TLT, VTI, VZ, XLF, XLV, XPEV",
       "holdings": [
         {
           "symbol": "ETH/USD",
-          "qty": 65.54944,
-          "last_price": 2197.91,
-          "value": 144071.77
+          "qty": 81.141128,
+          "last_price": 2187.0,
+          "value": 177455.65
         },
         {
           "symbol": "SOL/USD",
-          "qty": 1500.639671,
-          "last_price": 83.42,
-          "value": 125183.36
+          "qty": 1856.950212,
+          "last_price": 83.0316,
+          "value": 154185.55
         },
         {
           "symbol": "BTC/USD",
           "qty": 0.875412,
-          "last_price": 72126.4,
-          "value": 63140.34
+          "last_price": 71771.107,
+          "value": 62829.31
         }
       ],
-      "held_value": 332395.47
+      "held_value": 394470.5
     },
     "spy_balance": 1048260.02
   }
