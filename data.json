@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-10T00:08:18",
+  "generated": "2026-04-10T00:09:32",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -22382,7 +22382,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 985469.62,
+      "balance": 985496.04,
       "trades": 52,
       "buys": 31,
       "sells": 21,
@@ -22391,8 +22391,8 @@
         {
           "symbol": "SOXL",
           "qty": 2642.0,
-          "last_price": 72.43,
-          "value": 191360.06
+          "last_price": 72.44,
+          "value": 191386.48
         },
         {
           "symbol": "TQQQ",
@@ -22439,7 +22439,7 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 71915.1,
+          "last_price": 71983.5,
           "value": 0.0
         },
         {
@@ -22455,7 +22455,7 @@
           "value": 0.0
         }
       ],
-      "held_value": 732877.35
+      "held_value": 732903.77
     },
     "mid": {
       "balance": 1002840.57,
@@ -22558,7 +22558,7 @@
       "held_value": 853606.56
     },
     "rand": {
-      "balance": 840854.0,
+      "balance": 840955.2,
       "trades": 1229,
       "buys": 833,
       "sells": 396,
@@ -22573,8 +22573,8 @@
         {
           "symbol": "BTC/USD",
           "qty": 1.479588,
-          "last_price": 71915.1,
-          "value": 106404.69
+          "last_price": 71983.5,
+          "value": 106505.89
         },
         {
           "symbol": "ETH/USD",
@@ -22583,7 +22583,7 @@
           "value": 0.0
         }
       ],
-      "held_value": 253793.73
+      "held_value": 253894.93
     },
     "spy_balance": 1048260.02
   }
