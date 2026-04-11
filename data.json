@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-10T20:20:42",
+  "generated": "2026-04-10T21:11:59",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -8460,9 +8460,29 @@
       "rand": 830807.66,
       "spy": -0.0662,
       "spy_bal": 1047458.25
+    },
+    {
+      "ts": "9:11PM*",
+      "_raw_ts": "2026-04-10 21:11:55",
+      "agg": 991767.82,
+      "mid": 1003691.46,
+      "rand": 830644.69,
+      "spy": -0.0662,
+      "spy_bal": 1047458.25
     }
   ],
   "trades": [
+    {
+      "ts": "2026-04-10 21:11:54",
+      "bot": "Random Bot",
+      "symbol": "SOL/USD",
+      "action": "SELL",
+      "qty": 235.476153,
+      "price": 84.54,
+      "value": 19907.15,
+      "reason": "Throwing darts at a ticker board (crypto edition)",
+      "balance": 830685.53
+    },
     {
       "ts": "2026-04-10 20:20:36",
       "bot": "Random Bot",
@@ -23967,25 +23987,25 @@
         {
           "symbol": "AVAX/USD",
           "qty": 0.0,
-          "last_price": 9.359,
+          "last_price": 9.396,
           "value": 0.0
         },
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 72914.6,
+          "last_price": 72912.63,
           "value": 0.0
         },
         {
           "symbol": "ETH/USD",
           "qty": 0.0,
-          "last_price": 2240.513,
+          "last_price": 2239.4,
           "value": 0.0
         },
         {
           "symbol": "SOL/USD",
           "qty": 0.0,
-          "last_price": 85.003,
+          "last_price": 84.54,
           "value": 0.0
         }
       ],
@@ -24092,32 +24112,26 @@
       "held_value": 854457.45
     },
     "rand": {
-      "balance": 830807.66,
-      "trades": 1315,
+      "balance": 830644.69,
+      "trades": 1316,
       "buys": 902,
-      "sells": 413,
+      "sells": 414,
       "assets": "AFRM, AMD, BABA, BTC, COST, CRWD, DDOG, ETH, GM, GOOGL, GRAB, IEF, JPM, MRK, NFLX, PYPL, RIVN, SBUX, SOL, TLT, VTI, VZ, XLF, XLV, XPEV",
       "holdings": [
         {
           "symbol": "BTC/USD",
           "qty": 0.742328,
-          "last_price": 72914.6,
-          "value": 54126.58
+          "last_price": 72912.63,
+          "value": 54125.12
         },
         {
           "symbol": "ETH/USD",
           "qty": 10.46305,
-          "last_price": 2240.513,
-          "value": 23442.6
-        },
-        {
-          "symbol": "SOL/USD",
-          "qty": 235.476153,
-          "last_price": 85.003,
-          "value": 20016.18
+          "last_price": 2239.4,
+          "value": 23430.95
         }
       ],
-      "held_value": 97585.36
+      "held_value": 77556.07
     },
     "spy_balance": 1047458.25
   }
