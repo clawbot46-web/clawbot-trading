@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-13T00:08:22",
+  "generated": "2026-04-13T00:09:27",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -24495,7 +24495,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 976096.72,
+      "balance": 976195.14,
       "trades": 55,
       "buys": 33,
       "sells": 22,
@@ -24504,14 +24504,14 @@
         {
           "symbol": "META",
           "qty": 236.0,
-          "last_price": 622.58,
-          "value": 146928.88
+          "last_price": 622.74,
+          "value": 146966.64
         },
         {
           "symbol": "TQQQ",
           "qty": 3044.0,
-          "last_price": 47.85,
-          "value": 145655.4
+          "last_price": 47.87,
+          "value": 145716.28
         },
         {
           "symbol": "RIVN",
@@ -24546,8 +24546,8 @@
         {
           "symbol": "AFRM",
           "qty": 11.0,
-          "last_price": 47.76,
-          "value": 525.36
+          "last_price": 47.74,
+          "value": 525.14
         },
         {
           "symbol": "AVAX/USD",
@@ -24574,10 +24574,10 @@
           "value": 0.0
         }
       ],
-      "held_value": 823176.88
+      "held_value": 823275.3
     },
     "mid": {
-      "balance": 999653.62,
+      "balance": 999670.26,
       "trades": 34,
       "buys": 25,
       "sells": 9,
@@ -24652,8 +24652,8 @@
         {
           "symbol": "META",
           "qty": 104.0,
-          "last_price": 622.58,
-          "value": 64748.32
+          "last_price": 622.74,
+          "value": 64764.96
         },
         {
           "symbol": "LLY",
@@ -24674,7 +24674,7 @@
           "value": 154.46
         }
       ],
-      "held_value": 850419.61
+      "held_value": 850436.25
     },
     "rand": {
       "balance": 822230.04,
