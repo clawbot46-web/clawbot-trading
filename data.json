@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-13T00:10:32",
+  "generated": "2026-04-13T00:11:50",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -24495,7 +24495,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 976291.28,
+      "balance": 976437.32,
       "trades": 55,
       "buys": 33,
       "sells": 22,
@@ -24510,8 +24510,8 @@
         {
           "symbol": "TQQQ",
           "qty": 3044.0,
-          "last_price": 47.88,
-          "value": 145746.72
+          "last_price": 47.87,
+          "value": 145716.28
         },
         {
           "symbol": "RIVN",
@@ -24528,8 +24528,8 @@
         {
           "symbol": "SOFI",
           "qty": 8824.0,
-          "last_price": 15.94,
-          "value": 140654.56
+          "last_price": 15.96,
+          "value": 140831.04
         },
         {
           "symbol": "AMD",
@@ -24574,10 +24574,10 @@
           "value": 0.0
         }
       ],
-      "held_value": 823371.44
+      "held_value": 823517.48
     },
     "mid": {
-      "balance": 999666.61,
+      "balance": 999681.21,
       "trades": 34,
       "buys": 25,
       "sells": 9,
@@ -24586,8 +24586,8 @@
         {
           "symbol": "NFLX",
           "qty": 730.0,
-          "last_price": 102.5,
-          "value": 74825.0
+          "last_price": 102.52,
+          "value": 74839.6
         },
         {
           "symbol": "XLI",
@@ -24674,7 +24674,7 @@
           "value": 154.46
         }
       ],
-      "held_value": 850432.6
+      "held_value": 850447.2
     },
     "rand": {
       "balance": 822230.04,
