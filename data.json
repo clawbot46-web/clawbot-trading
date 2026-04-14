@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-14T00:11:36",
+  "generated": "2026-04-14T00:12:55",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -24495,7 +24495,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 1013943.42,
+      "balance": 1013855.18,
       "trades": 55,
       "buys": 33,
       "sells": 22,
@@ -24504,14 +24504,14 @@
         {
           "symbol": "TQQQ",
           "qty": 3044.0,
-          "last_price": 50.94,
-          "value": 155061.36
+          "last_price": 50.93,
+          "value": 155030.92
         },
         {
           "symbol": "SOFI",
           "qty": 8824.0,
-          "last_price": 17.16,
-          "value": 151419.84
+          "last_price": 17.15,
+          "value": 151331.6
         },
         {
           "symbol": "META",
@@ -24558,7 +24558,7 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 74512.01,
+          "last_price": 74474.26,
           "value": 0.0
         },
         {
@@ -24574,10 +24574,10 @@
           "value": 0.0
         }
       ],
-      "held_value": 861054.02
+      "held_value": 860935.34
     },
     "mid": {
-      "balance": 1002632.65,
+      "balance": 1002647.25,
       "trades": 34,
       "buys": 25,
       "sells": 9,
@@ -24586,8 +24586,8 @@
         {
           "symbol": "NFLX",
           "qty": 730.0,
-          "last_price": 103.21,
-          "value": 75343.3
+          "last_price": 103.23,
+          "value": 75357.9
         },
         {
           "symbol": "XLI",
@@ -24674,10 +24674,10 @@
           "value": 152.88
         }
       ],
-      "held_value": 853398.64
+      "held_value": 853413.24
     },
     "rand": {
-      "balance": 830154.91,
+      "balance": 830100.59,
       "trades": 1351,
       "buys": 928,
       "sells": 423,
@@ -24686,8 +24686,8 @@
         {
           "symbol": "BTC/USD",
           "qty": 1.43906,
-          "last_price": 74512.01,
-          "value": 107227.22
+          "last_price": 74474.26,
+          "value": 107172.89
         },
         {
           "symbol": "SOL/USD",
@@ -24702,7 +24702,7 @@
           "value": 0.0
         }
       ],
-      "held_value": 168784.07
+      "held_value": 168729.75
     },
     "spy_balance": 1047458.25
   }
