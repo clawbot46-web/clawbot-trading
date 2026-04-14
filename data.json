@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-14T00:08:37",
+  "generated": "2026-04-14T00:09:44",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -24558,7 +24558,7 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 74441.11,
+          "last_price": 74474.92,
           "value": 0.0
         },
         {
@@ -24677,7 +24677,7 @@
       "held_value": 853405.9
     },
     "rand": {
-      "balance": 830081.68,
+      "balance": 830130.34,
       "trades": 1351,
       "buys": 928,
       "sells": 423,
@@ -24686,8 +24686,8 @@
         {
           "symbol": "BTC/USD",
           "qty": 1.43906,
-          "last_price": 74441.11,
-          "value": 107125.19
+          "last_price": 74474.92,
+          "value": 107173.84
         },
         {
           "symbol": "SOL/USD",
@@ -24702,7 +24702,7 @@
           "value": 0.0
         }
       ],
-      "held_value": 168710.84
+      "held_value": 168759.5
     },
     "spy_balance": 1047458.25
   }
