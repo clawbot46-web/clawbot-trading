@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-14T00:14:01",
+  "generated": "2026-04-14T00:14:43",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -24564,7 +24564,7 @@
         {
           "symbol": "ETH/USD",
           "qty": 0.0,
-          "last_price": 2368.145,
+          "last_price": 2364.924,
           "value": 0.0
         },
         {
@@ -24577,7 +24577,7 @@
       "held_value": 861059.9
     },
     "mid": {
-      "balance": 1002624.37,
+      "balance": 1002679.17,
       "trades": 34,
       "buys": 25,
       "sells": 9,
@@ -24604,8 +24604,8 @@
         {
           "symbol": "AAPL",
           "qty": 274.0,
-          "last_price": 259.0,
-          "value": 70966.0
+          "last_price": 259.2,
+          "value": 71020.8
         },
         {
           "symbol": "TLT",
@@ -24674,7 +24674,7 @@
           "value": 152.88
         }
       ],
-      "held_value": 853390.36
+      "held_value": 853445.16
     },
     "rand": {
       "balance": 830123.81,
@@ -24698,7 +24698,7 @@
         {
           "symbol": "ETH/USD",
           "qty": 0.0,
-          "last_price": 2368.145,
+          "last_price": 2364.924,
           "value": 0.0
         }
       ],
