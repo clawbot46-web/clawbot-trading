@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-15T00:13:56",
+  "generated": "2026-04-15T00:15:32",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -24495,7 +24495,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 1045938.8,
+      "balance": 1045986.24,
       "trades": 55,
       "buys": 33,
       "sells": 22,
@@ -24504,8 +24504,8 @@
         {
           "symbol": "TQQQ",
           "qty": 3044.0,
-          "last_price": 53.56,
-          "value": 163036.64
+          "last_price": 53.55,
+          "value": 163006.2
         },
         {
           "symbol": "SOFI",
@@ -24516,8 +24516,8 @@
         {
           "symbol": "META",
           "qty": 236.0,
-          "last_price": 664.0,
-          "value": 156704.0
+          "last_price": 664.33,
+          "value": 156781.88
         },
         {
           "symbol": "GOOGL",
@@ -24574,10 +24574,10 @@
           "value": 0.0
         }
       ],
-      "held_value": 893018.96
+      "held_value": 893066.4
     },
     "mid": {
-      "balance": 1010637.04,
+      "balance": 1010693.28,
       "trades": 34,
       "buys": 25,
       "sells": 9,
@@ -24608,16 +24608,16 @@
           "value": 71130.4
         },
         {
+          "symbol": "AAPL",
+          "qty": 274.0,
+          "last_price": 259.08,
+          "value": 70987.92
+        },
+        {
           "symbol": "TLT",
           "qty": 813.0,
           "last_price": 87.3,
           "value": 70974.9
-        },
-        {
-          "symbol": "AAPL",
-          "qty": 274.0,
-          "last_price": 259.0,
-          "value": 70966.0
         },
         {
           "symbol": "TMO",
@@ -24634,8 +24634,8 @@
         {
           "symbol": "META",
           "qty": 104.0,
-          "last_price": 664.0,
-          "value": 69056.0
+          "last_price": 664.33,
+          "value": 69090.32
         },
         {
           "symbol": "NEE",
@@ -24674,7 +24674,7 @@
           "value": 152.12
         }
       ],
-      "held_value": 861403.03
+      "held_value": 861459.27
     },
     "rand": {
       "balance": 828315.92,
