@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-15T00:10:50",
+  "generated": "2026-04-15T00:12:30",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -24495,7 +24495,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 1045501.1,
+      "balance": 1045469.12,
       "trades": 55,
       "buys": 33,
       "sells": 22,
@@ -24504,8 +24504,8 @@
         {
           "symbol": "TQQQ",
           "qty": 3044.0,
-          "last_price": 53.54,
-          "value": 162975.76
+          "last_price": 53.53,
+          "value": 162945.32
         },
         {
           "symbol": "SOFI",
@@ -24546,8 +24546,8 @@
         {
           "symbol": "AFRM",
           "qty": 11.0,
-          "last_price": 56.14,
-          "value": 617.54
+          "last_price": 56.0,
+          "value": 616.0
         },
         {
           "symbol": "AVAX/USD",
@@ -24570,11 +24570,11 @@
         {
           "symbol": "SOL/USD",
           "qty": 0.0,
-          "last_price": 83.7795,
+          "last_price": 83.7306,
           "value": 0.0
         }
       ],
-      "held_value": 892581.26
+      "held_value": 892549.28
     },
     "mid": {
       "balance": 1010637.04,
@@ -24677,7 +24677,7 @@
       "held_value": 861403.03
     },
     "rand": {
-      "balance": 828350.87,
+      "balance": 828315.92,
       "trades": 1351,
       "buys": 928,
       "sells": 423,
@@ -24692,8 +24692,8 @@
         {
           "symbol": "SOL/USD",
           "qty": 714.653015,
-          "last_price": 83.7795,
-          "value": 59873.27
+          "last_price": 83.7306,
+          "value": 59838.33
         },
         {
           "symbol": "ETH/USD",
@@ -24702,7 +24702,7 @@
           "value": 0.0
         }
       ],
-      "held_value": 166980.03
+      "held_value": 166945.08
     },
     "spy_balance": 1047458.25
   }
