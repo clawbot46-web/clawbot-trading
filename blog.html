@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Clawbot Trading System</title>
+<style>
+  html { scroll-behavior: smooth; }
+  :root {
+    --bg: #0a0a0f;
+    --bg2: #111118;
+    --bg3: #1a1a24;
+    --border: #2a2a3a;
+    --text: #e8e8f0;
+    --muted: #6b6b80;
+    --gold: #f59e0b;
+    --agg: #f59e0b;
+    --mid: #3b82f6;
+    --rand: #a855f7;
+    --green: #22c55e;
+    --red: #ef4444;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+  nav { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 0 32px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
+  .nav-brand { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 700; color: var(--gold); letter-spacing: 0.5px; text-decoration: none; }
+  .nav-links { display: flex; gap: 6px; list-style: none; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 13px; padding: 6px 14px; border-radius: 20px; transition: all 0.2s; }
+  .nav-links a:hover { color: var(--text); background: var(--bg3); }
+  .nav-links a.active { color: var(--gold); background: rgba(245,158,11,0.12); }
+  .live-badge { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--green); background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); padding: 4px 10px; border-radius: 20px; }
+  .live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: pulse 1.5s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+  /* HAMBURGER */
+  .hamburger { display: flex; flex-direction: column; justify-content: center; gap: 5px; width: 36px; height: 36px; cursor: pointer; padding: 4px; border-radius: 6px; transition: background 0.2s; flex-shrink: 0; }
+  .hamburger:hover { background: rgba(255,255,255,0.07); }
+  .hamburger span { display: block; width: 22px; height: 2px; background: var(--muted); border-radius: 2px; transition: transform 0.3s, opacity 0.3s, background 0.2s; }
+  .hamburger:hover span { background: var(--text); }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* DRAWER */
+  .drawer-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 199; }
+  .drawer-overlay.open { display: block; }
+  .drawer { position: fixed; top: 0; left: 0; width: 260px; height: 100vh; background: var(--bg2); border-right: 1px solid var(--border); z-index: 200; transform: translateX(-100%); transition: transform 0.3s cubic-bezier(0.4,0,0.2,1); padding: 24px 0 40px; display: flex; flex-direction: column; }
+  .drawer.open { transform: translateX(0); }
+  .drawer-header { display: flex; align-items: center; gap: 10px; padding: 0 24px 24px; border-bottom: 1px solid var(--border); font-size: 18px; font-weight: 700; color: var(--gold); }
+  .drawer-close { margin-left: auto; cursor: pointer; font-size: 20px; color: var(--muted); line-height: 1; }
+  .drawer-close:hover { color: var(--text); }
+  .drawer-links { list-style: none; padding: 16px 0; }
+  .drawer-links li a { display: block; padding: 12px 24px; color: var(--muted); text-decoration: none; font-size: 15px; transition: all 0.2s; }
+  .drawer-links li a:hover { color: var(--text); background: var(--bg3); }
+  .drawer-links li a.active { color: var(--gold); background: rgba(245,158,11,0.08); }
+
+  /* PAGE */
+  .page-wrap { max-width: 720px; margin: 0 auto; padding: 60px 24px 100px; }
+  .post-title { font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 32px; }
+  .post-body p { color: #c8c8d8; font-size: 15px; line-height: 1.9; margin-bottom: 20px; }
+
+  @media (max-width: 640px) {
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-header">
+    🤖 CLAWBOT
+    <span class="drawer-close" onclick="closeDrawer()">✕</span>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="index.html" onclick="closeDrawer()">🏠 Dashboard</a></li>
+    <li><a href="aggressive.html" onclick="closeDrawer()">⚡ Aggressive</a></li>
+    <li><a href="middle.html" onclick="closeDrawer()">⚖️ Middle Road</a></li>
+    <li><a href="random.html" onclick="closeDrawer()">🎲 Random</a></li>
+    <li><a href="howworks.html" onclick="closeDrawer()">⚙️ How It Works</a></li>
+    <li><a href="story.html" onclick="closeDrawer()">📖 Our Story</a></li>
+    <li><a href="blog.html" onclick="closeDrawer()" class="active">Blog</a></li>
+  </ul>
+</div>
+
+<nav>
+  <div style="display:flex;align-items:center;gap:14px;">
+    <div class="hamburger" id="hamburger" onclick="toggleDrawer()">
+      <span></span><span></span><span></span>
+    </div>
+    <a class="nav-brand" href="index.html">🤖 CLAWBOT</a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Dashboard</a></li>
+    <li><a href="aggressive.html">⚡ Aggressive</a></li>
+    <li><a href="middle.html">⚖️ Middle Road</a></li>
+    <li><a href="random.html">🎲 Random</a></li>
+    <li><a href="howworks.html">⚙️ How It Works</a></li>
+    <li><a href="story.html">📖 Our Story</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+  </ul>
+  <div class="live-badge">
+    <div class="live-dot"></div>
+    LIVE
+  </div>
+</nav>
+
+<!-- ── PAGE CONTENT ─────────────────────────────────────────────────────── -->
+<div class="page-wrap">
+
+  <div class="post-title">Blog Post Number One</div>
+
+  <div class="post-body">
+    <p>Saturday March 7 I did a bunch of research and found out that the materials I need for my ai agent to trade stock is a server and openclaw installed with an api key. I got a server and then installed ubuntu I tried to install openclaw but it failed, I installed remote desktop, I got a free api key from open router, I tried to install openclaw again but it turned out are file was corrupted and we wasted six hours, I got a better file that is not corrupt and spent three hours setting it up.</p>
+
+    <p>Sunday March 8 I added it to my whatsapp account so it can message me and I can message it without being at my computer, I started installing skills so that it can do stuff like browse the web, listen to audio files ect. I ended up installing chromium so it could surf the web but it corrupted so I reinstalled it and got it to surf the web. I did a bunch of coding with the help of chatgpt and it can now summarize the news. I installed github and a skill scanner in total i spent 6 hours on this project today</p>
+
+    <p>Wednesday March 11 I got a new phone and tried to sign into whatsapp but that broke openclaw and openclaw would not reconnect no matter what i spent three hours trouble shooting before i did some research and it was just broken</p>
+
+    <p>Friday March 20 after wednesdays whatsapp break i was ready to abandoned this project but i remembered on sunday march 8 (the day after i started my project) openai (creators of chatgpt) and the guy who made claw released claude a way smatter easer to set up version of open claw i did not want to switch before because that would erase all my progress but everything was gone so i had nothing to lose i set it up in about an hour and asked it to make three ai stock trading bots on alpaca with different personality middle of the road (conservative and good risk management) aggressive (bad risk management) and random bot (completely random) i gave it an api key and went to eat dinner. I came back to almost finished product it just needed me to give it permissions for a few commands and open three files this is the moment i was like wohh this is tens times better than chatgpt or openclaw because it can surf the web but also has access to your computer so can do tasks like emailing people.</p>
+
+    <p>Saturday 21/Sunday 22 I don't have exact notes of what I did but I remember I made a website, added 5 pages to it and spent 9 hours working on it during the weekends. I took a rough idea by the bot and worked with him to carve the website. Its was not just one prompt it was still as much work as building a website just looks better</p>
+  </div>
+
+</div><!-- /page-wrap -->
+
+<script>
+  function toggleDrawer() {
+    document.getElementById('drawer').classList.toggle('open');
+    document.getElementById('drawerOverlay').classList.toggle('open');
+    document.getElementById('hamburger').classList.toggle('open');
+  }
+  function closeDrawer() {
+    document.getElementById('drawer').classList.remove('open');
+    document.getElementById('drawerOverlay').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+  }
+</script>
+</body>
+</html>
