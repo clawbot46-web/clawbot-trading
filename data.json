@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-15T00:09:59",
+  "generated": "2026-04-15T00:10:50",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -24495,7 +24495,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 1045440.22,
+      "balance": 1045501.1,
       "trades": 55,
       "buys": 33,
       "sells": 22,
@@ -24577,7 +24577,7 @@
       "held_value": 892581.26
     },
     "mid": {
-      "balance": 1010680.84,
+      "balance": 1010637.04,
       "trades": 34,
       "buys": 25,
       "sells": 9,
@@ -24586,8 +24586,8 @@
         {
           "symbol": "NFLX",
           "qty": 730.0,
-          "last_price": 106.46,
-          "value": 77715.8
+          "last_price": 106.4,
+          "value": 77672.0
         },
         {
           "symbol": "XLI",
@@ -24674,7 +24674,7 @@
           "value": 152.12
         }
       ],
-      "held_value": 861446.83
+      "held_value": 861403.03
     },
     "rand": {
       "balance": 828350.87,
