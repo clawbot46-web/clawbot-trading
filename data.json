@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-15T00:12:30",
+  "generated": "2026-04-15T00:13:35",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -24495,7 +24495,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 1045469.12,
+      "balance": 1045938.8,
       "trades": 55,
       "buys": 33,
       "sells": 22,
@@ -24504,8 +24504,8 @@
         {
           "symbol": "TQQQ",
           "qty": 3044.0,
-          "last_price": 53.53,
-          "value": 162945.32
+          "last_price": 53.56,
+          "value": 163036.64
         },
         {
           "symbol": "SOFI",
@@ -24528,8 +24528,8 @@
         {
           "symbol": "RIVN",
           "qty": 9459.0,
-          "last_price": 16.02,
-          "value": 151533.18
+          "last_price": 16.06,
+          "value": 151911.54
         },
         {
           "symbol": "AMD",
@@ -24574,7 +24574,7 @@
           "value": 0.0
         }
       ],
-      "held_value": 892549.28
+      "held_value": 893018.96
     },
     "mid": {
       "balance": 1010637.04,
