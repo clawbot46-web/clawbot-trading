@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-16T00:13:56",
+  "generated": "2026-04-16T00:16:20",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -24513,7 +24513,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 1075535.6,
+      "balance": 1075772.96,
       "trades": 55,
       "buys": 33,
       "sells": 22,
@@ -24522,14 +24522,14 @@
         {
           "symbol": "TQQQ",
           "qty": 3044.0,
-          "last_price": 56.13,
-          "value": 170859.72
+          "last_price": 56.15,
+          "value": 170920.6
         },
         {
           "symbol": "SOFI",
           "qty": 8824.0,
-          "last_price": 19.27,
-          "value": 170038.48
+          "last_price": 19.29,
+          "value": 170214.96
         },
         {
           "symbol": "META",
@@ -24582,7 +24582,7 @@
         {
           "symbol": "ETH/USD",
           "qty": 0.0,
-          "last_price": 2358.78,
+          "last_price": 2359.3,
           "value": 0.0
         },
         {
@@ -24592,10 +24592,10 @@
           "value": 0.0
         }
       ],
-      "held_value": 922615.76
+      "held_value": 922853.12
     },
     "mid": {
-      "balance": 1015108.48,
+      "balance": 1015093.88,
       "trades": 34,
       "buys": 25,
       "sells": 9,
@@ -24604,8 +24604,8 @@
         {
           "symbol": "NFLX",
           "qty": 730.0,
-          "last_price": 107.92,
-          "value": 78781.6
+          "last_price": 107.9,
+          "value": 78767.0
         },
         {
           "symbol": "GOOGL",
@@ -24692,7 +24692,7 @@
           "value": 151.1
         }
       ],
-      "held_value": 865874.47
+      "held_value": 865859.87
     },
     "rand": {
       "balance": 830159.38,
@@ -24716,7 +24716,7 @@
         {
           "symbol": "ETH/USD",
           "qty": 0.0,
-          "last_price": 2358.78,
+          "last_price": 2359.3,
           "value": 0.0
         }
       ],
