@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-16T00:08:42",
+  "generated": "2026-04-16T00:09:49",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -24513,7 +24513,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 1075402.26,
+      "balance": 1075371.82,
       "trades": 55,
       "buys": 33,
       "sells": 22,
@@ -24522,8 +24522,8 @@
         {
           "symbol": "TQQQ",
           "qty": 3044.0,
-          "last_price": 56.14,
-          "value": 170890.16
+          "last_price": 56.13,
+          "value": 170859.72
         },
         {
           "symbol": "SOFI",
@@ -24592,10 +24592,10 @@
           "value": 0.0
         }
       ],
-      "held_value": 922482.42
+      "held_value": 922451.98
     },
     "mid": {
-      "balance": 1015118.27,
+      "balance": 1015081.77,
       "trades": 34,
       "buys": 25,
       "sells": 9,
@@ -24604,8 +24604,8 @@
         {
           "symbol": "NFLX",
           "qty": 730.0,
-          "last_price": 107.96,
-          "value": 78810.8
+          "last_price": 107.91,
+          "value": 78774.3
         },
         {
           "symbol": "GOOGL",
@@ -24692,7 +24692,7 @@
           "value": 151.1
         }
       ],
-      "held_value": 865884.26
+      "held_value": 865847.76
     },
     "rand": {
       "balance": 830378.44,
