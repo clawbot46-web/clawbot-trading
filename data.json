@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-20T00:11:07",
+  "generated": "2026-04-20T00:12:01",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -25063,7 +25063,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 1084101.25,
+      "balance": 1084342.78,
       "trades": 57,
       "buys": 34,
       "sells": 23,
@@ -25072,8 +25072,8 @@
         {
           "symbol": "TQQQ",
           "qty": 3044.0,
-          "last_price": 57.63,
-          "value": 175425.72
+          "last_price": 57.62,
+          "value": 175395.28
         },
         {
           "symbol": "SOFI",
@@ -25084,14 +25084,14 @@
         {
           "symbol": "META",
           "qty": 236.0,
-          "last_price": 682.26,
-          "value": 161013.36
+          "last_price": 682.21,
+          "value": 161001.56
         },
         {
           "symbol": "RIVN",
           "qty": 9459.0,
-          "last_price": 16.94,
-          "value": 160235.46
+          "last_price": 16.97,
+          "value": 160519.23
         },
         {
           "symbol": "GOOGL",
@@ -25126,7 +25126,7 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 74626.1,
+          "last_price": 74601.05,
           "value": 0.0
         },
         {
@@ -25142,10 +25142,10 @@
           "value": 0.0
         }
       ],
-      "held_value": 995480.14
+      "held_value": 995721.67
     },
     "mid": {
-      "balance": 1010964.65,
+      "balance": 1010959.45,
       "trades": 38,
       "buys": 27,
       "sells": 11,
@@ -25178,8 +25178,8 @@
         {
           "symbol": "META",
           "qty": 104.0,
-          "last_price": 682.26,
-          "value": 70955.04
+          "last_price": 682.21,
+          "value": 70949.84
         },
         {
           "symbol": "NFLX",
@@ -25242,10 +25242,10 @@
           "value": 151.26
         }
       ],
-      "held_value": 860044.6
+      "held_value": 860039.4
     },
     "rand": {
-      "balance": 834477.29,
+      "balance": 834445.4,
       "trades": 1386,
       "buys": 949,
       "sells": 437,
@@ -25254,8 +25254,8 @@
         {
           "symbol": "BTC/USD",
           "qty": 1.43906,
-          "last_price": 74626.1,
-          "value": 107391.4
+          "last_price": 74601.05,
+          "value": 107355.35
         },
         {
           "symbol": "SOL/USD",
@@ -25278,8 +25278,8 @@
         {
           "symbol": "SPY",
           "qty": 77.0,
-          "last_price": 706.06,
-          "value": 54366.62
+          "last_price": 706.12,
+          "value": 54371.24
         },
         {
           "symbol": "F",
@@ -25308,8 +25308,8 @@
         {
           "symbol": "MSFT",
           "qty": 52.0,
-          "last_price": 418.51,
-          "value": 21762.52
+          "last_price": 418.5,
+          "value": 21762.0
         },
         {
           "symbol": "DOCU",
@@ -25356,8 +25356,8 @@
         {
           "symbol": "IONQ",
           "qty": 6.0,
-          "last_price": 44.39,
-          "value": 266.34
+          "last_price": 44.4,
+          "value": 266.4
         },
         {
           "symbol": "MDB",
@@ -25372,7 +25372,7 @@
           "value": 0.0
         }
       ],
-      "held_value": 668317.11
+      "held_value": 668285.22
     },
     "spy_balance": 1094808.58
   }
