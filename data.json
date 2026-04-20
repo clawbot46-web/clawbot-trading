@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-20T00:12:01",
+  "generated": "2026-04-20T00:14:15",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -25063,7 +25063,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 1084342.78,
+      "balance": 1084553.45,
       "trades": 57,
       "buys": 34,
       "sells": 23,
@@ -25072,14 +25072,14 @@
         {
           "symbol": "TQQQ",
           "qty": 3044.0,
-          "last_price": 57.62,
-          "value": 175395.28
+          "last_price": 57.61,
+          "value": 175364.84
         },
         {
           "symbol": "SOFI",
           "qty": 8824.0,
-          "last_price": 18.98,
-          "value": 167479.52
+          "last_price": 19.0,
+          "value": 167656.0
         },
         {
           "symbol": "META",
@@ -25096,14 +25096,14 @@
         {
           "symbol": "GOOGL",
           "qty": 458.0,
-          "last_price": 337.87,
-          "value": 154744.46
+          "last_price": 338.04,
+          "value": 154822.32
         },
         {
           "symbol": "PLTR",
           "qty": 441.0,
-          "last_price": 144.57,
-          "value": 63755.37
+          "last_price": 144.54,
+          "value": 63742.14
         },
         {
           "symbol": "AMD",
@@ -25120,7 +25120,7 @@
         {
           "symbol": "AVAX/USD",
           "qty": 0.0,
-          "last_price": 9.1764,
+          "last_price": 9.1133,
           "value": 0.0
         },
         {
@@ -25142,10 +25142,10 @@
           "value": 0.0
         }
       ],
-      "held_value": 995721.67
+      "held_value": 995932.34
     },
     "mid": {
-      "balance": 1010959.45,
+      "balance": 1010996.68,
       "trades": 38,
       "buys": 27,
       "sells": 11,
@@ -25160,8 +25160,8 @@
         {
           "symbol": "GOOGL",
           "qty": 219.0,
-          "last_price": 337.87,
-          "value": 73993.53
+          "last_price": 338.04,
+          "value": 74030.76
         },
         {
           "symbol": "AAPL",
@@ -25242,10 +25242,10 @@
           "value": 151.26
         }
       ],
-      "held_value": 860039.4
+      "held_value": 860076.63
     },
     "rand": {
-      "balance": 834445.4,
+      "balance": 834455.28,
       "trades": 1386,
       "buys": 949,
       "sells": 437,
@@ -25308,8 +25308,8 @@
         {
           "symbol": "MSFT",
           "qty": 52.0,
-          "last_price": 418.5,
-          "value": 21762.0
+          "last_price": 418.69,
+          "value": 21771.88
         },
         {
           "symbol": "DOCU",
@@ -25372,7 +25372,7 @@
           "value": 0.0
         }
       ],
-      "held_value": 668285.22
+      "held_value": 668295.1
     },
     "spy_balance": 1094808.58
   }
