@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-20T00:09:57",
+  "generated": "2026-04-20T00:11:07",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -25063,7 +25063,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 1084107.44,
+      "balance": 1084101.25,
       "trades": 57,
       "buys": 34,
       "sells": 23,
@@ -25072,8 +25072,8 @@
         {
           "symbol": "TQQQ",
           "qty": 3044.0,
-          "last_price": 57.64,
-          "value": 175456.16
+          "last_price": 57.63,
+          "value": 175425.72
         },
         {
           "symbol": "SOFI",
@@ -25096,14 +25096,14 @@
         {
           "symbol": "GOOGL",
           "qty": 458.0,
-          "last_price": 338.0,
-          "value": 154804.0
+          "last_price": 337.87,
+          "value": 154744.46
         },
         {
           "symbol": "PLTR",
           "qty": 441.0,
-          "last_price": 144.38,
-          "value": 63671.58
+          "last_price": 144.57,
+          "value": 63755.37
         },
         {
           "symbol": "AMD",
@@ -25142,10 +25142,10 @@
           "value": 0.0
         }
       ],
-      "held_value": 995486.33
+      "held_value": 995480.14
     },
     "mid": {
-      "balance": 1010993.12,
+      "balance": 1010964.65,
       "trades": 38,
       "buys": 27,
       "sells": 11,
@@ -25160,8 +25160,8 @@
         {
           "symbol": "GOOGL",
           "qty": 219.0,
-          "last_price": 338.0,
-          "value": 74022.0
+          "last_price": 337.87,
+          "value": 73993.53
         },
         {
           "symbol": "AAPL",
@@ -25242,10 +25242,10 @@
           "value": 151.26
         }
       ],
-      "held_value": 860073.07
+      "held_value": 860044.6
     },
     "rand": {
-      "balance": 834481.91,
+      "balance": 834477.29,
       "trades": 1386,
       "buys": 949,
       "sells": 437,
@@ -25278,8 +25278,8 @@
         {
           "symbol": "SPY",
           "qty": 77.0,
-          "last_price": 706.12,
-          "value": 54371.24
+          "last_price": 706.06,
+          "value": 54366.62
         },
         {
           "symbol": "F",
@@ -25372,7 +25372,7 @@
           "value": 0.0
         }
       ],
-      "held_value": 668321.73
+      "held_value": 668317.11
     },
     "spy_balance": 1094808.58
   }
