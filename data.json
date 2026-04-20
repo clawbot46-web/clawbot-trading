@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-20T00:08:38",
+  "generated": "2026-04-20T00:09:57",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -25145,7 +25145,7 @@
       "held_value": 995486.33
     },
     "mid": {
-      "balance": 1010962.26,
+      "balance": 1010993.12,
       "trades": 38,
       "buys": 27,
       "sells": 11,
@@ -25184,14 +25184,14 @@
         {
           "symbol": "NFLX",
           "qty": 730.0,
-          "last_price": 97.07,
-          "value": 70861.1
+          "last_price": 97.09,
+          "value": 70875.7
         },
         {
           "symbol": "TLT",
           "qty": 813.0,
-          "last_price": 86.84,
-          "value": 70600.92
+          "last_price": 86.86,
+          "value": 70617.18
         },
         {
           "symbol": "IEF",
@@ -25242,10 +25242,10 @@
           "value": 151.26
         }
       ],
-      "held_value": 860042.21
+      "held_value": 860073.07
     },
     "rand": {
-      "balance": 834482.95,
+      "balance": 834481.91,
       "trades": 1386,
       "buys": 949,
       "sells": 437,
@@ -25308,8 +25308,8 @@
         {
           "symbol": "MSFT",
           "qty": 52.0,
-          "last_price": 418.53,
-          "value": 21763.56
+          "last_price": 418.51,
+          "value": 21762.52
         },
         {
           "symbol": "DOCU",
@@ -25372,7 +25372,7 @@
           "value": 0.0
         }
       ],
-      "held_value": 668322.77
+      "held_value": 668321.73
     },
     "spy_balance": 1094808.58
   }
