@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-21T00:08:45",
+  "generated": "2026-04-21T00:10:51",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -25280,7 +25280,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 1099359.35,
+      "balance": 1099016.72,
       "trades": 61,
       "buys": 36,
       "sells": 25,
@@ -25289,8 +25289,8 @@
         {
           "symbol": "TQQQ",
           "qty": 3044.0,
-          "last_price": 58.54,
-          "value": 178195.76
+          "last_price": 58.5,
+          "value": 178074.0
         },
         {
           "symbol": "SOFI",
@@ -25301,8 +25301,8 @@
         {
           "symbol": "SOXL",
           "qty": 1699.0,
-          "last_price": 97.94,
-          "value": 166400.06
+          "last_price": 97.81,
+          "value": 166179.19
         },
         {
           "symbol": "RIVN",
@@ -25337,7 +25337,7 @@
         {
           "symbol": "AVAX/USD",
           "qty": 0.0,
-          "last_price": 9.2667,
+          "last_price": 9.3063,
           "value": 0.0
         },
         {
@@ -25359,10 +25359,10 @@
           "value": 0.0
         }
       ],
-      "held_value": 1012211.44
+      "held_value": 1011868.81
     },
     "mid": {
-      "balance": 1010277.81,
+      "balance": 1010250.07,
       "trades": 40,
       "buys": 28,
       "sells": 12,
@@ -25377,8 +25377,8 @@
         {
           "symbol": "GOOGL",
           "qty": 219.0,
-          "last_price": 338.61,
-          "value": 74155.59
+          "last_price": 338.65,
+          "value": 74164.35
         },
         {
           "symbol": "TMO",
@@ -25413,8 +25413,8 @@
         {
           "symbol": "NFLX",
           "qty": 730.0,
-          "last_price": 94.91,
-          "value": 69284.3
+          "last_price": 94.86,
+          "value": 69247.8
         },
         {
           "symbol": "COST",
@@ -25459,10 +25459,10 @@
           "value": 151.14
         }
       ],
-      "held_value": 856339.9
+      "held_value": 856312.16
     },
     "rand": {
-      "balance": 838694.73,
+      "balance": 838828.39,
       "trades": 1394,
       "buys": 950,
       "sells": 444,
@@ -25483,8 +25483,8 @@
         {
           "symbol": "XPEV",
           "qty": 3340.0,
-          "last_price": 17.42,
-          "value": 58182.8
+          "last_price": 17.46,
+          "value": 58316.4
         },
         {
           "symbol": "SPY",
@@ -25579,8 +25579,8 @@
         {
           "symbol": "IONQ",
           "qty": 6.0,
-          "last_price": 48.01,
-          "value": 288.06
+          "last_price": 48.02,
+          "value": 288.12
         },
         {
           "symbol": "MDB",
@@ -25589,7 +25589,7 @@
           "value": 265.0
         }
       ],
-      "held_value": 565153.72
+      "held_value": 565287.38
     },
     "spy_balance": 1092850.42
   }
