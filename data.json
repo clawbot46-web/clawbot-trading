@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-22T00:10:13",
+  "generated": "2026-04-22T00:11:08",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -25451,7 +25451,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 1102612.94,
+      "balance": 1102651.33,
       "trades": 66,
       "buys": 38,
       "sells": 28,
@@ -25460,8 +25460,8 @@
         {
           "symbol": "SOXL",
           "qty": 1699.0,
-          "last_price": 101.47,
-          "value": 172397.53
+          "last_price": 101.49,
+          "value": 172431.51
         },
         {
           "symbol": "CRWD",
@@ -25490,8 +25490,8 @@
         {
           "symbol": "PLTR",
           "qty": 441.0,
-          "last_price": 147.59,
-          "value": 65087.19
+          "last_price": 147.6,
+          "value": 65091.6
         },
         {
           "symbol": "AMD",
@@ -25520,14 +25520,14 @@
         {
           "symbol": "SOL/USD",
           "qty": 0.0,
-          "last_price": 87.4994,
+          "last_price": 87.45,
           "value": 0.0
         }
       ],
-      "held_value": 944872.58
+      "held_value": 944910.97
     },
     "mid": {
-      "balance": 1008508.43,
+      "balance": 1008535.81,
       "trades": 42,
       "buys": 29,
       "sells": 13,
@@ -25548,8 +25548,8 @@
         {
           "symbol": "AAPL",
           "qty": 274.0,
-          "last_price": 267.83,
-          "value": 73385.42
+          "last_price": 267.85,
+          "value": 73390.9
         },
         {
           "symbol": "XLE",
@@ -25596,8 +25596,8 @@
         {
           "symbol": "NFLX",
           "qty": 730.0,
-          "last_price": 93.06,
-          "value": 67933.8
+          "last_price": 93.09,
+          "value": 67955.7
         },
         {
           "symbol": "JNJ",
@@ -25624,10 +25624,10 @@
           "value": 149.88
         }
       ],
-      "held_value": 854961.97
+      "held_value": 854989.35
     },
     "rand": {
-      "balance": 843690.31,
+      "balance": 843637.03,
       "trades": 1396,
       "buys": 950,
       "sells": 446,
@@ -25642,8 +25642,8 @@
         {
           "symbol": "SOL/USD",
           "qty": 1082.676112,
-          "last_price": 87.4994,
-          "value": 94733.51
+          "last_price": 87.45,
+          "value": 94680.03
         },
         {
           "symbol": "XPEV",
@@ -25714,8 +25714,8 @@
         {
           "symbol": "MSFT",
           "qty": 20.0,
-          "last_price": 427.1,
-          "value": 8542.0
+          "last_price": 427.11,
+          "value": 8542.2
         },
         {
           "symbol": "DOCU",
@@ -25754,7 +25754,7 @@
           "value": 264.1
         }
       ],
-      "held_value": 532750.01
+      "held_value": 532696.73
     },
     "spy_balance": 1085326.18
   }
