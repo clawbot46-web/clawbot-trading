@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-22T00:09:24",
+  "generated": "2026-04-22T00:10:13",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -25451,7 +25451,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 1102629.93,
+      "balance": 1102612.94,
       "trades": 66,
       "buys": 38,
       "sells": 28,
@@ -25460,8 +25460,8 @@
         {
           "symbol": "SOXL",
           "qty": 1699.0,
-          "last_price": 101.48,
-          "value": 172414.52
+          "last_price": 101.47,
+          "value": 172397.53
         },
         {
           "symbol": "CRWD",
@@ -25524,7 +25524,7 @@
           "value": 0.0
         }
       ],
-      "held_value": 944889.57
+      "held_value": 944872.58
     },
     "mid": {
       "balance": 1008508.43,
