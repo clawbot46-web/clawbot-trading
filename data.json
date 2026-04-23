@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-23T00:10:29",
+  "generated": "2026-04-23T00:12:23",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -25598,7 +25598,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 1120937.14,
+      "balance": 1121099.01,
       "trades": 69,
       "buys": 40,
       "sells": 29,
@@ -25607,8 +25607,8 @@
         {
           "symbol": "SOXL",
           "qty": 1699.0,
-          "last_price": 106.29,
-          "value": 180586.71
+          "last_price": 106.34,
+          "value": 180671.66
         },
         {
           "symbol": "RIVN",
@@ -25643,14 +25643,14 @@
         {
           "symbol": "PLTR",
           "qty": 441.0,
-          "last_price": 148.8,
-          "value": 65620.8
+          "last_price": 148.91,
+          "value": 65669.31
         },
         {
           "symbol": "TQQQ",
           "qty": 947.0,
-          "last_price": 59.13,
-          "value": 55996.11
+          "last_price": 59.16,
+          "value": 56024.52
         },
         {
           "symbol": "AVAX/USD",
@@ -25667,7 +25667,7 @@
         {
           "symbol": "ETH/USD",
           "qty": 0.0,
-          "last_price": 2341.81,
+          "last_price": 2345.8,
           "value": 0.0
         },
         {
@@ -25677,10 +25677,10 @@
           "value": 0.0
         }
       ],
-      "held_value": 1029972.81
+      "held_value": 1030134.68
     },
     "mid": {
-      "balance": 1010866.29,
+      "balance": 1010848.28,
       "trades": 42,
       "buys": 29,
       "sells": 13,
@@ -25689,8 +25689,8 @@
         {
           "symbol": "AAPL",
           "qty": 274.0,
-          "last_price": 271.37,
-          "value": 74355.38
+          "last_price": 271.63,
+          "value": 74426.62
         },
         {
           "symbol": "TMO",
@@ -25713,8 +25713,8 @@
         {
           "symbol": "XOM",
           "qty": 476.0,
-          "last_price": 150.5,
-          "value": 71638.0
+          "last_price": 150.45,
+          "value": 71614.2
         },
         {
           "symbol": "IEF",
@@ -25725,8 +25725,8 @@
         {
           "symbol": "TLT",
           "qty": 813.0,
-          "last_price": 86.52,
-          "value": 70340.76
+          "last_price": 86.53,
+          "value": 70348.89
         },
         {
           "symbol": "CSCO",
@@ -25761,8 +25761,8 @@
         {
           "symbol": "ADBE",
           "qty": 39.0,
-          "last_price": 249.2,
-          "value": 9718.8
+          "last_price": 249.14,
+          "value": 9716.46
         },
         {
           "symbol": "PEP",
@@ -25777,10 +25777,10 @@
           "value": 149.44
         }
       ],
-      "held_value": 857319.85
+      "held_value": 857373.08
     },
     "rand": {
-      "balance": 836948.41,
+      "balance": 837090.97,
       "trades": 1399,
       "buys": 951,
       "sells": 448,
@@ -25801,20 +25801,20 @@
         {
           "symbol": "SPY",
           "qty": 77.0,
-          "last_price": 707.12,
-          "value": 54448.24
+          "last_price": 707.2,
+          "value": 54454.4
         },
         {
           "symbol": "XPEV",
           "qty": 3340.0,
-          "last_price": 16.06,
-          "value": 53640.4
+          "last_price": 16.08,
+          "value": 53707.2
         },
         {
           "symbol": "ETH/USD",
           "qty": 17.268451,
-          "last_price": 2341.81,
-          "value": 40439.43
+          "last_price": 2345.8,
+          "value": 40508.33
         },
         {
           "symbol": "AMZN",
@@ -25861,8 +25861,8 @@
         {
           "symbol": "MSFT",
           "qty": 20.0,
-          "last_price": 424.16,
-          "value": 8483.2
+          "last_price": 424.18,
+          "value": 8483.6
         },
         {
           "symbol": "DOCU",
@@ -25891,8 +25891,8 @@
         {
           "symbol": "IONQ",
           "qty": 6.0,
-          "last_price": 46.17,
-          "value": 277.02
+          "last_price": 46.22,
+          "value": 277.32
         },
         {
           "symbol": "MDB",
@@ -25907,7 +25907,7 @@
           "value": 139.8
         }
       ],
-      "held_value": 547478.35
+      "held_value": 547620.91
     },
     "spy_balance": 1096566.29
   }
