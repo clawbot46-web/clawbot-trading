@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-23T00:08:23",
+  "generated": "2026-04-23T00:09:37",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -25598,7 +25598,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 1120361.15,
+      "balance": 1120842.72,
       "trades": 69,
       "buys": 40,
       "sells": 29,
@@ -25607,8 +25607,8 @@
         {
           "symbol": "SOXL",
           "qty": 1699.0,
-          "last_price": 105.99,
-          "value": 180077.01
+          "last_price": 106.24,
+          "value": 180501.76
         },
         {
           "symbol": "RIVN",
@@ -25649,8 +25649,8 @@
         {
           "symbol": "TQQQ",
           "qty": 947.0,
-          "last_price": 59.09,
-          "value": 55958.23
+          "last_price": 59.12,
+          "value": 55986.64
         },
         {
           "symbol": "AVAX/USD",
@@ -25667,7 +25667,7 @@
         {
           "symbol": "ETH/USD",
           "qty": 0.0,
-          "last_price": 2341.081,
+          "last_price": 2341.81,
           "value": 0.0
         },
         {
@@ -25677,10 +25677,10 @@
           "value": 0.0
         }
       ],
-      "held_value": 1029425.23
+      "held_value": 1029878.39
     },
     "mid": {
-      "balance": 1010764.09,
+      "balance": 1010785.99,
       "trades": 42,
       "buys": 29,
       "sells": 13,
@@ -25749,8 +25749,8 @@
         {
           "symbol": "NFLX",
           "qty": 730.0,
-          "last_price": 92.51,
-          "value": 67532.3
+          "last_price": 92.54,
+          "value": 67554.2
         },
         {
           "symbol": "JNJ",
@@ -25777,10 +25777,10 @@
           "value": 149.44
         }
       ],
-      "held_value": 857217.65
+      "held_value": 857239.55
     },
     "rand": {
-      "balance": 836828.91,
+      "balance": 836862.83,
       "trades": 1399,
       "buys": 951,
       "sells": 448,
@@ -25801,8 +25801,8 @@
         {
           "symbol": "SPY",
           "qty": 77.0,
-          "last_price": 706.8,
-          "value": 54423.6
+          "last_price": 707.07,
+          "value": 54444.39
         },
         {
           "symbol": "XPEV",
@@ -25813,8 +25813,8 @@
         {
           "symbol": "ETH/USD",
           "qty": 17.268451,
-          "last_price": 2341.081,
-          "value": 40426.84
+          "last_price": 2341.81,
+          "value": 40439.43
         },
         {
           "symbol": "AMZN",
@@ -25891,8 +25891,8 @@
         {
           "symbol": "IONQ",
           "qty": 6.0,
-          "last_price": 46.08,
-          "value": 276.48
+          "last_price": 46.17,
+          "value": 277.02
         },
         {
           "symbol": "MDB",
@@ -25907,7 +25907,7 @@
           "value": 139.8
         }
       ],
-      "held_value": 547358.85
+      "held_value": 547392.77
     },
     "spy_balance": 1096566.29
   }
