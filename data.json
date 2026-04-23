@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-23T00:09:37",
+  "generated": "2026-04-23T00:10:29",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -25598,7 +25598,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 1120842.72,
+      "balance": 1120937.14,
       "trades": 69,
       "buys": 40,
       "sells": 29,
@@ -25607,8 +25607,8 @@
         {
           "symbol": "SOXL",
           "qty": 1699.0,
-          "last_price": 106.24,
-          "value": 180501.76
+          "last_price": 106.29,
+          "value": 180586.71
         },
         {
           "symbol": "RIVN",
@@ -25649,8 +25649,8 @@
         {
           "symbol": "TQQQ",
           "qty": 947.0,
-          "last_price": 59.12,
-          "value": 55986.64
+          "last_price": 59.13,
+          "value": 55996.11
         },
         {
           "symbol": "AVAX/USD",
@@ -25661,7 +25661,7 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 77785.675,
+          "last_price": 77841.358,
           "value": 0.0
         },
         {
@@ -25677,10 +25677,10 @@
           "value": 0.0
         }
       ],
-      "held_value": 1029878.39
+      "held_value": 1029972.81
     },
     "mid": {
-      "balance": 1010785.99,
+      "balance": 1010866.29,
       "trades": 42,
       "buys": 29,
       "sells": 13,
@@ -25749,8 +25749,8 @@
         {
           "symbol": "NFLX",
           "qty": 730.0,
-          "last_price": 92.54,
-          "value": 67554.2
+          "last_price": 92.65,
+          "value": 67634.5
         },
         {
           "symbol": "JNJ",
@@ -25777,10 +25777,10 @@
           "value": 149.44
         }
       ],
-      "held_value": 857239.55
+      "held_value": 857319.85
     },
     "rand": {
-      "balance": 836862.83,
+      "balance": 836948.41,
       "trades": 1399,
       "buys": 951,
       "sells": 448,
@@ -25795,14 +25795,14 @@
         {
           "symbol": "BTC/USD",
           "qty": 1.43906,
-          "last_price": 77785.675,
-          "value": 111938.22
+          "last_price": 77841.358,
+          "value": 112018.35
         },
         {
           "symbol": "SPY",
           "qty": 77.0,
-          "last_price": 707.07,
-          "value": 54444.39
+          "last_price": 707.12,
+          "value": 54448.24
         },
         {
           "symbol": "XPEV",
@@ -25861,8 +25861,8 @@
         {
           "symbol": "MSFT",
           "qty": 20.0,
-          "last_price": 424.08,
-          "value": 8481.6
+          "last_price": 424.16,
+          "value": 8483.2
         },
         {
           "symbol": "DOCU",
@@ -25907,7 +25907,7 @@
           "value": 139.8
         }
       ],
-      "held_value": 547392.77
+      "held_value": 547478.35
     },
     "spy_balance": 1096566.29
   }
