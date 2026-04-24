@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-24T00:10:01",
+  "generated": "2026-04-24T00:13:07",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -25921,7 +25921,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 1122803.86,
+      "balance": 1123280.88,
       "trades": 69,
       "buys": 40,
       "sells": 29,
@@ -25930,8 +25930,8 @@
         {
           "symbol": "SOXL",
           "qty": 1699.0,
-          "last_price": 118.03,
-          "value": 200532.97
+          "last_price": 118.19,
+          "value": 200804.81
         },
         {
           "symbol": "CRWD",
@@ -25960,20 +25960,20 @@
         {
           "symbol": "AMD",
           "qty": 251.0,
-          "last_price": 326.82,
-          "value": 82031.82
+          "last_price": 327.1,
+          "value": 82102.1
         },
         {
           "symbol": "PLTR",
           "qty": 441.0,
-          "last_price": 142.08,
-          "value": 62657.28
+          "last_price": 142.3,
+          "value": 62754.3
         },
         {
           "symbol": "TQQQ",
           "qty": 947.0,
-          "last_price": 59.96,
-          "value": 56782.12
+          "last_price": 60.0,
+          "value": 56820.0
         },
         {
           "symbol": "AVAX/USD",
@@ -25984,7 +25984,7 @@
         {
           "symbol": "BTC/USD",
           "qty": 0.0,
-          "last_price": 77714.3,
+          "last_price": 77666.2,
           "value": 0.0
         },
         {
@@ -26000,10 +26000,10 @@
           "value": 0.0
         }
       ],
-      "held_value": 1031839.57
+      "held_value": 1032316.59
     },
     "mid": {
-      "balance": 1004443.55,
+      "balance": 1004451.36,
       "trades": 45,
       "buys": 30,
       "sells": 15,
@@ -26066,8 +26066,8 @@
         {
           "symbol": "CSCO",
           "qty": 781.0,
-          "last_price": 88.31,
-          "value": 68970.11
+          "last_price": 88.32,
+          "value": 68977.92
         },
         {
           "symbol": "JNJ",
@@ -26094,10 +26094,10 @@
           "value": 152.16
         }
       ],
-      "held_value": 789028.33
+      "held_value": 789036.14
     },
     "rand": {
-      "balance": 833479.51,
+      "balance": 833526.94,
       "trades": 1418,
       "buys": 954,
       "sells": 464,
@@ -26106,20 +26106,20 @@
         {
           "symbol": "BTC/USD",
           "qty": 1.586183,
-          "last_price": 77714.3,
-          "value": 123269.13
+          "last_price": 77666.2,
+          "value": 123192.83
         },
         {
           "symbol": "LCID",
           "qty": 10905.0,
-          "last_price": 6.28,
-          "value": 68483.4
+          "last_price": 6.29,
+          "value": 68592.45
         },
         {
           "symbol": "SPY",
           "qty": 77.0,
-          "last_price": 708.61,
-          "value": 54562.97
+          "last_price": 708.73,
+          "value": 54572.21
         },
         {
           "symbol": "ETH/USD",
@@ -26136,14 +26136,14 @@
         {
           "symbol": "AMZN",
           "qty": 141.0,
-          "last_price": 254.98,
-          "value": 35952.18
+          "last_price": 255.0,
+          "value": 35955.0
         },
         {
           "symbol": "CSCO",
           "qty": 244.0,
-          "last_price": 88.31,
-          "value": 21547.64
+          "last_price": 88.32,
+          "value": 21550.08
         },
         {
           "symbol": "BND",
@@ -26196,8 +26196,8 @@
         {
           "symbol": "IONQ",
           "qty": 6.0,
-          "last_price": 43.63,
-          "value": 261.78
+          "last_price": 43.66,
+          "value": 261.96
         },
         {
           "symbol": "MDB",
@@ -26224,7 +26224,7 @@
           "value": 113.11
         }
       ],
-      "held_value": 419898.52
+      "held_value": 419945.95
     },
     "spy_balance": 1092264.52
   }
