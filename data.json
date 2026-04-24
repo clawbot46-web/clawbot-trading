@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-24T00:13:07",
+  "generated": "2026-04-24T00:14:17",
   "portfolio": [
     {
       "ts": "8:07PM",
@@ -25921,7 +25921,7 @@
   ],
   "summary": {
     "agg": {
-      "balance": 1123280.88,
+      "balance": 1123523.99,
       "trades": 69,
       "buys": 40,
       "sells": 29,
@@ -25930,8 +25930,8 @@
         {
           "symbol": "SOXL",
           "qty": 1699.0,
-          "last_price": 118.19,
-          "value": 200804.81
+          "last_price": 118.25,
+          "value": 200906.75
         },
         {
           "symbol": "CRWD",
@@ -25960,14 +25960,14 @@
         {
           "symbol": "AMD",
           "qty": 251.0,
-          "last_price": 327.1,
-          "value": 82102.1
+          "last_price": 327.68,
+          "value": 82247.68
         },
         {
           "symbol": "PLTR",
           "qty": 441.0,
-          "last_price": 142.3,
-          "value": 62754.3
+          "last_price": 142.29,
+          "value": 62749.89
         },
         {
           "symbol": "TQQQ",
@@ -26000,7 +26000,7 @@
           "value": 0.0
         }
       ],
-      "held_value": 1032316.59
+      "held_value": 1032559.7
     },
     "mid": {
       "balance": 1004451.36,
